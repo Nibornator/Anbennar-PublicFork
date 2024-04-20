@@ -618,7 +618,7 @@ estate_artificers_organization_covenant = {
 estate_artificers_organization_feiten_shuimu_cadre = {
 	icon = privilege_promote_maratha_nobility
 	loyalty = 0.1
-	influence = 0.15
+	influence = 0.1
 	land_share = 5
 	is_valid = {
 		OR = {
@@ -690,7 +690,7 @@ estate_artificers_organization_feiten_shuimu_cadre = {
 			tooltip = { add_country_modifier = { name = feiten_shuimu_regiments_way_over_cap duration = -1 } }
 		}
 		hidden_effect = {
-			clr_country_flag = artifice_research_normal
+			clr_country_flag = artifice_research_fast
 		}
 	}
 	on_granted = {
@@ -706,7 +706,7 @@ estate_artificers_organization_feiten_shuimu_cadre = {
 			}
 		}
 		hidden_effect = {
-			set_country_flag = artifice_research_normal
+			set_country_flag = artifice_research_fast
 		}
 	}
 	mechanics = { enables_rajput_regiments }
@@ -728,7 +728,7 @@ estate_artificers_organization_feiten_shuimu_cadre = {
 			siege_ability = 0.2
 			ship_power_propagation = 0.2
 			movement_speed_in_fleet_modifier = 2
-			allowed_rajput_fraction = 0.025
+			allowed_rajput_fraction = 0.1
 			naval_maintenance_modifier = 0.5
 			fire_damage_received = 0.2 # Balloons/airships blowing/burning up result in lots of collateral damage
 		}
@@ -753,7 +753,7 @@ estate_artificers_organization_feiten_shuimu_cadre = {
 			siege_ability = 0.15
 			ship_power_propagation = 0.15
 			movement_speed_in_fleet_modifier = 1.5
-			allowed_rajput_fraction = 0.025
+			allowed_rajput_fraction = 0.1
 			naval_maintenance_modifier = 0.5
 			fire_damage_received = 0.2
 		}
@@ -778,7 +778,7 @@ estate_artificers_organization_feiten_shuimu_cadre = {
 			siege_ability = 0.1
 			ship_power_propagation = 0.1
 			movement_speed_in_fleet_modifier = 1
-			allowed_rajput_fraction = 0.025
+			allowed_rajput_fraction = 0.1
 			naval_maintenance_modifier = 0.5
 			fire_damage_received = 0.2
 		}
@@ -797,7 +797,7 @@ estate_artificers_organization_feiten_shuimu_cadre = {
 			siege_ability = 0.05
 			ship_power_propagation = 0.05
 			movement_speed_in_fleet_modifier = 0.5
-			allowed_rajput_fraction = 0.025
+			allowed_rajput_fraction = 0.1
 			naval_maintenance_modifier = 0.5
 			fire_damage_received = 0.2
 		}
@@ -1915,7 +1915,6 @@ estate_artificers_feiten_invest_engineering_workshop = {
 	icon = privilege_grant_autonomy
 	influence = 0
 	loyalty = 0.05
-	land_share = 5
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {

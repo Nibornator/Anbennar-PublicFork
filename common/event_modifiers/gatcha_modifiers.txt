@@ -1,0 +1,20 @@
+gacha_province_cooldown = {}
+
+gacha_sacrifice_ducats_cooldown = {}
+
+gacha_sacrifice_mana_cooldown = {}
+
+uncanny_onyx = {
+	land_morale = 0.05
+	all_power_cost = -0.01
+}
+
+dwarovar_thingy = {
+	colonists = 1
+	tax_income = 24
+	global_colonial_growth = 30
+}
+
+no_doom = {
+	yearly_doom_reduction = 10
+}

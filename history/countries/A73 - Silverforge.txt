@@ -10,6 +10,7 @@ technology_group = tech_dwarven
 capital = 912
 
 historical_friend = A81 #Giberd
+historical_friend = A85
 
 elector = yes
 
@@ -22,7 +23,7 @@ elector = yes
 
 1425.2.23 = {
 	monarch = {
-		name = "Foldan III"
+		name = "Belzeberto III"
 		dynasty = "Silverhammer"
 		birth_date = 1379.1.3
 		adm = 4
@@ -32,5 +33,5 @@ elector = yes
 	
 	add_ruler_personality = just_personality
 	add_ruler_personality = malevolent_personality
-	set_ruler_flag = long_lived_ruler
+	set_ruler_flag = set_immortality
 }

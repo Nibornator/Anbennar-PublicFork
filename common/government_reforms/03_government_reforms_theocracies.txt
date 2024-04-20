@@ -2552,10 +2552,6 @@ stake_our_claim = {
 				escann_adventurer_can_settle_down = yes
 			}
 		}
-		OR = {
-			has_reform = stake_our_claim
-			is_at_war = no
-		}
 	}
 	modifiers = {
 		add_tribal_land_cost = 1
@@ -2631,10 +2627,6 @@ end_the_greentide = {
 			}
 			NOT = { has_reform = stake_our_claim }	# Don't check the more expensive triggers if the'yve already settled.
 			escann_adventurer_can_settle_down = no
-		}
-		OR = {
-			has_reform = end_the_greentide
-			is_at_war = no
 		}
 	}
 	modifiers = {
@@ -4761,6 +4753,45 @@ vf_krilavuna_magocracy = {
 	rulers_can_be_generals = yes
 	heirs_can_be_generals = yes
 	has_parliament = yes
+
+	effect = {
+		artifice_magic_switch_to_magic_only_mode = yes
+	}
+}
+
+celestial_delegation_reform = {
+	potential = {
+		tag = U89
+	}
+
+	modifiers = {
+		all_power_cost = -0.1
+		morale_damage_received = -0.1
+		artillery_shock = 1
+		military_tactics = 0.25
+		global_trade_power = -1
+		war_taxes_cost_modifier = -1
+	}
+	
+	government_abilities = {
+		anb_celestial_intervention
+	}
+	custom_attributes = {
+		enables_divine_idea_group = yes
+		locked_government_type = yes
+		is_magocracy = yes
+	}
+	
+	lock_level_when_selected = yes
+	
+	heir = no
+
+	rulers_can_be_generals = yes
+	icon = "monks"
+	allow_normal_conversion = no
+	
+	different_religion_acceptance = 0
+	different_religion_group_acceptance = 0
 
 	effect = {
 		artifice_magic_switch_to_magic_only_mode = yes

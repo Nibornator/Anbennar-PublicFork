@@ -1457,7 +1457,8 @@ allianceaction = {
 
 	condition = {
 		tooltip = dakinshi_warlords_no_ally
-		potential = { 
+		potential = {
+			NOT = { tag = S30 }
 		}
 		allow = { 
 			FROM = { 

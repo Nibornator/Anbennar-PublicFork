@@ -8,13 +8,13 @@ religion = righteous_path
 technology_group = tech_east_kobold
 capital = 4976
 historical_friend = Y05 #Lanjinhui
+historical_friend = Y20
 
 1000.1.1 = { set_estate_privilege = estate_artificers_organization_state }
-1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
 
 1397.6.11 = {
 	monarch = {
-		name = "Fax Akar"
+		name = "Wag Entzu"
 		dynasty = "of The Kindled Scale"
 		birth_date = 1390.1.1
 		adm = 2

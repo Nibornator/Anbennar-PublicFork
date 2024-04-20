@@ -1,7 +1,11 @@
+
+
+
+
 owner = H72
 controller = H72
 add_core = H72
-culture = highhold_orc
+culture = black_orc
 religion = old_dookan
 trade_goods = wine
 hre = no

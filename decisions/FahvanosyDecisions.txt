@@ -240,8 +240,8 @@ country_decisions = {
 				limit = { NOT = { has_global_flag = amiratsamo_rasanjy_coup } }	#Dude can't appear twice
 				
 				define_ruler = {
-					name = "Rasanjy"
-					dynasty = "nyAmiray"
+					name = "Poke XIV"
+					dynasty = "Erfara"
 					adm = 4
 					dip = 6
 					mil = 5
@@ -254,15 +254,6 @@ country_decisions = {
 				
 				define_consort = { }
 				
-				define_heir = {
-					name = Naka
-					dynasty = nyAmiray
-					age = 16
-					adm = 1
-					dip = 4
-					mil = 6
-					claim = 30
-				}
 			}
 
 			if = {

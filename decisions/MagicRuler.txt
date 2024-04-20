@@ -322,6 +322,15 @@ country_decisions = {
 			is_lesser_in_union = no
 		}
 		allow = {
+			if = {
+				limit = {
+					OR = {
+						ai = yes
+						#tag = x
+					}
+				}
+				always = no
+			}
 			custom_trigger_tooltip = { always = yes tooltip = tooltip_patron_type }
 			custom_trigger_tooltip = { always = yes tooltip = tooltip_patron_approval }
 		}

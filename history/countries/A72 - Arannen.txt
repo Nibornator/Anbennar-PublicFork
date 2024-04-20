@@ -7,6 +7,7 @@ primary_culture = arannese
 religion = regent_court
 technology_group = tech_cannorian
 historical_friend = A60	#Asheniande
+historical_friend = A12
 capital = 904
 
 1000.1.1 = { 
@@ -19,7 +20,7 @@ capital = 904
 
 1422.3.5 = {
 	monarch = {
-		name = "Austyn IV"
+		name = "Gwyn IV"
 		dynasty = "síl Arannen"
 		birth_date = 1417.4.3
 		adm = 4

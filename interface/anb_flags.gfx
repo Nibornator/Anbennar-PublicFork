@@ -7595,4 +7595,8 @@ spriteTypes = {
 		name = "GFX_FlagEmpty"
 		texturefile = "gfx/flags/Empty.tga"
 	}
+	spriteType = {
+		name = "GFX_KEK"
+		texturefile = "gfx/flags/KEK.tga"
+	}
 }

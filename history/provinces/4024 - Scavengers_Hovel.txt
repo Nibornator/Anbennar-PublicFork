@@ -1,7 +1,4 @@
 
-owner = Z55
-controller = Z55
-add_core = Z55
 culture = darkscale_kobold
 religion = kobold_dragon_cult
 trade_goods = unknown

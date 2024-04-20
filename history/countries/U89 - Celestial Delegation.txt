@@ -1,0 +1,49 @@
+
+setup_vision = yes
+government = theocracy
+add_government_reform = celestial_delegation_reform
+government_rank = 1
+primary_culture = leechmen
+religion = leechfather
+technology_group = tech_celestial
+capital = 6322 #da palace
+
+1422.2.3 = {
+	monarch = {
+		name = "River"
+		dynasty = "Doge"
+		birth_date = 1402.6.2
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+	add_ruler_personality = strict_personality
+	add_ruler_personality = benevolent_personality
+	add_ruler_personality = mage_personality
+
+	set_ruler_flag = conjuration_1
+	set_ruler_flag = conjuration_2
+	set_ruler_flag = conjuration_3
+	set_ruler_flag = evocation_1
+	set_ruler_flag = evocation_2
+	set_ruler_flag = evocation_3
+	set_ruler_flag = abjuration_1
+	set_ruler_flag = abjuration_2
+	set_ruler_flag = abjuration_3
+	set_ruler_flag = enchantment_1
+	set_ruler_flag = enchantment_2
+	set_ruler_flag = enchantment_3
+	set_ruler_flag = illusion_1
+	set_ruler_flag = illusion_2
+	set_ruler_flag = illusion_3
+	set_ruler_flag = divination_1
+	set_ruler_flag = divination_2
+	set_ruler_flag = divination_3
+	set_ruler_flag = transmutation_1
+	set_ruler_flag = transmutation_2
+	set_ruler_flag = transmutation_3
+	set_ruler_flag = initialized_magic_flags
+
+	set_ruler_flag = set_immortality
+
+}

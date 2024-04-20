@@ -7,12 +7,17 @@ primary_culture = mossmouth_ogre
 religion = feast_of_the_gods
 technology_group = tech_ogre
 capital = 4123
-
-1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
+historical_friend = Z55
+west_dwarovar_region = {
+	discover_country = ROOT
+}
+serpents_vale_region = {
+	discover_country = ROOT
+}
 
 1438.3.10 = {
 	monarch = {
-		name = "Shrakk"
+		name = "Guy 'The Unmortal'"
 		dynasty = "Mire Maw"
 		adm = 3
 		dip = 3

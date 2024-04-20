@@ -5088,3 +5088,111 @@ kheionai_cool_units_sprite_pack = {
 	}
 
 }
+
+villager_sprite_pack = {
+	country_trigger = {
+			TAG = F42
+	}
+
+	sprite_infantry = {
+		0 = VILLAGER_INFANTRY_1
+		1 = VILLAGER_INFANTRY_2
+		2 = VILLAGER_INFANTRY_3
+		3 = VILLAGER_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = VILLAGER_INFANTRY_1
+		1 = VILLAGER_INFANTRY_2
+		2 = VILLAGER_INFANTRY_3
+		3 = VILLAGER_INFANTRY_4
+	}
+	
+	sprite_artillery = {
+		0 = VILLAGER_ARTILLERY_1
+		1 = VILLAGER_ARTILLERY_2
+		2 = VILLAGER_ARTILLERY_3
+		3 = VILLAGER_ARTILLERY_4
+	}
+}
+
+stray_sprite_pack = {
+	country_trigger = {
+			TAG = H87
+	}
+
+	sprite_infantry = {
+		0 = STRAY_INFANTRY_1
+		1 = STRAY_INFANTRY_2
+		2 = STRAY_INFANTRY_3
+		3 = STRAY_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = STRAY_INFANTRY_1
+		1 = STRAY_INFANTRY_2
+		2 = STRAY_INFANTRY_3
+		3 = STRAY_INFANTRY_4
+	}
+	
+	sprite_artillery = {
+		0 = STRAY_ARTILLERY_1
+		1 = STRAY_ARTILLERY_2
+		2 = STRAY_ARTILLERY_3
+		3 = STRAY_ARTILLERY_4
+	}
+}
+
+hell_sprite_pack = {
+	country_trigger = {
+			tag = KEK
+	}
+
+	sprite_infantry = {
+		0 = HELL_INFANTRY_1
+		1 = HELL_INFANTRY_2
+		2 = HELL_INFANTRY_3
+		3 = HELL_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = HELL_INFANTRY_1
+		1 = HELL_INFANTRY_2
+		2 = HELL_INFANTRY_3
+		3 = HELL_INFANTRY_4
+	}
+	
+	sprite_artillery = {
+		0 = HELL_ARTILLERY_1
+		1 = HELL_ARTILLERY_2
+		2 = HELL_ARTILLERY_3
+		3 = HELL_ARTILLERY_4
+	}
+}
+
+celestial_sprite_pack = {
+	country_trigger = {
+			tag = U89
+	}
+
+	sprite_infantry = {
+		0 = CELESTIAL_INFANTRY_1
+		1 = CELESTIAL_INFANTRY_2
+		2 = CELESTIAL_INFANTRY_3
+		3 = CELESTIAL_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = CELESTIAL_INFANTRY_1
+		1 = CELESTIAL_INFANTRY_2
+		2 = CELESTIAL_INFANTRY_3
+		3 = CELESTIAL_INFANTRY_4
+	}
+	
+	sprite_artillery = {
+		0 = CELESTIAL_ARTILLERY_1
+		1 = CELESTIAL_ARTILLERY_2
+		2 = CELESTIAL_ARTILLERY_3
+		3 = CELESTIAL_ARTILLERY_4
+	}
+}

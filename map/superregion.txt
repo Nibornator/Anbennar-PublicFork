@@ -164,6 +164,10 @@ forbidden_lands_superregion = {
 	nuzurbokh_region
 }
 
+planar_superregion = {
+	ascended_region
+}
+
 new_world_superregion ={
 }
 

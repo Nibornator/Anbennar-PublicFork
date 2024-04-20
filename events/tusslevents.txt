@@ -1,0 +1,45 @@
+
+
+namespace = tussle_time
+
+
+country_event = {
+    id = tussle_time.1
+    title = tussle_time.1.t
+    desc = tussle_time.1.d
+    picture = CORINITE_WAR_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+        ai = no
+		NOT = { is_year = 1445 }
+    }
+	
+	immediate = {
+	
+	}
+	option = {		
+		name = "tussle_time.1.a"
+	}
+}
+
+country_event = {
+    id = tussle_time.2
+    title = tussle_time.2.t
+    desc = tussle_time.2.d
+    picture = BIG_STAR_IN_SKY_eventPicture
+
+    is_triggered_only = yes
+
+    trigger = {
+		NOT = { is_year = 1485 }
+    }
+	
+	immediate = {
+	
+	}
+	option = {		
+		name = "tussle_time.2.a"
+	}
+}

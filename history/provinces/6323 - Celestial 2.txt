@@ -1,0 +1,17 @@
+capital = "Halanna's Gardens"
+
+owner = U89
+controller = U89
+add_core = U89
+culture = leechmen
+religion = leechfather
+trade_goods = precursor_relics
+hre = no
+base_tax = 10
+base_production = 10
+base_manpower = 10
+
+add_province_modifier = {
+	name = celestial_delegation_consideration
+	duration = -1
+}

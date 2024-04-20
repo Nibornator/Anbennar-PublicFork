@@ -15,6 +15,10 @@ estate_monstrous_tribes = {
 				has_reform = pirate_republic_reform
 				tag = G93
 			}
+			AND = {
+				has_reform = matriarchal_pirate_republic
+				tag = L55
+			}
 		}
 		NOT = { has_reform = cossacks_reform }
 		
@@ -24,6 +28,10 @@ estate_monstrous_tribes = {
 			AND = {
 				has_reform = pirate_republic_reform
 				tag = G93
+			}
+			AND = {
+				has_reform = matriarchal_pirate_republic
+				tag = L55
 			}
 		}
 		NOT = { has_reform = enlightened_empire_reform }

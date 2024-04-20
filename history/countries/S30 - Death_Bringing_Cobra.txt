@@ -5,6 +5,13 @@ government_rank = 1
 primary_culture = umsozidak
 religion = shadow_pact
 technology_group = tech_inyaswarosa
+historical_friend = F68
+gazraak_region = {
+	discover_country = ROOT
+}
+gol_region = {
+	discover_country = ROOT
+}
 
 
 capital = 5566
@@ -15,13 +22,12 @@ capital = 5566
 
 1444.11.10 = {
 	monarch = {
-		name = "Kuende 'Bringer of Gifts'"
-		dynasty = "Urufkuzanzoka"
+		name = "Enleiv"
+		dynasty = "Oxleiv"
 		adm = 3
 		dip = 0
 		mil = 5
 		claim = 30
-		female = yes
 		birth_date = 1403.11.30
 	}
 	add_ruler_personality = mage_personality

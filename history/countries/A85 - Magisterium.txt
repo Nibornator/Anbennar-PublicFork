@@ -6,6 +6,7 @@ government_rank = 1
 primary_culture = east_damerian
 religion = regent_court
 technology_group = tech_cannorian
+historical_friend = A73
 
 capital = 3 #Old Damenath
 
@@ -19,7 +20,7 @@ elector = yes
 
 1419.9.1 = {
 	monarch = {
-		name = "Crovan"
+		name = "Felipegand"
 		dynasty = "of Vinerick"
 		culture = wexonard
 		birth_date = 1386.4.12

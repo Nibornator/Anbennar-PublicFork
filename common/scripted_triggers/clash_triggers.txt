@@ -1,0 +1,13 @@
+has_already_won_gatcha = {
+	OR = {
+		has_country_flag = reward_onyx_country
+		has_country_flag = reward_willow_country
+		has_country_flag = reward_egg_country
+		has_country_flag = reward_signet_country
+		has_country_flag = reward_digsite_country
+		has_country_flag = reward_wellspring_country
+		has_country_flag = reward_catalog_country
+		has_country_flag = reward_thor_country
+		has_country_flag = reward_wish_country
+	}
+}

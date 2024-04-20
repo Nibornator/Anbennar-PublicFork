@@ -5431,6 +5431,7 @@ province_event = {
 		continue_expedition = yes
 	}
 	
+	#oh shit
 	option = {
         name = diggy_encounter.294.a
         ai_chance = { factor = 100 }
@@ -6849,7 +6850,7 @@ province_event = {
 	}
 }
 
-#Trippy mushrooms - too high
+#Trippy mushrooms - holy shit
 province_event = {
 	id = diggy_encounter.351
 	title = diggy_encounter.351.t
@@ -6882,7 +6883,7 @@ province_event = {
 	}
 }
 
-#Trippy mushrooms - maximum high
+#Trippy mushrooms - maximum holy shit
 province_event = {
 	id = diggy_encounter.352
 	title = diggy_encounter.352.t
@@ -7057,6 +7058,7 @@ province_event = {
 		continue_expedition = yes
 	}
 	
+	#oh shit
 	option = {
         name = diggy_encounter.362.a
         ai_chance = { factor = 100 }
@@ -7134,6 +7136,7 @@ province_event = {
 		continue_expedition = yes
 	}
 	
+	#oh shit
 	option = {
         name = diggy_encounter.364.a
         ai_chance = { factor = 100 }

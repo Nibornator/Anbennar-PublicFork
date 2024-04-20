@@ -1700,7 +1700,9 @@ country_event = {
 					limit = { NOT = { tag = ROOT } } # do not set against yourself or error log is sad
 					
 					if = {
-						limit = { has_country_modifier = monstrous_nation }
+						limit = { 
+							has_country_modifier = monstrous_nation 
+						}
 						
 						add_opinion = { who = ROOT modifier = both_monstrous }
 						reverse_add_opinion = { who = ROOT modifier = both_monstrous }
@@ -1726,7 +1728,9 @@ country_event = {
 			every_country = {
 				limit = { NOT = { tag = ROOT } } # do not set against yourself or error log is sad
 				if = {
-					limit = { has_country_modifier = monstrous_nation }
+					limit = { 
+						has_country_modifier = monstrous_nation
+					}
 					
 					if = {
 						limit = { has_country_flag = semi_monstrous }

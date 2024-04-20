@@ -1,0 +1,41 @@
+﻿l_english:
+
+  celestial_delegation_inspiration:0 "§TDivine Intervention:§! §YInspiration§!"
+  celestial_delegation_scorn:0 "§TDivine Intervention:§! §RScorn§!"
+  celestial_delegation_prosperity:0 "§TDivine Intervention:§! §GProsperity§!"
+  celestial_delegation_abundance:0 "§TDivine Intervention:§! §GAbundance§!"
+  celestial_delegation_pestilence:0 "§TDivine Intervention:§! §PPestilence§!"
+  celestial_delegation_consideration:0 "§TDivine Delegation:§! §WConsideration§!"
+
+  #Tooltips
+  celestial_delegation_inspiration_tt:0 "§TDivine Delegation:§! §YInspiration§!"
+  celestial_delegation_scorn_tt:0 "§TCelestial Delegation:§! §RScorn§!"
+  celestial_delegation_prosperity_tt:0 "§TDivine Delegation:§! §GProsperity§!"
+  celestial_delegation_abundance_tt:0 "§TDivine Delegation:§! §GAbundance§!"
+  celestial_delegation_pestilence_tt:0 "§TDivine Delegation:§! §PPestilence§!"
+
+  celestial_delegation.1.t:0 "§TCelestial Delegation:§! §YInspiration§!"
+  celestial_delegation.1.d:0 "A Great Sign appeared in the sky. A woman. She was clothed in sunlight, and stood upon the moon, and wore a crown weaved from stars.\n\nAnother Sign. It was a crimson dragon, with seven heads and ten horns, each helmed with one of seven diadems.\n\nThe dragon's tail moved, smothering half the stars in the sky and hurling them onto Halann. It charged the woman, ready to devour her, and she lifted a staff of gold and cast the beast down. Then, bloodied and proud, she turned to face us, and spoke with the voices of a thousand heroes.\n\n"Be not afraid," said she, "for salvation and power will come with the kingdom of the Lord, and the authority of we - His anointed."\n\n"The Hunter of my siblings has been banished from our realm," said she, "for we have conquered him by the blood of the lamb on the word of its testimony."\n\n"You are the lamb, now," said she, "and love for life must not deter you from death."\n\n"Therefore, rejoice in the heavens," the woman proclaimed, her lilting voice rising in an ired tongue, "but know that woe shall come to the land and the sea, for the Hunter has come down to you in great fury, knowing his time is short."\n\nThen the woman raised her staff, and faded from the night sky, and we knew that her victory heralded a new war, and that our deaths must be vainglorious that they will not be in vain."
+  celestial_delegation.1.a:0 "Salvation arriveth, and our enemies shall fall on our blades!"
+  celestial_delegation.2.t:0 "§TCelestial Delegation:§! §RScorn§!"
+  celestial_delegation.2.d:0 "A Dark Sign appeared before us, clothed in black and branded with marks of a curse.\n\n"The Hunter is coming," said they, "and you have been found wanting." We drew our blades, but the Sign was unmoved by our advance, merely lifting their hand. We found ourselves rooted in place, stricken by a terror unlike anything we had felt before.\n\n"Are you with him?" They barked, twisting their scarred mouth into a snarl. "You are powerless before me, and yet you rise against me nonetheless? You know nothing of the threat your world is faced with."\n\nThey began to fade into the air, becoming one with the night.\n\n"Those who seek salvation must deny themselves, take up their sword, and follow us," said they, "for whoever wishes to save their life will lose it, but whoever loses their life for us will find it."\n\n"What is the good of gaining the wealth of the world," asked they, "when their soul becomes forfeit? What could anyone give in exchange for themselves?"\n\n"When night falls, and the Hunter stalks," said they, "the kingdom of the Lord will come with His servants, and He will reward each man for his deeds alone."\n\n"I tell you, now," warned they, their voice turning grave, "that some who stand before me today will not know death before the Lord walks this [Root.GovernmentName]."\n\nThen the Sign was gone, and we were alone once more."
+  celestial_delegation.2.a:0 "Salvation arriveth, but will it be ours...?"
+  celestial_delegation.3.t:0 "§TCelestial Delegation:§! §GProsperity§!"
+  celestial_delegation.3.d:0 "A Great Sign appeared in our town, and she walked through the streets until she arrived at the midwife's.\n\n"Greetings, you who are favoured! The Lord is with you." She announced as the latch was lifted.\n\nThe midwife was troubled, but the Sign spoke once more.\n\n"Be not afraid; you have found favour with the Lord. You will bring forth a child, and they will be great, known as the Child of the Most High. The Lord will give them a throne, and they will reign forevermore; their kingdom will never end."\n\n"How can this be?" The midwife asked the Sign.\n\n"The Lord will appear before you, though you will not know it, and the power of the Most High will shadow you. No word from the Lord will ever fail."\n\nThe midwife paused, before nodding, clenching her fist in determination.\n\n"Then I am the Lord's servant," she answered, "and may your word to me be fulfilled."\n\nWhen the child was born, we knew. We lifted him to the sky, and crowned him with flowers, and brushed our fingertips to his forehead with echoing chants; god-begot, lo, god-begot."
+  celestial_delegation.3.a:0 "Behold our glory! The Lord be our witness!"
+  celestial_delegation.4.t:0 "§TCelestial Delegation:§! §GAbundance§!"
+  celestial_delegation.4.d:0 "They that dwelleth in [Root.GetName] shall abide under the shadow of the Almighty.\n\nThe Lord is our refuge and our fortress; in Him, we will trust.\n\nHe shall deliver us from the snare of the Hunter, and from the noisome pestilence.\n\nHe shall cover us with His feathers, and under his wings shalt we heal.\n\nThou shalt not be afraid for the terror by night; nor for the arrow that flieth by day;\n\nNot for disease that haunts darkness; nor for the wasting destruction at noon.\n\nA thousand shall fall at thy side, and ten thousand at thy right hand; but it shall not come nigh thee.\n\nOnly with thine eyes shalt thou behold and see the reward of the wicked."
+  celestial_delegation.4.a:0 "With long life will I satisfy Him, and shew him my salvation."
+  celestial_delegation.5.t:0 "§TCelestial Delegation:§! §PPestilence§!"
+  celestial_delegation.5.d:0 "A Dark Sign appeared in [Root.GetName].\n\nThey spoke to some people. Others were cast with age or blindness, that they could not find the Sign as they walked.\n\n"This is a place of sin," said they, "and the Lord shall not abide it. Those who are good, I bid thee; leave! Take your children and lovers and parents and friends, and flee this place before the morning cometh!"\n\nAs dawn came, the Sign waited outside the settlement, leading those who followed them away from their homes.\n\n"Flee for your lives!" They called, sorrowful yet determined. "Do not look back, and do not stop!"\n\nThe sun rose. The Lord rained burning sulphur onto [Root.GetName], overthrowing the towns and cities and blighting the land. The sinners turned to salt, as did those who looked back; all the rest saw was dense smoke rising to the sky, as if from a furnace."
+  celestial_delegation.5.a:0 "Ashes to ashes, dust to dust, salt to salt."
+
+  celestial_delegation_reform:0 "§TCelestial Delegation§!"
+  celestial_delegation_reform_desc:0 ""
+  ability_anb_celestial_intervention:0 "§YCelestial Intervention§!"
+  anb_celestial_intervention_1:0 "§MProvidence§!"
+  anb_celestial_intervention_1_gain_modifier:0 "Providence Gain Modifier"
+  monthly_anb_celestial_intervention_1:0 "Monthly Providence Gain"
+
+  reveal_map_decision_title:0 "§PDark Descendants Awaken§!"
+  unreveal_map_decision_title:0 "§PDark Descendants Sleep§!"

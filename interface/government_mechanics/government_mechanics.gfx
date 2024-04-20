@@ -645,4 +645,29 @@ spriteTypes = {
 		size = { x = 224 y = 11 }
 		effectFile = "gfx/FX/progress.lua"
 	}
+
+	#Celestial Delegation
+	spriteType = {
+		name = "GFX_celestial_delegation_background_bg"
+		texturefile = "gfx/interface/government_mechanics/celestial_delegation/celestial_delegation_background.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_celestial_delegation_progressbar_frame"
+		texturefile = "gfx/interface/government_mechanics/celestial_delegation/celestial_delegation_progressbar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_celestial_delegation_progressbar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/celestial_delegation/celestial_delegation_progressbar_full.dds"
+		textureFile2 = "gfx/interface/government_mechanics/celestial_delegation/celestial_delegation_progressbar_empty.dds"
+		size = { x = 224 y = 11 }
+		effectFile = "gfx/FX/progress.lua"
+	}
 }

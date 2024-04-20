@@ -57,3 +57,8 @@ animation = {
 	name = "Feiten_Airship_anchored"
 	file = "Feiten_Airship_anchored.anim"
 }
+
+animation = {
+	name = "Gate_Of_Hell_idle"
+	file = "Gate_Of_Hell_idle.anim"
+}

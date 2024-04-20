@@ -1,0 +1,1384 @@
+#If you're reading this, turn back or spoil yourself to cool content.
+#....................................................
+#No seriously why are you reading this file?
+#............................
+#Well I warned you
+
+#Country View
+#Gacha Menu/Tabs
+#Open Button
+custom_button = {
+	name = gacha_open_menu
+	potential = { artifice_invention_has_any_menu_open = no NOT = { has_country_flag = gacha_open_menu_flag } }
+	trigger = { }
+	effect = { hidden_effect = { set_country_flag = gacha_open_menu_flag set_country_flag = gacha_tab_1_open }}
+}
+#Menu Text
+custom_text_box = {
+	name = gacha_open
+	potential = { artifice_invention_has_any_menu_open = no NOT = { has_country_flag = gacha_open_menu_flag } }
+}
+custom_button = {
+	name = gacha_roll_rewards
+	tooltip = gacha_universalis_roll_rewards_tt
+	potential = { tag = U89 NOT = { has_country_flag = gacha_open_menu_flag } }
+	trigger = { }
+	effect = { custom_tooltip = gacha_randomness_ptm_tt hidden_effect = { capital_scope = { add_province_triggered_modifier = gacha_randomness_ptm } } }
+}
+#Close Button
+custom_button = {
+	name = gacha_close_menu
+	tooltip = x
+	potential = { has_country_flag = gacha_open_menu_flag }
+	trigger = { }
+	effect = { hidden_effect = { gacha_flags_clear_effect = yes }}
+}
+#Background Strip
+custom_icon = {
+	name = gacha_background
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+	frame = {
+		number = 1
+		trigger = { has_country_flag = gacha_tab_1_open }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = gacha_tab_2_open }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_flag = gacha_tab_3_open }
+	}
+}
+#Menu Text
+custom_text_box = {
+	name = gacha_close
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+#Ticket Text
+custom_text_box = {
+	name = gacha_tickets_title
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+custom_text_box = {
+	name = gacha_tickets_value
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+#Total Wins Text
+custom_text_box = {
+	name = gacha_wins_title
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+custom_text_box = {
+	name = gacha_wins_value
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+#Total Sacrifices Text
+custom_text_box = {
+	name = gacha_sacrifices_title
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+custom_text_box = {
+	name = gacha_sacrifices_value
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+#Tab Text
+custom_text_box = {
+	name = gacha_tab_1_title
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+custom_text_box = {
+	name = gacha_tab_2_title
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+custom_text_box = {
+	name = gacha_tab_3_title
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+#Last Winner Text
+custom_text_box = {
+	name = gacha_last_winner_title
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_last_winner_loc
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+#Leaderboard Text
+custom_text_box = {
+	name = gacha_leaderboard_1_title
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_1_value
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_2_title
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_2_value
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_3_title
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_3_value
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_4_title
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_4_value
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_5_title
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_5_value
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_6_title
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_leaderboard_6_value
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+#Shield Frame
+custom_icon = {
+	name = gacha_shield_frame
+	potential = { has_country_flag = gacha_tab_1_open }
+}
+custom_text_box = {
+	name = gacha_flag_frame_text
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+
+#Gacha Universalis Title
+custom_text_box = {
+	name = gacha_universalis_title
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+}
+
+#Tabs 1-3
+custom_button = {
+	name = gacha_left_tab
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+	frame = {
+		number = 1
+		trigger = { NOT = { has_country_flag = gacha_tab_1_open } }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = gacha_tab_1_open }
+	}
+	trigger = {
+
+	}
+	effect = {
+		hidden_effect = {
+			clr_country_flag = gacha_tab_2_open
+			clr_country_flag = gacha_tab_3_open
+			set_country_flag = gacha_tab_1_open
+		}
+	}
+}
+custom_button = {
+	name = gacha_middle_tab
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+	frame = {
+		number = 1
+		trigger = { NOT = { has_country_flag = gacha_tab_2_open } }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = gacha_tab_2_open }
+	}
+	trigger = {
+
+	}
+	effect = {
+		hidden_effect = {
+			clr_country_flag = gacha_tab_1_open
+			clr_country_flag = gacha_tab_3_open
+			set_country_flag = gacha_tab_2_open
+		}
+	}
+}
+custom_button = {
+	name = gacha_right_tab
+	potential = {
+		has_country_flag = gacha_open_menu_flag
+	}
+	frame = {
+		number = 1
+		trigger = { NOT = { has_country_flag = gacha_tab_3_open } }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_flag = gacha_tab_3_open }
+	}
+	trigger = {
+
+	}
+	effect = {
+		hidden_effect = {
+			clr_country_flag = gacha_tab_1_open
+			clr_country_flag = gacha_tab_2_open
+			set_country_flag = gacha_tab_3_open
+		}
+	}
+}
+
+custom_text_box = {
+	name = gacha_tab_3_banner
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+}
+
+custom_button = {
+    name = gacha_sacrifice_button_1
+    potential = {
+    	has_country_flag = gacha_tab_1_open
+    }
+
+	trigger = {
+		years_of_income = 1
+
+		NOT = {
+			has_country_modifier = gacha_sacrifice_ducats_cooldown
+		}
+	}
+
+	effect = {
+		add_years_of_income = -1
+
+		add_country_modifier = {
+			name = gacha_sacrifice_ducats_cooldown
+			duration = 3650
+		}
+
+		add_ticket_effect = { tickets = 1 }
+		hidden_effect = {
+			export_to_variable = {
+				which = income
+				value = monthly_income
+			}
+			multiply_variable = {
+				income = 12
+			}
+			change_variable = {
+				which = gatcha_money
+				which = income
+			}
+			# Round down cause doge is weak
+			multiply_variable = { gatcha_money = 0.001 }
+			multiply_variable = { gatcha_money = 1000 }
+		}
+	}
+	tooltip = gacha_sacrifice_button_1_tt
+}
+custom_button = {
+    name = gacha_sacrifice_button_2
+    potential = {
+    	has_country_flag = gacha_tab_1_open
+    }
+
+	trigger = {
+		adm_power = 50
+		dip_power = 50
+		mil_power = 50
+
+		NOT = {
+			has_country_modifier = gacha_sacrifice_mana_cooldown
+		}
+	}
+
+	effect = {
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mil_power = -50
+		add_country_modifier = {
+			name = gacha_sacrifice_mana_cooldown
+			duration = 3650
+		}
+		add_ticket_effect = { tickets = 1 }
+		hidden_effect = {
+			change_variable = {
+				gatcha_mana = 50
+			}
+		}
+	}
+	tooltip = gacha_sacrifice_button_2_tt
+}
+custom_button = {
+    name = gacha_sacrifice_button_3
+    potential = {
+    	has_country_flag = gacha_tab_1_open
+    }
+
+	trigger = {
+		always = no
+	}
+
+	effect = {
+
+		add_ticket_effect = { tickets = 1 }
+	}
+	tooltip = x
+}
+custom_button = {
+    name = gacha_sacrifice_button_4
+    potential = {
+    	has_country_flag = gacha_tab_1_open
+    }
+
+	trigger = {
+		always = no
+	}
+
+	effect = {
+
+		add_ticket_effect = { tickets = 1 }
+	}
+	tooltip = x
+}
+custom_button = {
+    name = gacha_sacrifice_button_5
+    potential = {
+    	has_country_flag = gacha_tab_1_open
+    }
+
+	trigger = {
+		always = no
+	}
+
+	effect = {
+
+		add_ticket_effect = { tickets = 1 }
+	}
+	tooltip = x
+}
+
+#Tab 1 Button Text
+custom_text_box = {
+	name = gacha_tab_1_button_1_text
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+custom_text_box = {
+	name = gacha_tab_1_button_2_text
+	potential = {
+		has_country_flag = gacha_tab_1_open
+	}
+}
+
+#Tab 2 Catalog
+custom_text_box = {
+	name = gacha_catalog_item_1_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_1_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_1_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+custom_text_box = {
+	name = gacha_catalog_item_2_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_2_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_2_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+custom_text_box = {
+	name = gacha_catalog_item_3_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_3_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_3_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+custom_text_box = {
+	name = gacha_catalog_item_4_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_4_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_4_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+custom_text_box = {
+	name = gacha_catalog_item_5_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_5_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_5_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+custom_text_box = {
+	name = gacha_catalog_item_6_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_6_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_6_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+custom_text_box = {
+	name = gacha_catalog_item_7_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_7_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_7_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+custom_text_box = {
+	name = gacha_catalog_item_8_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_8_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_8_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+custom_text_box = {
+	name = gacha_catalog_item_9_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_9_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_9_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+custom_text_box = {
+	name = gacha_catalog_item_10_title
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_10_desc
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_catalog_item_10_value
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+#Menu Tab 2 Rarity Text
+custom_text_box = {
+	name = gacha_uncommon_info
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_rare_info
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_mythic_info
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+custom_text_box = {
+	name = gacha_legendary_info
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+#Disclaimer
+custom_text_box = {
+	name = gacha_disclaimer_info
+	potential = {
+		has_country_flag = gacha_tab_2_open
+	}
+}
+
+#Menu Tab 3 Collection
+custom_button = {
+	name = gacha_item_1
+	tooltip = egg_of_the_king_tt
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+
+	frame = {
+		number = 1
+		trigger = { NOT = { has_country_flag = reward_egg_country } }
+	}
+	frame = {
+		number = 2
+		trigger = { always = no }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_flag = reward_egg_country }
+	}
+
+	trigger = {
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = reward_egg_country
+			}
+			custom_tooltip = egg_of_the_king_effect_tt
+		}
+		else = {
+			custom_tooltip = unknown_relic_uncommon_tt
+		}
+	}
+}
+custom_button = {
+	name = gacha_item_2
+	tooltip = uncanny_onyx_tt
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+	frame = {
+		number = 1
+		trigger = { NOT = { has_country_flag = reward_onyx_country } }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = reward_onyx_country NOT = { has_country_modifier = uncanny_onyx } }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = uncanny_onyx }
+	}
+
+	trigger = {
+		hidden_trigger = {
+			has_country_flag = reward_onyx_country
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = reward_onyx_country
+			}
+			custom_tooltip = uncanny_onyx_effect_tt
+			if = {
+				limit = {
+					NOT = {
+						has_country_modifier = uncanny_onyx
+					}
+				}
+				add_country_modifier = {
+					name = uncanny_onyx
+					duration = -1
+				}
+			}
+		}
+		else = {
+			custom_tooltip = unknown_relic_uncommon_tt
+		}
+	}
+}
+custom_icon = {
+	name = gacha_item_3
+	tooltip = whispering_willow_tt
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+	frame = {
+		number = 1
+		trigger = { NOT = { has_country_flag = reward_willow_country } }
+	}
+	frame = {
+		number = 2
+		trigger = { always = no }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_flag = reward_willow_country }
+	}
+}
+custom_button = {
+	name = gacha_item_4
+	tooltip = charred_signet_tt
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+	frame = {
+		number = 1
+		trigger = { NOT = { has_country_flag = reward_signet_country } }
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = reward_signet_country NOT = { has_country_modifier = hellfire_signet_modifier } }
+	}
+	frame = {
+		number = 3
+		trigger = { has_country_modifier = hellfire_signet_modifier }
+	}
+	trigger = {
+		if = {
+			limit = {
+				has_country_flag = reward_signet_country
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_modifier = hellfire_signet_modifier
+					}
+				}
+				adm_power = 500
+				dip_power = 500
+				mil_power = 500
+			}
+			else = {
+
+			}
+		}
+		else = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = reward_signet_country
+				NOT = {
+					has_country_modifier = hellfire_signet_modifier
+					has_country_flag = has_hellfire_signet
+				}
+			}
+			custom_tooltip = charred_signet_effect_tt
+			country_event = {
+				id = gacha.101
+			}
+			hidden_effect = {
+				set_country_flag = has_hellfire_signet
+			}
+		}
+		else = {
+
+		}
+	}
+}
+custom_icon = {
+	name = gacha_item_5
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+	frame = {
+		number = 1
+		trigger = { has_country_flag = reward_digsite_country }
+	}
+	frame = {
+		number = 2
+		trigger = { always = yes }
+	}
+}
+custom_icon = {
+	name = gacha_item_6
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+	frame = {
+		number = 1
+		trigger = { has_country_flag = reward_wellspring_country }
+	}
+	frame = {
+		number = 2
+		trigger = { always = yes }
+	}
+}
+custom_icon = {
+	name = gacha_item_7
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+	frame = {
+		number = 1
+		trigger = { has_country_flag = reward_catalog_country }
+	}
+	frame = {
+		number = 2
+		trigger = { always = yes }
+	}
+}
+custom_icon = {
+	name = gacha_item_8
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+	frame = {
+		number = 1
+		trigger = { has_country_flag = river_doge_didnt_fucking_finish_this_one }
+	}
+	frame = {
+		number = 2
+		trigger = { always = yes }
+	}
+}
+custom_icon = {
+	name = gacha_item_9
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+	frame = {
+		number = 1
+		trigger = { has_country_flag = reward_thor_country }
+	}
+	frame = {
+		number = 2
+		trigger = { always = yes }
+	}
+}
+custom_icon = {
+	name = gacha_item_10
+	potential = {
+		has_country_flag = gacha_tab_3_open
+	}
+	frame = {
+		number = 1
+		trigger = { has_country_flag = reward_wish_country }
+	}
+	frame = {
+		number = 2
+		trigger = { always = yes }
+	}
+}
+
+#Province View
+custom_button = {
+    name = gatcha_province_button
+    potential = {
+    	owner = {
+			tag = FROM
+		}
+    }
+
+	trigger = {
+		base_tax = 2
+		base_production = 2
+		base_manpower = 2
+		owner = {
+			tag = FROM
+			is_core = PREV
+		}
+
+		NOT = {
+			has_province_modifier = gacha_province_cooldown
+		}
+	}
+
+	effect = {
+		add_base_tax = -1
+		add_base_production = -1
+		add_base_manpower = -1
+
+		add_province_modifier = {
+			name = gacha_province_cooldown
+			duration = 3650
+			hidden = yes
+		}
+		owner = { 
+			add_ticket_effect = { tickets = 1 } 
+			hidden_effect = {
+				change_variable = {
+					gatcha_dev = 1
+				}
+			}
+		}
+	}
+	tooltip = gacha_sacrifice_development_tt
+}
+
+#Celestial Delegation Stuff
+custom_button = {
+    name = celestial_delegation_button_1
+    potential = {
+    	FROM = { tag = U89 }
+		is_city = yes
+		U89 = {
+			has_wartaxes = yes
+			has_government_power = {
+				mechanic_type = anb_celestial_intervention
+				power_type = anb_celestial_intervention_1
+				value = 100
+			}
+		}
+    }
+
+	trigger = {
+		hidden_trigger = {
+			U89 = {
+				has_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = 100
+				}
+			}
+			owner = {
+				NOT = {
+					has_country_modifier = celestial_delegation_inspiration
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			U89 = {
+				add_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = -100
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = celestial_delegation_inspiration
+					duration = 3650
+				}
+				country_event = {
+					id = celestial_delegation.1
+				}
+			}
+		}
+	}
+	tooltip = celestial_delegation_inspiration_tt
+}
+
+custom_button = {
+    name = celestial_delegation_button_2
+    potential = {
+    	FROM = { tag = U89}
+		U89 = {
+			has_wartaxes = yes
+			has_government_power = {
+				mechanic_type = anb_celestial_intervention
+				power_type = anb_celestial_intervention_1
+				value = 100
+			}
+		}
+    }
+
+	trigger = {
+		hidden_trigger = {
+			U89 = {
+				has_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = 100
+				}
+			}
+			owner = {
+				NOT = {
+					has_country_modifier = celestial_delegation_scorn
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			U89 = {
+				add_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = -100
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = celestial_delegation_scorn
+					duration = 3650
+				}
+				country_event = {
+					id = celestial_delegation.2
+				}
+			}
+		}
+	}
+	tooltip = celestial_delegation_scorn_tt
+}
+
+custom_button = {
+    name = celestial_delegation_button_3
+    potential = {
+    	FROM = { tag = U89 }
+		U89 = {
+			has_wartaxes = yes
+			has_government_power = {
+				mechanic_type = anb_celestial_intervention
+				power_type = anb_celestial_intervention_1
+				value = 100
+			}
+		}
+    }
+
+	trigger = {
+		hidden_trigger = {
+			U89 = {
+				has_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = 100
+				}
+			}
+			owner = {
+				NOT = {
+					has_country_modifier = celestial_delegation_prosperity
+				}
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			U89 = {
+				add_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = -100
+				}
+			}
+			owner = {
+				add_country_modifier = {
+					name = celestial_delegation_prosperity
+					duration = 3650
+				}
+				country_event = {
+					id = celestial_delegation.3
+				}
+			}
+		}
+	}
+	tooltip = celestial_delegation_prosperity_tt
+}
+
+custom_button = {
+    name = celestial_delegation_button_4
+    potential = {
+    	FROM = { tag = U89}
+		U89 = {
+			has_wartaxes = yes
+			has_government_power = {
+				mechanic_type = anb_celestial_intervention
+				power_type = anb_celestial_intervention_1
+				value = 50
+			}
+		}
+    }
+
+	trigger = {
+		hidden_trigger = {
+			U89 = {
+				has_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = 50
+				}
+			}
+			NOT = {
+				has_province_modifier = celestial_delegation_abundance
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			U89 = {
+				add_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = -50
+				}
+			}
+			add_province_modifier = {
+				name = celestial_delegation_abundance
+				duration = 3650
+			}
+			province_event = {
+				id = celestial_delegation.4
+			}
+		}
+	}
+	tooltip = celestial_delegation_abundance_tt
+}
+
+custom_button = {
+    name = celestial_delegation_button_5
+    potential = {
+    	FROM = { tag = U89}
+		U89 = {
+			has_wartaxes = yes
+			has_government_power = {
+				mechanic_type = anb_celestial_intervention
+				power_type = anb_celestial_intervention_1
+				value = 50
+			}
+		}
+    }
+
+	trigger = {
+		hidden_trigger = {
+			U89 = {
+				has_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = 50
+				}
+			}
+			NOT = {
+				has_province_modifier = celestial_delegation_pestilence
+			}
+			base_tax = 3
+			base_production = 3
+			base_manpower = 3
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			U89 = {
+				add_government_power = {
+					mechanic_type = anb_celestial_intervention
+					power_type = anb_celestial_intervention_1
+					value = -50
+				}
+			}
+			add_province_modifier = {
+				name = celestial_delegation_pestilence
+				duration = 3650
+			}
+			province_event = {
+				id = celestial_delegation.5
+			}
+		}
+	}
+	tooltip = celestial_delegation_pestilence_tt
+}
+
+#Fun stuff
+custom_button = {
+	name = fun_time_1
+	tooltip = fun_time_1_tt
+	potential = {
+		FROM = { tag = U89}
+		U89 = {
+			has_wartaxes = yes
+		} 
+	}
+	trigger = { }
+	effect = { 
+		hidden_effect = {
+			owner = {
+				save_global_event_target_as = banishment_vote_1
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = fun_time_2
+	tooltip = fun_time_2_tt
+	potential = {
+		FROM = { tag = U89}
+		U89 = {
+			has_wartaxes = yes
+		} 
+	}
+	trigger = { }
+	effect = { 
+		hidden_effect = {
+			owner = {
+				save_global_event_target_as = banishment_vote_2
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = fun_time_3
+	tooltip = fun_time_3_tt
+	potential = {
+		FROM = { tag = U89}
+		U89 = {
+			has_wartaxes = yes
+		} 
+	}
+	trigger = { }
+	effect = { 
+		hidden_effect = {
+			owner = {
+				save_global_event_target_as = banishment_vote_3
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = fun_time_4
+	tooltip = fun_time_4_tt
+	potential = {
+		FROM = { tag = U89}
+		U89 = {
+			has_wartaxes = yes
+		} 
+	}
+	trigger = { }
+	effect = { 
+		hidden_effect = {
+			owner = {
+				save_global_event_target_as = banishment_vote_4
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = fun_time_5
+	tooltip = fun_time_5_tt
+	potential = {
+		FROM = { tag = U89}
+		U89 = {
+			has_wartaxes = yes
+		}
+	}
+	trigger = { }
+	effect = { 
+		hidden_effect = {
+			owner = {
+				save_global_event_target_as = banishment_vote_5
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = start_fun_time
+	tooltip = start_fun_time_tt
+	potential = {
+		tag = U89
+		artifice_invention_has_any_menu_open = no NOT = { has_country_flag = gacha_open_menu_flag }
+	}
+	trigger = { }
+	effect = { 
+		hidden_effect = {
+			every_country = {
+				limit = {
+					ai = no
+				}
+				country_event = {
+					id = banishment.1
+				}
+			}
+		}
+	}
+}
+custom_button = {
+	name = count_fun_time
+	tooltip = count_fun_time_tt
+	potential = {
+		tag = U89
+		artifice_invention_has_any_menu_open = no NOT = { has_country_flag = gacha_open_menu_flag }
+	}
+	trigger = { }
+	effect = { 
+		hidden_effect = {
+			country_event = {
+				id = banishment.2
+			}
+		}
+	}
+}
+custom_button = {
+	name = end_fun_time
+	tooltip = end_fun_time_tt
+	potential = {
+		tag = U89
+		artifice_invention_has_any_menu_open = no NOT = { has_country_flag = gacha_open_menu_flag }
+	}
+	trigger = { }
+	effect = { 
+		hidden_effect = {
+			event_target:banishment_banished_one = {
+				country_event = {
+					id = banishment.5
+				}
+			}
+		}
+	}
+}

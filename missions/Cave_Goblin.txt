@@ -697,7 +697,7 @@ cave_goblin_warband_column_3 = {
 									has_terrain = dwarven_hold_surface
 								}
 							}
-							NOT = { religion = goblinic_shamanism }
+							NOT = { religion = ROOT }
 							NOT = { dwarovar_goblin_culture = yes }
 						}
 					}
@@ -719,7 +719,7 @@ cave_goblin_warband_column_3 = {
 						set_capital = PREV
 					}
 					change_culture = ROOT
-					change_religion = goblinic_shamanism
+					change_religion = ROOT
 				}
 			}
 		}

@@ -1,0 +1,9 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_occult_ideas"
+		texturefile = "gfx//interface//ideas_EU4//idea_occult_ideas.dds"
+		noOfFrames = 1
+
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

@@ -11,7 +11,7 @@ base_tax = 10
 base_production = 8
 base_manpower = 5
 
-trade_goods = grain	#Arawkelin despite being having a big city is still quite rural, so their MT will contain changing their trade goods
+trade_goods = grain	#AruWukelin despite being having a big city is still quite rural, so their MT will contain changing their trade goods
 
 capital = ""
 

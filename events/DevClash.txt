@@ -1,0 +1,667 @@
+namespace = dev_clash_census
+
+# Countries
+country_event = {
+	id = dev_clash_census.1
+	title = dev_clash_census.1.t
+	desc = dev_clash_census.1.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+		owns = 8
+	}
+	
+	option = {
+		name = dev_clash_census.1.a
+		ai_chance = { factor = 1 }
+
+		# Assign initial values
+		random_country = {
+			limit = {
+				ai = no
+				NOT = {
+					tag = U89
+				}
+			}
+
+			save_global_event_target_as = clash_most_discipline_target
+			save_global_event_target_as = clash_most_income_target
+			save_global_event_target_as = clash_most_not_income_target
+			save_global_event_target_as = clash_most_army_target
+			save_global_event_target_as = clash_most_navy_target
+			save_global_event_target_as = clash_most_inflation_target
+			save_global_event_target_as = clash_most_corruption_target
+
+			export_to_variable = {
+				which = clash_most_discipline_var
+				value = modifier:discipline
+			}
+			export_to_variable = {
+				which = clash_most_army_var
+				value = army_size
+			}
+			export_to_variable = {
+				which = clash_most_navy_var
+				value = navy_size
+			}
+			export_to_variable = {
+				which = clash_most_inflation_var
+				value = inflation
+			}
+			export_to_variable = {
+				which = clash_most_corruption_var
+				value = corruption
+			}
+			export_to_variable = {
+				which = clash_dev_var
+				value = total_development
+			}
+			export_to_variable = {
+				which = clash_dev_income_var
+				value = monthly_income
+			}
+			divide_variable = {
+				which = clash_dev_income_var
+				which = clash_dev_var
+			}
+			set_variable = {
+				which = clash_dev_income_low_var
+				which = clash_dev_income_var
+			}
+
+			ROOT = {
+				set_variable = { which = clash_most_discipline_var which = PREV }
+				set_variable = { which = clash_most_army_var which = PREV }
+				set_variable = { which = clash_most_navy_var which = PREV }
+				set_variable = { which = clash_dev_income_var which = PREV }
+				set_variable = { which = clash_dev_income_low_var which = PREV }
+				set_variable = { which = clash_most_corruption_var which = PREV }
+				set_variable = { which = clash_most_inflation_var which = PREV }
+			}
+		}
+
+		# Calc loop
+		every_country = {
+			limit = {
+				ai = no
+				NOT = {
+					tag = U89
+				}
+			}
+
+			export_to_variable = {
+				which = clash_most_discipline_var_tmp
+				value = modifier:discipline
+			}
+			export_to_variable = {
+				which = clash_most_army_var_tmp
+				value = army_size
+			}
+			export_to_variable = {
+				which = clash_most_navy_var_tmp
+				value = navy_size
+			}
+			export_to_variable = {
+				which = clash_most_inflation_var_tmp
+				value = inflation
+			}
+			export_to_variable = {
+				which = clash_most_corruption_var_tmp
+				value = corruption
+			}
+			export_to_variable = {
+				which = clash_dev_income_var_tmp
+				value = monthly_income
+			}
+			export_to_variable = {
+				which = clash_dev_var_tmp
+				value = total_development
+			}
+			divide_variable = {
+				which = clash_dev_income_var_tmp
+				which = clash_dev_var_tmp
+			}
+
+			ROOT = {
+				set_variable = { which = clash_most_discipline_var_tmp which = PREV }
+				set_variable = { which = clash_most_army_var_tmp which = PREV }
+				set_variable = { which = clash_most_navy_var_tmp which = PREV }
+				set_variable = { which = clash_most_inflation_var_tmp which = PREV }
+				set_variable = { which = clash_most_corruption_var_tmp which = PREV }
+				set_variable = { which = clash_dev_income_var_tmp which = PREV }
+
+				if = {
+					limit = {
+						check_variable = {
+							which = clash_most_discipline_var_tmp
+							which = clash_most_discipline_var
+						}
+					}
+					set_variable = {
+						which = clash_most_discipline_var
+						which = clash_most_discipline_var_tmp
+					}
+					PREV = { save_global_event_target_as = clash_most_discipline_target }
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = clash_most_inflation_var_tmp
+							which = clash_most_inflation_var
+						}
+					}
+					set_variable = {
+						which = clash_most_inflation_var
+						which = clash_most_inflation_var_tmp
+					}
+					PREV = { save_global_event_target_as = clash_most_inflation_target }
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = clash_most_corruption_var_tmp
+							which = clash_most_corruption_var
+						}
+					}
+					set_variable = {
+						which = clash_most_corruption_var
+						which = clash_most_corruption_var_tmp
+					}
+					PREV = { save_global_event_target_as = clash_most_corruption_target }
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = clash_dev_income_var_tmp
+							which = clash_dev_income_var
+						}
+					}
+					set_variable = {
+						which = clash_dev_income_var
+						which = clash_dev_income_var_tmp
+					}
+					PREV = { save_global_event_target_as = clash_most_income_target }
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = clash_dev_income_var_tmp
+								which = clash_dev_income_var_low
+							}
+						}
+					}
+					set_variable = {
+						which = clash_dev_income_var_low
+						which = clash_dev_income_var_tmp
+					}
+					PREV = { save_global_event_target_as = clash_most_not_income_target }
+				}
+				if = {
+					limit = {
+						PREV = { army_size = event_target:clash_most_army_target }
+					}
+					set_variable = {
+						which = clash_most_army_var
+						which = clash_most_army_var_tmp
+					}
+					PREV = { save_global_event_target_as = clash_most_army_target }
+				}
+				if = {
+					limit = {
+						PREV = { navy_size = event_target:clash_most_navy_target }
+					}
+					set_variable = {
+						which = clash_most_navy_var
+						which = clash_most_navy_var_tmp
+					}
+					PREV = { save_global_event_target_as = clash_most_navy_targett }
+				}
+			}
+		}
+
+		event_target:clash_most_discipline_target = {
+			add_country_modifier = {
+				name = clash_most_discipline_modifier
+				duration = 1825
+			}
+		}
+		event_target:clash_most_income_target = {
+			add_country_modifier = {
+				name = clash_most_most_income_modifier
+				duration = 1825
+			}
+		}
+		event_target:clash_most_not_income_target = {
+			add_country_modifier = {
+				name = clash_most_not_income_modifier
+				duration = 1825
+			}
+		}
+		event_target:clash_most_army_target = {
+			add_country_modifier = {
+				name = clash_most_army_modifier
+				duration = 1825
+			}
+		}
+		event_target:clash_most_navy_target = {
+			add_country_modifier = {
+				name = clash_most_navy_modifier
+				duration = 1825
+			}
+		}
+		event_target:clash_most_inflation_target = {
+			add_country_modifier = {
+				name = clash_most_inflation_modifier
+				duration = 1825
+			}
+		}
+		event_target:clash_most_corruption_target = {
+			if = {
+				limit = {
+					corruption = 20
+				}
+
+				add_corruption = -2
+			} else = {
+				add_corruption = -1
+			}
+		}
+		
+		every_country = {
+			limit = {
+				ai = no
+			}
+
+			country_event = {
+				id = dev_clash_census.2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dev_clash_census.2
+	title = dev_clash_census.2.t
+	desc = dev_clash_census.2.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		ai = no
+	}
+	
+	option = {
+		name = dev_clash_census.2.a
+		ai_chance = { factor = 1 }
+
+		tooltip = {
+			event_target:clash_most_discipline_target = {
+				add_country_modifier = {
+					name = clash_most_discipline_modifier
+					duration = 1825
+				}
+			}
+			event_target:clash_most_income_target = {
+				add_country_modifier = {
+					name = clash_most_most_income_modifier
+					duration = 1825
+				}
+			}
+			event_target:clash_most_not_income_target = {
+				add_country_modifier = {
+					name = clash_most_not_income_modifier
+					duration = 1825
+				}
+			}
+			event_target:clash_most_army_target = {
+				add_country_modifier = {
+					name = clash_most_army_modifier
+					duration = 1825
+				}
+			}
+			event_target:clash_most_navy_target = {
+				add_country_modifier = {
+					name = clash_most_navy_modifier
+					duration = 1825
+				}
+			}
+			event_target:clash_most_inflation_target = {
+				add_country_modifier = {
+					name = clash_most_inflation_modifier
+					duration = 1825
+				}
+			}
+			event_target:clash_most_corruption_target = {
+				if = {
+					limit = {
+						corruption = 20
+					}
+	
+					add_corruption = -2
+				} else = {
+					add_corruption = -1
+				}
+			}
+		}
+	}
+}
+
+# Provinces
+country_event = {
+	id = dev_clash_census.3
+	title = dev_clash_census.3.t
+	desc = dev_clash_census.3.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+		owns = 8
+	}
+	
+	option = {
+		name = dev_clash_census.3.a
+		ai_chance = { factor = 1 }
+
+		# Assign initial values
+		random_province = {
+			limit = {
+				owner = { ai = no NOT = { tag = U89 } } 
+				is_city = yes
+				NOT = { province_group = hold_province } 
+			}
+			save_global_event_target_as = clash_most_dev_target
+			save_global_event_target_as = clash_most_adm_dev_target
+			save_global_event_target_as = clash_most_dip_dev_target
+			save_global_event_target_as = clash_most_mil_dev_target
+
+			export_to_variable = {
+				which = clash_most_dev_var
+				value = development
+			}
+			export_to_variable = {
+				which = clash_most_adm_dev_var
+				value = base_tax
+			}
+			export_to_variable = {
+				which = clash_most_dip_dev_var
+				value = base_production
+			}
+			export_to_variable = {
+				which = clash_most_mil_dev_var
+				value = base_manpower
+			}
+
+			ROOT = {
+				set_variable = { which = clash_most_dev_var which = PREV }
+				set_variable = { which = clash_most_adm_dev_target which = PREV }
+				set_variable = { which = clash_most_dip_dev_target which = PREV }
+				set_variable = { which = clash_most_mil_dev_target which = PREV }
+			}
+		}
+		random_province = {
+			limit = {
+				owner = { ai = no } 
+				is_city = yes
+				province_group = hold_province 
+				has_subterranean_race = yes
+				is_capital = yes
+			}
+
+			save_global_event_target_as = clash_least_hold_dev_target
+			export_to_variable = {
+				which = clash_least_hold_dev_var
+				value = development
+			}
+			ROOT = {
+				set_variable = { which = clash_least_hold_dev_var which = PREV }
+			}
+		}
+
+		# Fallback for hold if no player has it cause blah blah blah blah
+		if = {
+			limit = { NOT = { has_saved_global_event_target = clash_least_hold_dev_target } }
+			random_province = {
+				limit = {
+					is_city = yes
+					province_group = hold_province 
+				}
+	
+				save_global_event_target_as = clash_least_hold_dev_target
+				export_to_variable = {
+					which = clash_least_hold_dev_var
+					value = development
+				}
+				ROOT = {
+					set_variable = { which = clash_least_hold_dev_var which = PREV }
+				}
+			}
+		}
+
+		# Calc loop
+		every_country = {
+			limit = {
+				ai = no
+				NOT = {
+					tag = U89
+				}
+			}
+
+			every_owned_province = {
+				limit = {
+					is_city = yes
+					NOT = { province_group = hold_province }
+				}
+				export_to_variable = {
+					which = clash_most_dev_var_tmp
+					value = development
+				}
+				export_to_variable = {
+					which = clash_most_adm_dev_var_tmp
+					value = base_tax
+				}
+				export_to_variable = {
+					which = clash_most_dip_dev_var_tmp
+					value = base_production
+				}
+				export_to_variable = {
+					which = clash_most_mil_dev_var_tmp
+					value = base_manpower
+				}
+
+				ROOT = {
+					set_variable = { which = clash_most_dev_var_tmp which = PREV }
+					set_variable = { which = clash_most_adm_dev_var_tmp which = PREV }
+					set_variable = { which = clash_most_dip_dev_var_tmp which = PREV }
+					set_variable = { which = clash_most_mil_dev_var_tmp which = PREV }
+
+					if = {
+						limit = {
+							check_variable = {
+								which = clash_most_dev_var_tmp
+								which = clash_most_dev_var
+							}
+						}
+						set_variable = {
+							which = clash_most_dev_var
+							which = clash_most_dev_var_tmp
+						}
+						PREV = { save_global_event_target_as = clash_most_dev_target }
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = clash_most_adm_dev_var_tmp
+								which = clash_most_adm_dev_var
+							}
+						}
+						set_variable = {
+							which = clash_most_adm_dev_var
+							which = clash_most_adm_dev_var_tmp
+						}
+						PREV = { save_global_event_target_as = clash_most_adm_dev_target }
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = clash_most_dip_dev_var_tmp
+								which = clash_most_dip_dev_var
+							}
+						}
+						set_variable = {
+							which = clash_most_dip_dev_var
+							which = clash_most_dip_dev_var_tmp
+						}
+						PREV = { save_global_event_target_as = clash_most_dip_dev_target }
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = clash_most_mil_dev_var_tmp
+								which = clash_most_mil_dev_var
+							}
+						}
+						set_variable = {
+							which = clash_most_mil_dev_var
+							which = clash_most_mil_dev_var_tmp
+						}
+						PREV = { save_global_event_target_as = clash_most_mil_dev_target }
+					}
+				}
+			}
+
+			every_owned_province = {
+				limit = {
+					is_city = yes
+					province_group = hold_province
+					has_subterranean_race = yes
+					# Could rescope to capital probably
+					is_capital = yes
+				}
+
+				export_to_variable = {
+					which = clash_least_hold_dev_var_tmp
+					value = development
+				}
+
+				ROOT = {
+					set_variable = { which = clash_least_hold_dev_var_tmp which = PREV }
+
+					if = {
+						limit = {
+							NOT = {
+								check_variable = {
+									which = clash_least_hold_dev_var_tmp
+									which = clash_least_hold_dev_var
+								}
+							}
+						}
+						set_variable = {
+							which = clash_least_hold_dev_var
+							which = clash_least_hold_dev_var_tmp
+						}
+						PREV = { save_global_event_target_as = clash_least_hold_dev_target }
+					}
+				}
+			}
+		}
+
+		event_target:clash_most_dev_target = {
+			add_permanent_province_modifier = {
+				name = clash_most_dev
+				duration = 1825
+			}
+		}
+		event_target:clash_most_adm_dev_target = {
+			add_permanent_province_modifier = {
+				name = clash_most_adm_dev
+				duration = 1825
+			}
+		}
+		event_target:clash_most_dip_dev_target = {
+			add_permanent_province_modifier = {
+				name = clash_most_dip_dev
+				duration = 1825
+			}
+		}
+		event_target:clash_most_mil_dev_target = {
+			add_permanent_province_modifier = {
+				name = clash_most_mil_dev
+				duration = 1825
+			}
+		}
+		event_target:clash_least_hold_dev_target = {
+			add_devastation = -100
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+
+		every_country = {
+			limit = {
+				ai = no
+			}
+
+			country_event = {
+				id = dev_clash_census.4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dev_clash_census.4
+	title = dev_clash_census.4.t
+	desc = dev_clash_census.4.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		ai = no
+	}
+	
+	option = {
+		name = dev_clash_census.4.a
+		ai_chance = { factor = 1 }
+
+		tooltip = {
+			event_target:clash_most_dev_target = {
+				add_permanent_province_modifier = {
+					name = clash_most_dev_2
+					duration = 1825
+				}
+			}
+			event_target:clash_most_adm_dev_target = {
+				add_permanent_province_modifier = {
+					name = clash_most_adm_dev_2
+					duration = 1825
+				}
+			}
+			event_target:clash_most_dip_dev_target = {
+				add_permanent_province_modifier = {
+					name = clash_most_dip_dev_2
+					duration = 1825
+				}
+			}
+			event_target:clash_most_mil_dev_target = {
+				add_permanent_province_modifier = {
+					name = clash_most_mil_dev_2
+					duration = 1825
+				}
+			}
+			event_target:clash_least_hold_dev_target = {
+				add_devastation = -100
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+}

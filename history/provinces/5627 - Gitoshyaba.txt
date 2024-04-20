@@ -1,8 +1,7 @@
 # No previous file for Nakhchivan
 
-owner = S12
-controller = S12
-add_core = S12
+owner = S37
+controller = S37
 add_core = S37
 culture = tanizu
 religion = beast_memory

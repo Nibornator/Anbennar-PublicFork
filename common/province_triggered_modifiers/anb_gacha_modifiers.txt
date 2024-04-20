@@ -1,0 +1,20 @@
+#PTM for randomness
+gacha_randomness_ptm = {
+	potential = {
+		always = yes
+	}
+
+	trigger ={
+
+	}
+
+	on_activation = {
+		owner = {
+			country_event = { id = gacha.1 }
+		}
+	}
+
+	on_deactivation = {
+		
+	}
+}

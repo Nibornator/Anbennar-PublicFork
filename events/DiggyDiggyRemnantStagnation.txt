@@ -827,7 +827,7 @@ country_event = {
 
 
 ################
-## AI DEBUG
+## AI DEBUG shit
 ################
 
 #Ai stoopid

@@ -7,12 +7,13 @@ primary_culture = crownsman
 religion = regent_court
 technology_group = tech_cannorian
 capital = 787
+historical_friend = A32
 
 1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
 
 1438.3.10 = {
 	monarch = {
-		name = "Reán síl na Arasùil"
+		name = "Abaddon síl na Arasùil"
 		birth_date = 1405.1.20
 		adm = 6
 		dip = 4

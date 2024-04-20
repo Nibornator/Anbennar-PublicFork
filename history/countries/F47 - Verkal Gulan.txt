@@ -8,6 +8,13 @@ religion = ancestor_worship
 technology_group = tech_dwarven
 capital = 2914
 fixed_capital = 2914
+historical_friend = L55
+middle_dwarovar_region = {
+	discover_country = ROOT
+}
+telekenid_region = {
+	discover_country = ROOT
+}
 
 1000.1.1 = { 
 	set_estate_privilege = estate_mages_organization_state
@@ -28,7 +35,7 @@ fixed_capital = 2914
 
 1421.1.19 = {
 	monarch = {
-		name = "Urothr"
+		name = "Merlino"
 		dynasty = "of the Gate"
 		birth_date = 1392.3.15
 		adm = 4
@@ -38,7 +45,7 @@ fixed_capital = 2914
 	
 	add_ruler_personality = strict_personality
 	add_ruler_personality = cruel_personality
-	set_ruler_flag = long_lived_ruler
+	set_ruler_flag = set_immortality
 	add_government_reform = presidential_despot_reform
 	if = {
 		limit = { has_dlc = "Leviathan" }

@@ -14,17 +14,6 @@ country_event = {
 	
 	trigger = {
 		tag = U06
-		U06 = {	is_subject_of = A47 }
-		is_at_war = no
-		is_year = 1458
-		NOT = { is_year = 1465 }
-		NOT = { has_global_flag = prince_of_khasa_deshak }
-		NOT = {
-			exists = F57
-		}
-		U07 = {
-			owns_or_subject_of = 400
-		}
 	}
 	
 	immediate = {
@@ -40,33 +29,8 @@ country_event = {
 	
 	option = { #Reject his offer
 		name = akasik_flavour.1.a
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 2
-				has_opinion = {
-					who = A47
-					value = 100
-				}
-			}
-			modifier = {
-				factor = 2.5
-				A47 = { ai = yes }
-			}
-			modifier = {
-				factor = 0.5
-				army_size_percentage = 0.75
-			}
-			modifier = {
-				factor = 0.1
-				NOT = {
-					has_opinion = {
-						who = A47
-						value = 80
-					}
-				}
-				A47 = { ai = no }
-			}
+		trigger = {
+			ai = no
 		}
 		U07 = {
 			country_event = {
@@ -91,45 +55,14 @@ country_event = {
 		}
 	}
 	
-	option = { #Hail to the King
+	option = { #Hail to the QUEEN
 		name = akasik_flavour.1.b
-		ai_chance = {
-			factor = 40
-			modifier = {
-				factor = 0.1
-				has_opinion = {
-					who = A47
-					value = 150
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = {
-					has_opinion = {
-						who = A47
-						value = 100
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				liberty_desire = 50
-			} 
-			modifier = {
-				factor = 0.5
-				NOT = { army_size_percentage = 0.75 }
-			}
-			modifier = {
-				factor = 0.1
-				A47 = { ai = yes }
-			}
-		}
 		declare_war_with_cb = {
 			who = A47
 			casus_belli = cb_independence_war
 		}
 		define_ruler = {
-			name = "Bashal I"
+			name = "Amanda I"
 			dynasty = "Keskhasa"
 			culture = khasani
 			religion = mother_akasik
@@ -138,6 +71,14 @@ country_event = {
 			mil = 6
 			age = 20
 			claim = 50
+			female = yes
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = akan_general
+				duration = -1
+				hidden = yes
+			}
 		}
 		define_ruler_to_general = {
 			fire = 2
@@ -177,7 +118,10 @@ country_event = {
 	option = { #Grant him his estate
 		name = akasik_flavour.1.c
 		ai_chance = { factor = 1 }
-		trigger = { owns_core_province = 383 }
+		trigger = { 
+			owns_core_province = 383 
+			ai = no
+		}
 		custom_tooltip = keskhasa_estate
 		383 = {
 			cede_province = F57
@@ -185,7 +129,7 @@ country_event = {
 		}
 		F57 = {
 			define_ruler = {
-				name = "Bashal I"
+				name = "Amanda I"
 				dynasty = "Keskhasa"
 				culture = khasani
 				religion = mother_akasik
@@ -194,13 +138,22 @@ country_event = {
 				mil = 6
 				age = 20
 				claim = 95
+				female = yes
 			}
 			add_ruler_personality = inspiring_leader_personality
 			add_historical_friend = U06
+			add_historical_friend = F23
 			hidden_effect = {
 				country_event = {
 					id = akasik_flavour.4
 					days = 7
+				}
+			}
+			hidden_effect = {
+				add_country_modifier = {
+					name = akan_general
+					duration = -1
+					hidden = yes
 				}
 			}
 		}
@@ -214,6 +167,7 @@ country_event = {
 			}
 		}
 		U06 = { add_historical_friend = F57 }
+		F23 = { add_historical_friend = F57 }
 		hidden_effect = {
 			A47 = {
 				country_event = {
@@ -393,7 +347,7 @@ country_event = {
 						size = 1
 						culture = khasani
 						religion = mother_akasik
-						leader = "Bashal"
+						leader = "Amanda"
 						leader_dynasty = "Keskhasa"
 						win = yes
 					}
@@ -408,7 +362,7 @@ country_event = {
 						size = 1
 						culture = khasani
 						religion = mother_akasik
-						leader = "Bashal"
+						leader = "Amanda"
 						leader_dynasty = "Keskhasa"
 						win = yes
 					}
@@ -457,8 +411,9 @@ country_event = {
 					size = 1
 					culture = khasani
 					religion = mother_akasik
-					leader = "Bashal"
+					leader = "Amanda"
 					leader_dynasty = "Keskhasa"
+					female = yes
 					win = yes
 				}
 			}
@@ -644,7 +599,7 @@ country_event = {
 	
 	immediate = {
 		define_ruler = {
-			name = "Bashal I"
+			name = "Amanda I"
 			dynasty = "Keskhasa"
 			culture = khasani
 			religion = mother_akasik
@@ -653,6 +608,7 @@ country_event = {
 			mil = 6
 			age = 20
 			claim = 95
+			female = yes
 		}
 	}
 	
@@ -674,6 +630,7 @@ country_event = {
 			manuever = 4
 			siege = 3
 		}
+		convert_female_ruler_to_general = yes
 		hidden_effect = {
 			U06 = {
 				country_event = {

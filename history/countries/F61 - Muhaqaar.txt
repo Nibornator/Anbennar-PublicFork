@@ -5,6 +5,7 @@ government_rank = 1
 primary_culture = tijarikheti
 religion = elikhetist
 technology_group = tech_salahadesi
+historical_friend = L13
 
 capital = 5483
 
@@ -12,7 +13,7 @@ capital = 5483
 
 1433.1.10 = {
 	monarch = {
-		name = "Menes"
+		name = "Druplesnubb"
 		birth_date = 1413.9.4
 		adm = 3
 		dip = 5

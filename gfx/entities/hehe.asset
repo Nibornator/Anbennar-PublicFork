@@ -1,0 +1,116 @@
+###################################################################################################################
+#####                                                   INFANTRY                                              #####
+###################################################################################################################
+
+entity = {
+	name = "VILLAGER_INFANTRY_1"
+	pdxmesh = "VILLAGER_INFANTRYu_1"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+
+	attach = { 
+		Right_hand_node = "muslim_spear" 
+	}
+}
+
+entity = {
+	name = "VILLAGER_INFANTRY_2"
+	pdxmesh = "VILLAGER_INFANTRYu_2"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+
+	attach = { 
+		Left_hand_node = "muslim_rifle_02" 
+	}
+}
+
+entity = {
+	name = "VILLAGER_INFANTRY_3"
+	pdxmesh = "VILLAGER_INFANTRYu_3"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+
+	attach = { 
+		Left_hand_node = "muslim_rifle_03" 
+	}
+}
+
+entity = {
+	name = "VILLAGER_INFANTRY_4"
+	pdxmesh = "VILLAGER_INFANTRYu_4"
+
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+
+	attach = { 
+		Left_hand_node = "muslim_rifle_03" 
+	}
+}
+
+###################################################################################################################
+#####                                                   ARTILLERY                                             #####
+###################################################################################################################
+
+entity = {
+	name = "VILLAGER_ARTILLERY_1"
+	pdxmesh = "artillery_base_mesh_large"
+
+	state = { name = "attack"		animation = "artillery_base_attack" }
+	state = { name = "idle" 		animation = "artillery_base_idle" }
+	#state = { name = "death" 		animation = "artillery_base_idle" }
+	state = { name = "walk" 		animation = "artillery_base_moving" }
+	state = { name = "retreat" 		animation = "artillery_base_moving" }
+	
+	attach = { 
+		name = "gunman"
+		infantry_node = "VILLAGER_INFANTRY_1" 
+		cannon_node = "indiangfx_ARTILLERY_1_cannon" 
+	}
+}
+
+entity = {
+	clone = "VILLAGER_ARTILLERY_1"
+	name = "VILLAGER_ARTILLERY_2"
+	attach = {
+		name = "gunman"
+		infantry_node = "VILLAGER_INFANTRY_2" 
+		cannon_node = "indiangfx_ARTILLERY_1_cannon" 
+	}
+}
+
+
+entity = {
+	clone = "VILLAGER_ARTILLERY_1"
+	name = "VILLAGER_ARTILLERY_3"
+	attach = {
+		name = "gunman"
+		infantry_node = "VILLAGER_INFANTRY_3" 
+		cannon_node = "indiangfx_ARTILLERY_1_cannon" 
+	}
+}
+
+
+entity = {
+	clone = "VILLAGER_ARTILLERY_1"
+	name = "VILLAGER_ARTILLERY_4"
+	attach = {
+		name = "gunman"
+		infantry_node = "VILLAGER_INFANTRY_4" 
+		cannon_node = "indiangfx_ARTILLERY_1_cannon" 
+	}
+}

@@ -11,10 +11,22 @@ mercantilism = 25
 historical_rival = U14 #Mountainhuggers
 historical_rival = U18 #Re'uyel
 historical_friend = U17 #Crathanor
+historical_friend = U06
 
 1000.1.1 = { 
 	set_estate_privilege = estate_mages_organization_state 
 	set_country_flag = ancestor_worship_knows_balgar
 	set_country_flag = ancestor_worship_knows_murri
 	set_country_flag = ancestor_worship_knows_krummul
+}
+
+1441.2.20 = {
+	monarch = {
+		name = "Susurrus"
+		dynasty = "Cowloved"
+		birth_date = 1400.11.11
+		adm = 3
+		dip = 3
+		mil = 4
+	}
 }

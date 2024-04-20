@@ -8,6 +8,11 @@ religion = high_philosophy
 technology_group = tech_raheni
 religious_school = unbroken_claw_school
 capital = 4465
+historical_friend = R63
+historical_friend = R66
+jade_mines_region = {
+	discover_country = ROOT
+}
 
 1000.1.1 = { 
 	set_estate_privilege = estate_mages_organization_state 
@@ -19,7 +24,7 @@ capital = 4465
 
 1444.1.1 = {
 	monarch = {
-		name = "Jamma II"
+		name = "Civi IV Ever"
 		dynasty = "Pirvand"
 		birth_date = 1383.4.21
 		adm = 4

@@ -27,4 +27,7 @@ latent_trade_goods = {
 	coal
 }
 
-center_of_trade = 1
+add_province_modifier = {
+	name = ogre_divine_intervention
+	duration = 9125
+}

@@ -95,9 +95,10 @@ country_event = {
 			}
 			upper_suran_area = {
 				limit = { owned_by = F29 }
-				cede_province = F46
+				cede_province = F45
+				add_core = F45
 			}
-			create_vassal_with_religion_and_culture = { tag = F45 religion = bulwari_sun_cult culture = surani }
+			vassalize = F45
 			hidden_effect = {
 				F45 = {
 					define_ruler = {
@@ -503,23 +504,11 @@ country_event = {
 		#Sareyand declares war to reclaim its old land
 		if = {
 			limit = {
-				F45 = { owns = 636 } #Hasr
+				F45 = { owns = 636 }
 			}
 			F25 = {
 				declare_war_with_cb = {
 					who = F45
-					casus_belli = cb_core
-					war_goal_province = 636
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				F87 = { owns = 636 } #Panuses
-			}
-			F25 = {
-				declare_war_with_cb = {
-					who = F87
 					casus_belli = cb_core
 					war_goal_province = 636
 				}

@@ -341,7 +341,7 @@ country_event = {
 	id = black_demesne.3
 	title = black_demesne.3.t
 	desc = black_demesne.3.d
-	picture = BAD_WITH_MONARCH_eventPicture
+	picture = APOSTLE_eventPicture
 	
 	is_triggered_only = yes
 	

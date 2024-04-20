@@ -7079,6 +7079,22 @@
  local_rule_desc:0 "Assigning administrative responsibilities to local bureaucrats allows us to cut down on much of the bureaucratic red tape that is involved in overseeing local affairs."
  rightful_conquest:0 "Rightful Conquest"
  rightful_conquest_desc:0 "By right of noble royalty, the lands around our domain belong to our illustrious family. None shall deny our birthright to be the rulers of our domain!"
+ occult_ideas:0 "Occult Ideas"
+ occult_ideas_bonus:0 "Full Occult Focus"
+ dusk_antediluvian:0 "Dusk Of The Antediluvian"
+ dusk_antediluvian_desc:0 "Our best and brightest all agree; the old era has ended, but a new age has not yet come. Something lurks at the edge of our vision, flitting between the cracks and fissures that line our reality. But we have seen it, and we cannot allow it to pass unheeded. The people will be trained and armed, and our allies will be informed of this incoming threat. Perhaps we can stand against it, if only we stand together.\n"
+ alkahest:0 "Alkahest"
+ alkahest_desc:0 "From the holes in reality drips sap. With careful hands and gentle magic, that sap can be distilled. What is left is alkahest - a potent solvent, and a source of magic in and of itself. Though difficult to harness, the delicate processes involved has allowed our scientific capabilities to progress in leaps and bounds.\n"
+ metaphysicality:0 "Metaphysicality"
+ metaphysicality_desc:0 "The threat we are faced with is unreal, kept from our reality with woven seals entirely beyond our ability to understand. Though we cannot reinforce them, we can deduce the methods behind their creation, and mimic them to firmly anchor ourselves to our home plane. When catastrophe comes, we must be steadfast in our opposition. And if we fall? At least our bodies might be left behind.\n\nStatic Artificery Bonus: §G+10§!"
+ blood_covenant:0 "Blood Of The Covenant"
+ blood_covenant_desc:0 "We cannot stand against this calamity alone; that much is clear, and the rest of the world is slowly realising this. Even those who cannot see the cracks can tell something is amiss - that some kind of primal fear now lies just behind their consciousness. They may not be driven to join us outright, but the seed has already been planted. We simply need the right words to convince them.\n"
+ water_womb:0 "Water Of The Womb"
+ water_womb_desc:0 "When the outsiders breach our world, we must be led by the most competent individuals our nation can offer. If our weaker heirs and politicians are not prepared to stand aside, then we must make them, and we must have better people ready to take their place at a moment's notice.\n"
+ numerology:0 "Numerology"
+ numerology_desc:0 "Two. Four. Nineteen. Thirty-eight. Seventy-six. Three-hundred-sixty-one. Seven-hundred-twenty-two. One-thousand-one-hundred-eleven. Our nation's diviners dream of these numbers. Our scientists observe them in their calculations constantly. They hold a secret; a key, maybe, or an answer to a question we have not the knowledge to ask. The math, as it stands, doesn't add up, but the effort dedicated to understanding why is proving invaluable.\n"
+ afflatus:0 "Afflatus"
+ afflatus_desc:0 "It's almost here, we can feel it. We will defend Halann with those we trust, but there is no more time for kind words and subtle convincing. Those who do not stand alongside us now stand against us, and we have not the time to suffer their disobedience. Not anymore.\n\n§TUnlocking every Occult Idea inexorably chains your nation to the Prime Material, and just might swing the pendulum of fate in your favour...§!\n"
 
 
  #Policies#

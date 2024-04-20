@@ -2611,14 +2611,14 @@ domandrod_autumn_gate = {
 	
 	#what to do when it's built
 	on_built = {
-		3281 = {
+		1806 = {
 			add_canal = domandrod_autumn_gate
 		}
 	}
 	
 	#what to do when it's destroyed
 	on_destroyed = {
-		3281 = {
+		1806 = {
 			remove_canal = domandrod_autumn_gate
 		}
 	}

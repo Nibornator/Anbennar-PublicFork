@@ -380,6 +380,13 @@ custom_icon = {
     }
 }
 
+custom_icon = {
+    name = celestial_delegation_bg
+    potential = {
+    	has_reform = celestial_delegation_reform
+    }
+}
+
 custom_button = {
 	name = effelai_button_1
 	potential = {

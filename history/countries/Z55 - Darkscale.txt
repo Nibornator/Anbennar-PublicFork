@@ -7,13 +7,18 @@ primary_culture = darkscale_kobold
 religion = kobold_dragon_cult
 technology_group = tech_darkscale_kobold
 capital = 4024
-
-1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
+historical_friend = J32
+west_dwarovar_region = {
+	discover_country = ROOT
+}
+serpents_vale_region = {
+	discover_country = ROOT
+}
 
 1440.3.4 = {
 	monarch = {
-		name = "Zorën"
-		dynasty = "Darkscale"
+		name = "Bojnik"
+		dynasty = "Icescale"
 		birth_date = 1422.12.2
 		adm = 4
 		dip = 3

@@ -7,6 +7,7 @@ primary_culture = west_damerian
 religion = regent_court
 technology_group = tech_cannorian
 capital = 10 # Wesdam
+historical_friend = A84
 
 
 1000.1.1 = { 
@@ -18,7 +19,7 @@ capital = 10 # Wesdam
 
 1443.1.1 = {
 	monarch = {
-		name = "Regency for Laurens Silmuna"
+		name = "Regency for Labstein Silmuna"
 		adm = 1
 		dip = 1
 		mil = 1
@@ -37,8 +38,8 @@ capital = 10 # Wesdam
 		culture = high_lorentish
 	}
 	heir = {
-		name = "Laurens"
-		monarch_name = "Laurens III"
+		name = "Labstein"
+		monarch_name = "Labstein III"
 		dynasty = "Silmuna"
 		birth_date = 1438.3.15
 		death_date = 1499.7.1

@@ -7,13 +7,17 @@ primary_culture = stone_dwarf
 religion = regent_court
 technology_group = tech_dwarven
 capital = 854
+historical_friend = B17
+west_dwarovar_region = {
+	discover_country = ROOT
+}
 
 1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
 
 #Eranel's leader lore: dorf, respected balgarsmith. If being descended from Balgar is too wacky, the dynasty is just how good he is at building shit.
 1437.4.8 = {
 	monarch = {
-		name = "Kraig"
+		name = "Chronologic"
 		dynasty = "Balgarsblood"
 		adm = 5
 		dip = 1
@@ -23,5 +27,5 @@ capital = 854
 	
 	add_ruler_personality = lawgiver_personality
 	add_ruler_personality = naive_personality
-	set_ruler_flag = long_lived_ruler
+	set_ruler_flag = set_immortality
 }

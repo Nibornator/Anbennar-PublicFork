@@ -219,7 +219,7 @@ update_artifice_points = {
 								culture_group = dwarven
 								culture_group = goblin
 								culture_group = kobold
-								dwarovar_orc_culture_primary = yes
+								culture = black_orc
 								culture = mossmouth_ogre
 							}
 						}

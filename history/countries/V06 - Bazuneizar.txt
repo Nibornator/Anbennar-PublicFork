@@ -4,7 +4,7 @@ add_government_reform = steppe_horde
 government_rank = 1
 primary_culture = plateau_runsukhi
 religion = levaajan
-technology_group = tech_wastelander
+technology_group = tech_shuvuush
 capital = 5200
 
 

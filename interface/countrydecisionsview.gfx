@@ -160,6 +160,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_artifice_tab_icon"
 		texturefile = "gfx//interface//custom_gui//artificery//artificery_tab_icon.dds"
+		noOfFrames = 2
 		noOfFrames = 4
 	}
 	#Artifice Fake Button For Tooltip
@@ -195,6 +196,96 @@ spriteTypes = {
 		name = "inventions_menu_background_frames_middle"
 		texturefile = "gfx//interface//custom_gui//artificery//inventions_menu_background_frames_middle.dds"
 		noOfFrames = 4
+	}
+
+	#Dev Clash Stuff
+	#Background
+	spriteType = {
+		name = "gacha_bg_strip"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_bg_strip.dds"
+		noOfFrames = 3
+	}
+	#Left/Right Tabs
+	spriteType = {
+		name = "gacha_tab_left_right"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_tab_left_right.dds"
+		noOfFrames = 3
+	}
+	#Middle tabs
+	spriteType = {
+		name = "gacha_tab_middle"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_tab_middle.dds"
+		noOfFrames = 2
+	}
+	#Shield Frame
+	spriteType = {
+		name = "gacha_shield_big_frame"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_shield_big_frame.dds"
+	}
+	#General Button
+	spriteType = {
+		name = "gacha_button_general"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_button_general.dds"
+	}
+	#General Button2
+	spriteType = {
+		name = "gacha_button_general_wide"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_button_general_wide.dds"
+	}
+	spriteType = {
+		name = "egg_of_the_king_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//egg_of_the_king_icon.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "uncanny_onyx_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//uncanny_onyx_icon.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "gacha_item_3_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_item_3_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "gacha_item_4_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_item_4_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "gacha_item_5_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_item_5_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "gacha_item_6_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_item_6_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "gacha_item_7_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_item_7_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "gacha_item_8_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_item_8_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "gacha_item_9_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_item_9_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "gacha_item_10_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_item_10_icon.dds"
+		noOfFrames = 2
+	}
+	#Reliquary Button
+	spriteType = {
+		name = "gacha_reliquary_button"
+		texturefile = "gfx//interface//custom_gui//gacha//gacha_reliquary_button.dds"
 	}
 
 }

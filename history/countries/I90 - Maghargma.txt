@@ -7,12 +7,15 @@ add_government_reform = ogre_kingdom
 religion = feast_of_the_gods
 technology_group = tech_ogre
 capital = 5037
+historical_friend = H70
+west_dwarovar_region = {
+	discover_country = ROOT
+}
 
-1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
 
 1438.1.1 = {
 	monarch = {
-		name = "Ziltagh"
+		name = "Alpog"
 		dynasty = "Gravelhide"
 		birth_date = 1410.9.17
 		adm = 5
@@ -20,7 +23,7 @@ capital = 5037
 		mil = 6
 		
 		leader = {
-			name = "Ziltagh Gravelhide"	 # Name of the leader
+			name = "Alpog Gravelhide"	 # Name of the leader
 			type = general	   # Type of leader: general, admiral, explorer, conquistidor
 			fire = 2
 			shock = 5

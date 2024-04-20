@@ -11,12 +11,6 @@ objectTypes = {
 		file = "gfx/models/anbennar/monuments/balhyl.mesh"
 		scale = 0.6
 	}
-
-	pdxmesh = {
-		name = "dam_mesh"
-		file = "gfx/models/anbennar/monuments/dam.mesh"
-		scale = 1
-	}
 	
 	pdxmesh = {
 		name = "bd_tower_mesh"
@@ -203,5 +197,16 @@ objectTypes = {
 		name = "AzA_Fortress_mesh"
 		file = "gfx/models/anbennar/monuments/AsA_Fortress.mesh"
 		scale = 1.00
+	}
+	
+	pdxmesh = {
+		name = "Gate_Of_Hell_mesh"
+		file = "gfx/models/anbennar/monuments/Gate_To_Hell.mesh"
+		
+		animation = { id = "idle"	type = "Gate_Of_Hell_idle" }
+		
+		scale = 1.00
+		
+		cull_distance = 700.0f
 	}
 }

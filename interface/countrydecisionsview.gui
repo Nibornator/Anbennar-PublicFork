@@ -718,6 +718,1015 @@ guiTypes = {
 			scripted = yes
 			format = center
 		}
+		
+		#Gacha Stuff
+		#Menus Stuff(Background + Tabs)
+		iconType = {
+			name = "gacha_background"
+			position = { x = -7 y = -10 }
+			quadTextureSprite = "gacha_bg_strip"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "gacha_open_menu"
+			position = { x = 49 y = 340 }
+			quadTextureSprite = "gacha_button_general_wide"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		#Open Gacha textbox (In decisions menu)
+		instantTextBoxType= {
+			position = { x = -22 y = 345 }
+			name = "gacha_open"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+			scripted = yes
+			format = center
+		}
+		guiButtonType = {
+			name = "gacha_roll_rewards"
+			position = { x = 20 y = 420 }
+			quadTextureSprite = "gacha_button_general"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "start_fun_time"
+			position = { x = 20 y = 390 }
+			quadTextureSprite = "gacha_button_general"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "count_fun_time"
+			position = { x = 150 y = 450 }
+			quadTextureSprite = "gacha_button_general"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "end_fun_time"
+			position = { x = 150 y = 390 }
+			quadTextureSprite = "gacha_button_general"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "gacha_close_menu"
+			position = { x = 203 y = 845 }
+			quadTextureSprite = "GFX_artificery_close_inventions_menu"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+			shortcut = "ESCAPE"
+		}
+		guiButtonType = {
+			name = "gacha_left_tab"
+			position = { x = 8 y = 183 }
+			quadTextureSprite = "gacha_tab_left_right"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "gacha_middle_tab"
+			position = { x = 186 y = 183 }
+			quadTextureSprite = "gacha_tab_middle"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "gacha_right_tab"
+			position = { x = 365 y = 183 }
+			quadTextureSprite = "gacha_tab_left_right"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+
+		guiButtonType = {
+			name = "gacha_item_1"
+			position = { x = 78 y = 320 }
+			quadTextureSprite = "egg_of_the_king_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "gacha_item_2"
+			position = { x = 282 y = 320 }
+			quadTextureSprite = "uncanny_onyx_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		iconType = {
+			name = "gacha_item_3"
+			position = { x = 78 y = 416 }
+			quadTextureSprite = "gacha_item_3_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "gacha_item_4"
+			position = { x = 282 y = 416 }
+			quadTextureSprite = "gacha_item_4_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		iconType = {
+			name = "gacha_item_5"
+			position = { x = 78 y = 512 }
+			quadTextureSprite = "gacha_item_5_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		iconType = {
+			name = "gacha_item_6"
+			position = { x = 282 y = 512 }
+			quadTextureSprite = "gacha_item_6_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		iconType = {
+			name = "gacha_item_7"
+			position = { x = 78 y = 608 }
+			quadTextureSprite = "gacha_item_7_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		iconType = {
+			name = "gacha_item_8"
+			position = { x = 282 y = 608 }
+			quadTextureSprite = "gacha_item_8_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		iconType = {
+			name = "gacha_item_9"
+			position = { x = 78 y = 705 }
+			quadTextureSprite = "gacha_item_9_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		iconType = {
+			name = "gacha_item_10"
+			position = { x = 282 y = 705 }
+			quadTextureSprite = "gacha_item_10_icon"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		instantTextBoxType= {
+			position = { x = 112 y = 255}
+			name = "gacha_tab_3_banner"
+			font = "vic_22s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x = -18 y = 595 }
+			name = "gacha_flag_frame_text"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		iconType = {
+			name = "gacha_shield_frame"
+			position = { x = 30 y = 490 }
+			quadTextureSprite = "gacha_shield_big_frame"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+		#Gacha Button
+		guiButtonType = {
+			name = "gacha_sacrifice_button_1"
+			position = { x = 120 y = 280 }
+			quadTextureSprite = "gacha_button_general"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "gacha_sacrifice_button_2"
+			position = { x = 220 y = 280 }
+			quadTextureSprite = "gacha_button_general"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "gacha_sacrifice_button_3"
+			position = { x = 320 y = 280 }
+			quadTextureSprite = "gacha_button_general"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "gacha_sacrifice_button_4"
+			position = { x = 170 y = 320 }
+			quadTextureSprite = "gacha_button_general"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+		guiButtonType = {
+			name = "gacha_sacrifice_button_5"
+			position = { x = 270 y = 320 }
+			quadTextureSprite = "gacha_button_general"
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+			clicksound = back_click
+		}
+
+		#Close - Title(In Menu)
+		instantTextBoxType= {
+			position = { x=108 y =858}
+			name = "gacha_close"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+			scripted = yes
+			format = center
+		}
+		#Gacha Variables Display
+		instantTextBoxType= {
+			position = { x=-65 y =122}
+			name = "gacha_tickets_title"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=-65 y =146}
+			name = "gacha_tickets_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=108 y =122}
+			name = "gacha_wins_title"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=108 y =146}
+			name = "gacha_wins_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=286 y =122}
+			name = "gacha_sacrifices_title"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=286 y =146}
+			name = "gacha_sacrifices_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		#Tabs
+		instantTextBoxType= {
+			position = { x = -72 y = 198 }
+			name = "gacha_tab_1_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x = 107 y = 198 }
+			name = "gacha_tab_2_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x = 288 y = 198 }
+			name = "gacha_tab_3_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		#Gacha Last Winner
+		instantTextBoxType= {
+			position = { x=-16 y =385}
+			name = "gacha_last_winner_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=-18 y =425}
+			name = "gacha_last_winner_loc"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		#Gacha Leaderboard
+		instantTextBoxType= {
+			position = { x=243 y =390}
+			name = "gacha_leaderboard_1_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =428}
+			name = "gacha_leaderboard_1_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =465}
+			name = "gacha_leaderboard_2_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =504}
+			name = "gacha_leaderboard_2_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =546}
+			name = "gacha_leaderboard_3_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =580}
+			name = "gacha_leaderboard_3_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =620}
+			name = "gacha_leaderboard_4_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =658}
+			name = "gacha_leaderboard_4_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =695}
+			name = "gacha_leaderboard_5_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =730}
+			name = "gacha_leaderboard_5_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =770}
+			name = "gacha_leaderboard_6_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x=243 y =808}
+			name = "gacha_leaderboard_6_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
+
+		#Tab 1 Buttons
+		instantTextBoxType= {
+			position = { x = 6 y = 284 }
+			name = "gacha_tab_1_button_1_text"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+			scripted = yes
+			format = center
+		}
+		instantTextBoxType= {
+			position = { x = 105 y = 284 }
+			name = "gacha_tab_1_button_2_text"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+			scripted = yes
+			format = center
+		}
+
+		#Tab 2 Catalog
+		instantTextBoxType= {
+			position = { x=25 y =270}
+			name = "gacha_catalog_item_1_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =270}
+			name = "gacha_catalog_item_1_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =270}
+			name = "gacha_catalog_item_1_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=25 y =300}
+			name = "gacha_catalog_item_2_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =300}
+			name = "gacha_catalog_item_2_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =300}
+			name = "gacha_catalog_item_2_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=25 y =350}
+			name = "gacha_catalog_item_3_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =350}
+			name = "gacha_catalog_item_3_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =350}
+			name = "gacha_catalog_item_3_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=25 y =420}
+			name = "gacha_catalog_item_4_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =420}
+			name = "gacha_catalog_item_4_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =420}
+			name = "gacha_catalog_item_4_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=25 y =487}
+			name = "gacha_catalog_item_5_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =487}
+			name = "gacha_catalog_item_5_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =487}
+			name = "gacha_catalog_item_5_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=25 y =515}
+			name = "gacha_catalog_item_6_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =515}
+			name = "gacha_catalog_item_6_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =515}
+			name = "gacha_catalog_item_6_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=25 y =565}
+			name = "gacha_catalog_item_7_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =565}
+			name = "gacha_catalog_item_7_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =565}
+			name = "gacha_catalog_item_7_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=25 y =600}
+			name = "gacha_catalog_item_8_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =600}
+			name = "gacha_catalog_item_8_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =600}
+			name = "gacha_catalog_item_8_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=25 y =630}
+			name = "gacha_catalog_item_9_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =630}
+			name = "gacha_catalog_item_9_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =630}
+			name = "gacha_catalog_item_9_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=25 y =680}
+			name = "gacha_catalog_item_10_title"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=195 y =680}
+			name = "gacha_catalog_item_10_desc"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=500 y =680}
+			name = "gacha_catalog_item_10_value"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		#Misc Stuff
+		instantTextBoxType= {
+			position = { x=30 y =750}
+			name = "gacha_uncommon_info"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=180 y =750}
+			name = "gacha_rare_info"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=280 y =750}
+			name = "gacha_mythic_info"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=400 y =750}
+			name = "gacha_legendary_info"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+		instantTextBoxType= {
+			position = { x=20 y =790}
+			name = "gacha_disclaimer_info"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = left
+		}
+
+		instantTextBoxType= {
+			position = { x=112 y =80}
+			name = "gacha_universalis_title"
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 340
+			maxHeight = 20
+			text = ""	
+			orientation = "UPPER_LEFT"
+			scripted = yes
+			format = center
+		}
 
 		#Generic Inventions Tab
 		#Position offset (x = -11 y = -14) for calculating position using menu PDN or other source

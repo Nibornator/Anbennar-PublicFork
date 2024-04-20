@@ -6,12 +6,13 @@ primary_culture = mantimatu
 religion = elikhetist
 technology_group = tech_west_sarhaly
 capital = 5774
+historical_friend = F61
 
-1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
+1000.1.1 = { set_estate_privilege = estate_mages_organization_state }
 
 1426.12.17 = {
 	monarch = {
-		name = "Chufar"
+		name = "Dotti Grombari"
 		dynasty = "Tophird"
 		culture = horakheti
 		birth_date = 1400.11.1

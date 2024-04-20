@@ -910,15 +910,15 @@ bjarnrik3_missions = {
 		}
 		
 		trigger = {
-			698 = { country_or_subject_holds = ROOT }
-			699 = { country_or_subject_holds = ROOT }
+			# 698 = { country_or_subject_holds = ROOT }
+			# 699 = { country_or_subject_holds = ROOT }
 		}
 		
 		effect = {
-			serpentshead_area = { 
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = { name = "bjarnrik_foothold_alenic" duration = 7300 }
+			# serpentshead_area = { 
+			# 	add_permanent_claim = ROOT
+			# }
+			# add_country_modifier = { name = "bjarnrik_foothold_alenic" duration = 7300 }
 		}
 	}
 	
@@ -1325,19 +1325,19 @@ bjarnrik4_missions = {
 		}
 		
 		trigger = {
-			OR = {
-				NOT = { exists = Z22 }
-				Z22 = { is_vassal = yes }
-			}
-			serpentshead_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			# OR = {
+			# 	NOT = { exists = Z22 }
+			# 	Z22 = { is_vassal = yes }
+			# }
+			# serpentshead_area = {
+			# 	country_or_non_sovereign_subject_holds = ROOT
+			# }
 		}
 		
 		effect = {
-			country_event = { id = "gerudia.8" }
-			694 = { add_claim = ROOT }
-			700 = { add_claim = ROOT }
+			# country_event = { id = "gerudia.8" }
+			# 694 = { add_claim = ROOT }
+			# 700 = { add_claim = ROOT }
 		}
 	}
 	

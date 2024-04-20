@@ -9,12 +9,13 @@ technology_group = tech_gerudian
 capital = 731
 add_historical_rival = Z28 #Bayvic
 add_historical_rival = Z22 #Celmaldor
+historical_friend = A46
 
 1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
 
 1432.10.7 = {
 	monarch = {
-		name = "Rycan IV"
+		name = "Rycan 'Street Smuggler' IV"
 		dynasty = "Adshaw"
 		birth_date = 1401.10.1
 		adm = 4

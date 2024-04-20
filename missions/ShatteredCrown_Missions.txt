@@ -2026,7 +2026,7 @@ shatteredcrown_5 = {
 		
 		provinces_to_highlight = {
 			region = west_dwarovar_region
-			dwarovar_orc_culture = yes
+			culture = black_orc
 			NOT = { country_or_subject_holds = ROOT }
 		}
 		
@@ -2035,7 +2035,7 @@ shatteredcrown_5 = {
 				type = all
 				OR = {
 					country_or_subject_holds = ROOT
-					dwarovar_orc_culture = no
+					NOT = { culture = black_orc }
 				}
 			}
 		}

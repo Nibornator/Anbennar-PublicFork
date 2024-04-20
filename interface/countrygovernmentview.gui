@@ -83,6 +83,14 @@ guiTypes = {
 			scripted = yes
 		}
 
+		#Celestial Delegation
+		iconType = {
+			name = "celestial_delegation_bg"
+			position = { x= 12 y = 220 }
+			quadTextureSprite = "GFX_celestial_delegation_background_bg" 
+			scripted = yes
+		}
+
 		### ------- Government -------
 
 		iconType =

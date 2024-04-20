@@ -32,13 +32,6 @@ reveria_1 = {
 				army_size_percentage = 0.6
 				num_of_generals = 1
 				owns_core_province = 167
-				167 = {
-					fort_level = 1
-				}
-				OR = {
-					has_country_modifier = racial_pop_kobold_expulsion
-					has_country_modifier = racial_pop_kobold_purge
-				}
 			}
 			else = {
 				mil_power = 50
@@ -75,16 +68,7 @@ reveria_1 = {
 				name= "reveria_ready_to_fight_a"
 				duration = 3650
 			}
-			add_mil_power = -50
-			if = {
-				limit = { ai = yes }
-				hidden_effect = {
-					generic_end_purge = { race = kobold }
-					generic_end_expulsion = { race = kobold}
-					generic_start_purge = { race = kobold }
-					increase_free_state_action = { action = genocide }
-				}
-			}
+			add_mil_power = 50
 		}
 	}
 	
@@ -145,25 +129,14 @@ reveria_1 = {
 				change_province_name = "Drekiríki"
 				rename_capital = "Drekiríki"
 			}
-			if = {
-				limit = { ai = yes }
-				hidden_effect = {
-					177 = {
-						change_culture = ROOT
-						change_religion = ROOT
-						add_base_production = 3
-						add_base_tax = 3
-						add_base_manpower = 3
-					}
-					largest_decrease_of_kobold_tolerance_effect = yes
-					remove_country_modifier = racial_pop_kobold_purge
-					remove_country_modifier = racial_pop_kobold_expulsion
-					add_country_modifier = {
-						name = racial_pop_kobold_purge
-						duration = -1
-					}
-				}
+			177 = {
+				change_culture = ROOT
+				change_religion = ROOT
+				add_base_production = 3
+				add_base_tax = 3
+				add_base_manpower = 3
 			}
+			largest_increase_of_kobold_tolerance_effect = yes
 		}
 	}
 	
@@ -211,6 +184,14 @@ reveria_1 = {
 		
 		effect = {
 			country_event = { id = reveria.13 }
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = kobold
+					}
+					change_culture = kobildzani_kobold
+				}
+			}
 		}
 	}
 	

@@ -1,0 +1,663 @@
+namespace = banishment
+
+# Guide:
+# 1. Setup your targets from your gui
+# 2. Fire banishment.1 for all tags / player tags, and banishment.2 for yourself only in year delay or so
+# 3. Fire banishment.5 on event_target:banishment_banished_one from GUI when it's session end
+
+# Global vote event, vote targets SHOULD already be set
+country_event = {
+	id = banishment.1
+	title = banishment.1.t
+	desc = banishment.1.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+
+	option = {
+		name = banishment.1.a
+		ai_chance = { factor = 1 }
+
+		add_ticket_effect = { tickets = 1 }
+
+		hidden_effect = {
+			event_target:banishment_vote_1 = {
+				change_variable = {
+					banishment_vote = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = banishment.1.b
+		ai_chance = { factor = 1 }
+
+		add_ticket_effect = { tickets = 1 }
+
+		hidden_effect = {
+			event_target:banishment_vote_2 = {
+				change_variable = {
+					banishment_vote = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = banishment.1.c
+		ai_chance = { factor = 1 }
+
+		add_ticket_effect = { tickets = 1 }
+
+		hidden_effect = {
+			event_target:banishment_vote_3 = {
+				change_variable = {
+					banishment_vote = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = banishment.1.e
+		ai_chance = { factor = 1 }
+
+		add_ticket_effect = { tickets = 1 }
+
+		hidden_effect = {
+			event_target:banishment_vote_4 = {
+				change_variable = {
+					banishment_vote = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = banishment.1.f
+		ai_chance = { factor = 1 }
+
+		add_ticket_effect = { tickets = 1 }
+
+		hidden_effect = {
+			event_target:banishment_vote_5 = {
+				change_variable = {
+					banishment_vote = 1
+				}
+			}
+		}
+	}
+}
+
+# Vote result event, doge only
+country_event = {
+	id = banishment.2
+	title = banishment.2.t
+	desc = banishment.2.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+
+	# Find most voted
+	immediate = {
+		event_target:banishment_vote_1 = {
+			save_event_target_as = banishment_vote_win
+		}
+
+		event_target:banishment_vote_2 = {
+			if = {
+				limit = {
+					check_variable = {
+						which = banishment_vote
+						which = event_target:banishment_vote_win
+					}
+				}
+				save_global_event_target_as = banishment_vote_win
+			}
+		}
+
+		
+		event_target:banishment_vote_3 = {
+			if = {
+				limit = {
+					check_variable = {
+						which = banishment_vote
+						which = event_target:banishment_vote_win
+					}
+				}
+				save_global_event_target_as = banishment_vote_win
+			}
+		}
+
+		
+		event_target:banishment_vote_4 = {
+			if = {
+				limit = {
+					check_variable = {
+						which = banishment_vote
+						which = event_target:banishment_vote_win
+					}
+				}
+				save_global_event_target_as = banishment_vote_win
+			}
+		}
+
+		
+		event_target:banishment_vote_5 = {
+			if = {
+				limit = {
+					check_variable = {
+						which = banishment_vote
+						which = event_target:banishment_vote_win
+					}
+				}
+				save_global_event_target_as = banishment_vote_win
+			}
+		}
+	}
+
+	option = {
+		name = banishment.2.democracy
+		ai_chance = { factor = 1 }
+
+		event_target:banishment_vote_win = {
+			save_global_event_target_as = banishment_banished_one
+		}
+	}
+
+	option = {
+		name = banishment.2.a
+		ai_chance = { factor = 1 }
+
+		event_target:banishment_vote_1 = {
+			save_global_event_target_as = banishment_banished_one
+		}
+	}
+
+	option = {
+		name = banishment.2.b
+		ai_chance = { factor = 1 }
+
+		event_target:banishment_vote_2 = {
+			save_global_event_target_as = banishment_banished_one
+		}
+	}
+
+	option = {
+		name = banishment.2.c
+		ai_chance = { factor = 1 }
+
+		event_target:banishment_vote_3 = {
+			save_global_event_target_as = banishment_banished_one
+		}
+	}
+
+	option = {
+		name = banishment.2.e
+		ai_chance = { factor = 1 }
+
+		event_target:banishment_vote_4 = {
+			save_global_event_target_as = banishment_banished_one
+		}
+	}
+
+	option = {
+		name = banishment.2.f
+		ai_chance = { factor = 1 }
+
+		event_target:banishment_vote_5 = {
+			save_global_event_target_as = banishment_banished_one
+		}
+	}
+
+	after = {
+		every_country = {
+			limit = {
+				ai = no
+				NOT = {
+					alliance_with = event_target:banishment_banished_one
+				}
+			}
+
+			country_event = { id = banishment.3 }
+		}
+	}
+}
+
+# Information event 1
+country_event = {
+	id = banishment.3
+	title = banishment.3.t
+	desc = banishment.3.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+
+	# Banish them
+	option = {
+		name = banishment.3.a
+		ai_chance = { factor = 1 }
+
+		add_ticket_effect = { tickets = 1 }
+	}
+
+	# Spare them
+	option = {
+		name = banishment.3.b
+		ai_chance = { factor = 1 }
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = banishment.4
+				days = 365 # Idk if you want delay
+			}
+		}
+	}
+}
+
+# Information event 2
+country_event = {
+	id = banishment.4
+	title = banishment.4.t
+	desc = banishment.4.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+
+	# Sure
+	option = {
+		name = banishment.4.a
+		ai_chance = { factor = 1 }
+
+		add_ticket_effect = { tickets = 5 }
+	}
+
+	# Not really
+	option = {
+		highlight = yes
+		name = banishment.4.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+
+# The banishment
+country_event = {
+	id = banishment.5
+	title = banishment.5.t
+	desc = banishment.5.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+
+	option = {
+		name = banishment.5.a
+		ai_chance = { factor = 1 }
+		highlight = yes
+
+		custom_tooltip = fun_time_goodluck_tt
+		hidden_effect = {
+			# Peace
+			every_country = {
+				if = {
+					limit = {
+						ROOT = {
+							# Peace only with leader?
+							OR = {
+								is_in_war = {
+									attacker_leader = PREV
+								}
+								is_in_war = {
+									defender_leader = PREV
+								}
+							}
+						}
+					}
+					white_peace = ROOT
+				}
+			}
+
+			# Break alliances
+			every_country = {
+				limit = {
+					alliance_with = ROOT
+				}
+
+				break_alliance = ROOT
+			}
+
+			# Colonize new stuff
+			6325 = {
+				add_core = ROOT
+				cede_province = ROOT
+				change_religion = ROOT
+				change_culture = ROOT
+			}
+			6326 = {
+				add_core = ROOT
+				cede_province = ROOT
+				change_religion = ROOT
+				change_culture = ROOT
+			}
+
+			hidden_effect = {
+				disband_all_units = yes
+			}
+
+			# Destroy old stuff
+			every_owned_province = {
+				limit = {
+					NOT = {
+						province_id = 6325
+						province_id = 6326
+					}
+				}
+
+				destroy_province_permanently = yes
+			}
+
+			every_country = {
+				limit = {
+					ai = no
+					NOT = {
+						tag = ROOT
+					}
+				}
+
+				country_event = {
+					id = banishment.6
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+# Banishment info for other players
+country_event = {
+	id = banishment.6
+	title = banishment.6.t
+	desc = banishment.6.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+
+	option = {
+		name = banishment.6.a
+		ai_chance = { factor = 1 }
+		custom_tooltip = fun_time_goodbye_tt
+	}
+
+	option = {
+		name = banishment.6.b
+		highlight = yes
+		ai_chance = { factor = 1 }
+		trigger = {
+			full_idea_group = occult_ideas
+		}
+
+		custom_tooltip = fun_time_goodbye_tt
+		add_prestige = 10
+		add_ticket_effect = { tickets = 2 }
+	}
+}
+
+#Banishment - Return
+country_event = {
+	id = banishment.20
+	title = banishment.20.t
+	desc = banishment.20.d
+	picture = ANGRY_MOB_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = Y51
+	}
+
+	option = {
+		name = banishment.20.a
+		ai_chance = { factor = 1 }
+
+		hidden_effect = {
+			every_province = {
+				limit = {
+					has_province_modifier = cant_colonize
+				}
+			
+				remove_province_modifier = cant_colonize
+				cede_province = Y51
+				add_core = Y51
+			}
+			Y51 = {
+				4420 = {
+					move_capital_effect = yes
+				}
+				6326 = {
+					decolonize = yes
+					undiscover_country = PREV
+				}
+				6325 = {
+					decolonize = yes
+					undiscover_country = PREV
+				}
+			}
+		}
+	}
+
+	after = {
+		every_country = {
+			limit = {
+				ai = no
+				NOT = {
+					tag = ROOT
+				}
+			}
+
+			country_event = {
+				id = banishment.21
+				days = 1
+			}
+		}
+		F42 = {
+			country_event = {
+				id = banishment.22
+				days = 365
+			}
+		}
+	}
+}
+#Banishment - Return Info
+country_event = {
+	id = banishment.21
+	title = banishment.21.t
+	desc = banishment.21.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+
+	option = {
+		name = banishment.21.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+#Banishment - Sacrifice
+country_event = {
+	id = banishment.22
+	title = banishment.22.t
+	desc = banishment.22.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = banishment.22.a
+		ai_chance = { factor = 1 }
+
+		custom_tooltip = fun_time_goodluck_tt
+		hidden_effect = {
+			# Peace
+			every_country = {
+				if = {
+					limit = {
+						ROOT = {
+							# Peace only with leader?
+							OR = {
+								is_in_war = {
+									attacker_leader = PREV
+								}
+								is_in_war = {
+									defender_leader = PREV
+								}
+							}
+						}
+					}
+					white_peace = ROOT
+					if = {
+						limit = {
+							alliance_with = ROOT
+						}
+						break_alliance = ROOT
+					}
+					if = {
+						limit = {
+							is_subject_of = ROOT
+						}
+						free_vassal = THIS
+					}
+				}
+			}
+
+			# Colonize new stuff
+			6325 = {
+				add_core = ROOT
+				cede_province = ROOT
+				change_religion = ROOT
+				change_culture = ROOT
+			}
+			6326 = {
+				add_core = ROOT
+				cede_province = ROOT
+				change_religion = ROOT
+				change_culture = ROOT
+			}
+
+			hidden_effect = {
+				disband_all_units = yes
+			}
+
+			# Destroy old stuff
+			every_owned_province = {
+				limit = {
+					NOT = {
+						province_id = 6325
+						province_id = 6326
+					}
+				}
+
+				destroy_province_permanently = yes
+			}
+		}
+	}
+
+	after = {
+		every_country = {
+			limit = {
+				ai = no
+				NOT = {
+					tag = ROOT
+				}
+			}
+
+			country_event = {
+				id = banishment.23
+				days = 1
+			}
+		}
+	}
+}
+#Banishment - Sacrifice Info
+country_event = {
+	id = banishment.23
+	title = banishment.23.t
+	desc = banishment.23.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = banishment.23.a
+		ai_chance = { factor = 1 }
+
+		custom_tooltip = fun_time_goodbye_tt
+	}
+
+}
+
+#Infernal Ascent
+country_event = {
+	id = banishment.99
+	title = banishment.99.t
+	desc = banishment.99.d
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = F42
+		is_year = 1500
+	}
+
+	option = {
+		name = banishment.99.a
+		ai_chance = { factor = 1 }
+
+		change_tag = KEK
+		6325 = {
+			add_base_tax = 10
+			add_base_production = 10
+			add_base_manpower = 10
+		}
+		6326 = {
+			add_base_tax = 10
+			add_base_production = 10
+			add_base_manpower = 10
+		}
+		hidden_effect = {
+			apply_sprite_pack = hell_sprite_pack
+		}
+	}
+
+}

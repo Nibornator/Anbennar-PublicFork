@@ -419,7 +419,7 @@ race_black_orc = {
 		tooltip_reason = ""
 		weight = 50
 		trigger = {
-			dwarovar_orc_culture_primary = yes
+			primary_culture = black_orc
 		}
 	}
 }

@@ -11876,6 +11876,7 @@ surakes_paradise_garden = {
 	local_development_cost = -0.1
 	local_governing_cost = -0.15
 	local_unrest = -1
+	picture = "paradise_garden"
 }
 
 surakes_sun_garden = {
@@ -11884,6 +11885,7 @@ surakes_sun_garden = {
 	republican_tradition = 0.3
 	devotion = 1
 	state_maintenance_modifier = -0.15
+	picture = "sun_garden"
 }
 
 surakes_nationalcult_modifier = {
@@ -15862,6 +15864,18 @@ azkare_sangsogha_bonus_medium = {
 azkare_sangsogha_bonus_small = {
 	governing_capacity_modifier = 0.05
 }
+azkare_chimbija_bonus_massive = {
+	advisor_cost = -0.20
+}
+azkare_chimbija_bonus_big = {
+	advisor_cost = -0.15
+}
+azkare_chimbija_bonus_medium = {
+	advisor_cost = -0.10
+}
+azkare_chimbija_bonus_small = {
+	advisor_cost = -0.05
+}
 azkare_menjeotaen_bonus_massive = {
 	yearly_corruption = -0.15
 }
@@ -18550,6 +18564,7 @@ arawkelin_zealous_missionaries = {
 }
 arawkelin_integrate_the_expedition = {
 	culture_conversion_cost = -0.1
+	num_accepted_cultures = 1
 }
 arawkelin_cultural_syncretism = {
 	global_unrest = -2
@@ -21894,6 +21909,7 @@ mulen_hanging_city_baths = {
 }
 
 mulen_hanging_city_gardens = {
+	picture = "sun_garden"
 	local_development_cost = -0.4
 	supply_limit = 20
 	allowed_num_of_buildings = 1
@@ -26036,137 +26052,135 @@ bosancovac_clockwork_city = {
 	allowed_num_of_manufactories = 1
 	institution_growth = 5
 }
-
-#Azkabar
-F35_lake_mining_operations ={
+#azkabar
+lake_mining_operations ={
 	local_production_efficiency = 0.1
 }
-F35_black_mines = {
+black_mines = {
 	local_production_efficiency = 0.15
 }
-F35_great_obsidian_mines = {
+great_obsydian_mines = {
 	trade_goods_size = 1
 }
-F35_trial_of_iskrates = {
+trial_of_iskrates = {
 	spy_offence = 0.10
 }
-F35_main_eclipse_headquarters = {
+main_eclipse_headquarters = {
 	spy_offence = 0.15
 }
-F35_formation_of_the_arsunaellu = {
+formation_of_the_arsunaellu = {
 	liberty_desire = -15
 	diplomatic_reputation = 1
 	diplomatic_annexation_cost = -0.10
 }
-F35_summit_of_azkabar = {
-	diplomatic_annexation_cost = -0.5
+sumit_of_azkabar = {
+	diplomatic_annexation_cost = -0.25
 }
-F35_garden_of_surael = {
+garden_of_surael = {
 	all_estate_loyalty_equilibrium = 0.05
 	stability_cost_modifier = -0.25
-	global_prosperity_growth = 0.5
+	global_prosperity_growth = 0.50
 }
-F35_purification_of_the_garden = {
+purification_of_the_garden = {
 	tolerance_own = 2
 	nobles_loyalty_modifier = 0.1
 }
-F35_garden_free_of_blasphemy = {
+garden_free_of_blasphemy = {
 	build_cost = -0.1
 	build_time = -0.1
 	church_loyalty_modifier = 0.05
 }
-F35_the_new_eclipse_doctrine = {
+the_new_eclipse_doctrine = {
 	global_unrest = 5
 	global_heretic_missionary_strength = 0.2
 	global_manpower_modifier = 0.10
 	land_morale_constant = -0.10
 }
-F35_prison_research = {
-	technology_cost = -0.1
-	embracement_cost = -0.1
+prison_research = {
+	technology_cost = 0.1
 }
-F35_peace_in_the_garden = {
+peace_in_garden = {
 	legitimacy = 2
 	governing_capacity_modifier = 0.10
 }
-F35_surakes_forward_inspection_base = {
+surakes_forward_inspection_base = {
 	local_unrest = -2
 	trade_value = 5
 }
-F35_black_walls_of_bulwar = {
+black_wallls_of_bulwar = {
 	local_defensiveness = 0.15
 	local_manpower_modifier = 0.10
-	local_fort_maintenance_modifier = -0.5
-	local_garrison_size = 0.10
+	fort_maintenance_modifier = -0.5
+	garrison_size = 0.10
 }
-F35_bidyatu = {
+bidyatu = {
 	local_unrest = -2
 	local_defensiveness = 0.25
 }
-F35_cleanse_the_garden = {
+complete_eclipse_integration = {
+	local_unrest = -1
+	local_autonomy = -0.05
+}
+walls_unravelled = {
+	local_fort_maintenance_modifier = -0.2
+}
+cleanse_the_garden = {
 	local_unrest = 15
 }
-F35_azkabar_resistance_to_change_culture = {
+azkabar_resistance_to_change_culture = {
 	local_unrest = 5
 }
-F35_searching_for_secrets = {
+searching_for_secret = {
 	production_efficiency = 0.05
 	adventurers_loyalty_modifier = 0.1
 }
-F35_walls_unraveled = {
+walls_unraveled = {
 	fort_maintenance_modifier = -0.2
 }
-F35_whispers_in_every_temple = {
-	advisor_cost = -0.1
-}
-F35_the_lie_becomes_the_truth = {
-	global_unrest = -1
-	improve_relation_modifier = 0.1
-}
-F35_cooperation1 = {
+cooperation1 = {
 	spy_offence = 0.05  
 }
-F35_cooperation2 = {
+cooperation2 = {
 	spy_offence = 0.1 trade_efficiency =0.05 
 }
-F35_cooperation3 = {
+cooperation3 = {
 	spy_offence = 0.1 trade_efficiency =0.1 
 }
-F35_cooperation4 = {
+cooperation4 = {
 	spy_offence = 0.1 trade_efficiency =0.1 
 }
-F35_cooperation5 = {
+cooperation5 = {
 	spy_offence = 0.1 trade_efficiency =0.1 land_morale = 0.05 
 }
-F35_cleanup1 = {
+cleanup1 = {
 	diplomatic_reputation = 1  
 }
-F35_cleanup2 = {
+cleanup2 = {
 	diplomatic_reputation = 1 improve_relation_modifier = 0.05 
 }
-F35_cleanup3 = {
+cleanup3 = {
 	diplomatic_reputation = 1 improve_relation_modifier = 0.1 
 }
-F35_cleanup4 = {
+cleanup4 = {
 	diplomatic_reputation = 1 improve_relation_modifier = 0.15 
 }
-F35_cleanup5 = {
+cleanup5 = {
 	diplomatic_reputation = 1 improve_relation_modifier = 0.15 discipline =0.025  
 }
-F35_proclamation_of_prosperity = {
-	build_cost = -0.20
-	build_time = -0.20
+proclamation_of_prosperity = {
+	build_cost = -0.15
+	build_time = -0.15
 }
-F35_azkabar_accords = {
+azkabar_accords = {
 	local_unrest = 10
 	production_efficiency = -0.15
 	local_manpower_modifier = -0.1
 }
-F35_azkabar_accords_integration = {
+azkabar_accords_integraion = {
 	local_autonomy = -0.05
 	local_unrest = -1
 }
-F35_state_instituted_cleansing = {
+azkabar_state_cleanup = {
 	local_unrest = 5
 	local_missionary_strength = 0.01
 	local_tax_modifier = -0.5
@@ -26174,8 +26188,7 @@ F35_state_instituted_cleansing = {
 	province_trade_power_modifier = -0.5
 	local_institution_spread = -0.5
 }
-
-#Eclipse system
+#eclipse system
 F35_eclipse_headquarter_1_independent = {
 	global_spy_defence = -0.1
 }
@@ -26742,10 +26755,6 @@ U07_gnollish_domination = {
 	trade_goods_size_modifier = 0.1
 }
 
-U07_expanded_diplomacy = {
-	diplomatic_upkeep = 1
-}
-
 U07_settling_the_krahway = {
 	colonists = 1
 	global_colonial_growth = 20
@@ -26876,18 +26885,6 @@ U07_developing_colony = {
 	global_unrest = 3
 }
 
-U07_pirates_of_the_isles = {
-	privateer_efficiency = 0.15
-	allowed_marine_fraction = 0.05
-	diplomatic_reputation = -1
-}
-
-U07_endralliander_toll = {
-	trade_steering = 0.1
-	trade_efficiency = 0.1
-	tax_income = 24
-}
-
 #Krah Economy
 
 U07_krah_economy_1 = {
@@ -26925,70 +26922,13 @@ U07_krah_economy_5 = {
 	global_unrest = 5
 }
 
-saloren_redoubt_of_the_red = {
-	local_defensiveness = 0.25
-	local_fort_maintenance_modifier = -0.2
+lian_divine_intervention = {
+	liberty_desire = 20
 }
 
-saloren_subject_defiance = {
-	improve_relation_modifier = 0.15
-}
-
-saloren_inevitable_1 = {
-	land_morale = 0.10
-}
-
-saloren_inevitable_2 = {
-	land_morale = 0.10
+oxtroo_divine_intervention = {
+	global_tax_income = 12
+	land_morale = 0.05
 	shock_damage_received = -0.05
-}
-saloren_roilsardi_marches = {
-	manpower_recovery_speed = 0.15
-}
-
-#Sthanan ith Vussam
-G81_the_dumran_vustarvach_modifier = {
-	institution_growth = 6
-}
-
-G81_gifts_of_the_nakadi = {
-	local_development_cost = -0.2
-}
-
-G81_city_of_violet_cloth_modifier = {
-	institution_growth = 3
-	province_trade_power_modifier = 0.3
-	trade_goods_size_modifier = 0.3
-}
-
-G81_woodsmen_levies = {
-	local_manpower_modifier = 0.2
-	local_regiment_cost = -0.15
-}
-
-G81_restructuring_the_army = {
-	army_tradition = -1
-	global_regiment_cost = 0.2
-	manpower_recovery_speed = -0.5
-}
-
-G81_the_golden_army = {
-	infantry_power = 0.1
-	yearly_army_professionalism = 0.001
-}
-
-G81_vustarin_knowledge_1 = {
-	trade_goods_size_modifier = 0.1
-}
-
-G81_vustarin_knowledge_2 = {
-	trade_goods_size_modifier = 0.15
-}
-
-G81_vustarin_knowledge_3 = {
-	trade_goods_size_modifier = 0.2
-}
-
-G81_vustarin_knowledge_4 = {
-	trade_goods_size_modifier = 0.3
+	land_forcelimit = 4
 }

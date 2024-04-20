@@ -7,6 +7,8 @@ primary_culture = reverian
 religion = regent_court
 technology_group = tech_cannorian
 capital = 138
+historical_friend = Z08
+
 
 historical_rival = A80 #Iochand
 
@@ -14,7 +16,7 @@ historical_rival = A80 #Iochand
 
 1397.6.11 = {
 	monarch = {
-		name = "Lothane III"
+		name = "Khaine 'The Avatar' III"
 		dynasty = "síl Rever"
 		birth_date = 1390.1.1
 		adm = 4

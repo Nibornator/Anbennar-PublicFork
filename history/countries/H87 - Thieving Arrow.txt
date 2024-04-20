@@ -4,20 +4,27 @@ government = tribal
 add_government_reform = dwarovar_warband
 government_rank = 1
 primary_culture = straggler_goblin
-religion = goblinic_shamanism
+religion = bulwari_sun_cult
 technology_group = tech_cave_goblin
 capital = 2964
-
-1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
+historical_friend = F42
+serpentreach_region = {
+	discover_country = ROOT
+}
+bulwar_superregion = {
+	discover_country = ROOT
+}
 
 1442.3.17 = {
 	monarch = {
-		name = "Nuldes 'Rut'"
-		dynasty = "Thieving Arrow"
+		name = "Jelly"
+		dynasty = "of Thieving Arrow"
 		birth_date = 1402.11.4
 		adm = 3
 		dip = 5
 		mil = 4
+		culture = sun_elf
 	}
+	set_ruler_flag = set_immortality
 	add_ruler_personality = industrious_personality
 }

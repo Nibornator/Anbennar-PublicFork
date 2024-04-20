@@ -1,7 +1,6 @@
 owner = V01
 controller = V01
 add_core = V01
-add_core = V15
 culture = anarkhudi
 religion = un_khudai
 capital = ""
@@ -15,8 +14,3 @@ base_manpower = 1
 
 trade_goods = iron
 center_of_trade = 1
-
-add_permanent_province_modifier = {
-	name = troll_minority_integrated_small
-	duration = -1
-}

@@ -6,6 +6,13 @@ primary_culture = naleni_harpy
 religion = the_hunt
 secondary_religion = sky_domain
 technology_group = tech_siadunan_harpy
+historical_friend = F47
+middle_dwarovar_region = {
+	discover_country = ROOT
+}
+far_salahad_region = {
+	discover_country = ROOT
+}
 
 capital = 6659
 
@@ -13,7 +20,7 @@ capital = 6659
 
 1444.1.1 = {
 	monarch = {
-		name = "Niunus"
+		name = "VBA"
 		dynasty = "Nephiuéda"
 		birth_date = 1379.12.1
 		female = yes

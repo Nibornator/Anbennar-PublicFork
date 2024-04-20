@@ -9,8 +9,9 @@ technology_group = tech_salahadesi
 
 capital = 382
 historical_friend = A47 #Eborthil
+historical_friend = F23
 
-1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
+1000.1.1 = { set_estate_privilege = estate_mages_organization_state }
 
 1422.1.1 = {
 	set_country_flag = lilac_wars_moon_party

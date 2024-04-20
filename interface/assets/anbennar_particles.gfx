@@ -9,5 +9,9 @@ objectTypes = {
 		name = "haraf_worm_big"
 		type = "haraf_worm_big"
 	}
-}
+	
+	pdxparticle = {
+		name = "Hell"
+		type = "Hell"
+	}
 }

@@ -1222,10 +1222,10 @@ godswall = {
 		}
 
 		on_upgraded = {
-			add_great_project = {
-				type = godswall_tunnel
-				instant = yes
-			}
+	#		add_great_project = {
+	#			type = godswall_tunnel
+	#			instant = yes
+	#		}
 		}
 	}
 }
@@ -2289,10 +2289,10 @@ godswall_tunnel = {
 	start = 4533
 
 	# date built in real life (so anything built during game time will be there if you start a game after that date)
-	date = 1855.06.20
+	date = 1455.06.20
 
 	#time to build
-	time = { months = 180 }
+	time = { months = 0 }
 
 	#how much to build one
 	build_cost = 0
@@ -2308,16 +2308,17 @@ godswall_tunnel = {
 
 	#can we build it?
 	build_trigger = {
-		OR = {
-			has_great_project = {
-				type = godswall
-				tier = 3
-			}
-			custom_trigger_tooltip = {
-				tooltip = rending_has_happened
-				has_global_flag = rending_happened
-			}
-		}
+	#	OR = {
+	#		has_great_project = {
+	#			type = godswall
+	#			tier = 3
+	#		}
+	#		custom_trigger_tooltip = {
+	#			tooltip = rending_has_happened
+	#			has_global_flag = rending_happened
+	#		}
+	#	}
+		NOT = { TAG = R62 }
 	}
 
 	#what to do when it's built
@@ -2328,8 +2329,6 @@ godswall_tunnel = {
 
 	#what to do when it's destroyed
 	on_destroyed = {
-		remove_canal = godswall_tunnel
-		clr_global_flag = godswall_tunnel_opened
 	}
 
 	#can our country use it?

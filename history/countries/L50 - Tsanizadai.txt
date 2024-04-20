@@ -12,11 +12,11 @@ capital = 6632
 historical_rival = L48 #Ataturozi
 historical_rival = L68 #Karassk
 historical_friend = S15 #Karshyr
-1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
+1000.1.1 = { set_estate_privilege = estate_mages_organization_state }
 
 1440.6.1 = {
 	monarch = {
-		name = "Emampro"
+		name = "Poke XIII"
 		dynasty = "Erfara"
 		birth_date = 1410.4.7
 		female = no

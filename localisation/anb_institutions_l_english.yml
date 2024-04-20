@@ -34,7 +34,6 @@
   tech_raheni:0 "Raheni"
   tech_hobgoblin:0 "Hobgoblin"
   tech_eagle_hobgoblin:0 "Eagle Hobgoblin"
-  tech_hill_troll:0 "Hill Troll"
   tech_troll:0 "Troll"
   tech_west_sarhaly:0 "West Sarhaly"
   tech_south_sarhaly:0 "South Sarhaly"
@@ -61,6 +60,7 @@
   tech_baashidi: "Baashidi"
   tech_ynnsmen: "Ynnsmen"
   tech_east_bharbhen: "East Bharbhen"
+  tech_celestial: "Celestial"
   
   tooltip_lencenor_esmaria_dameshead:0 "Province in the Lencenor, Esmaria or Dameshead Region"
   tooltip_owner_gnomish:0 "Is Gnomish"

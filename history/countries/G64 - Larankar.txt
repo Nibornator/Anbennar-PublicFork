@@ -9,12 +9,14 @@ technology_group = tech_taychendi
 capital = 2487
 
 historical_rival = G52 #Ameion
-
-1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
+historical_friend = G60
+kheionai_superregion = {
+	discover_country = ROOT
+}
 
 1444.1.1 = {
 	monarch = {
-		name = "Erankar 'the Defiant'"
+		name = "Leuz 'the Defiant'"
 		dynasty = "Kaonrippavar"
 		birth_date = 1410.3.6
 		death_date = 1476.9.4

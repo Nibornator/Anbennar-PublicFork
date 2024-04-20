@@ -113,11 +113,7 @@ age_of_discovery = {
 
 		obj_suran_temples = {
 			allow = {
-				OR = {
-					capital_scope = { superregion = bulwar_superregion }
-					religion_group = bulwari
-				}
-				NOT = { religion_group = cannorian }
+				capital_scope = { superregion = bulwar_superregion }
 			}
 			601 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -275,7 +271,7 @@ age_of_discovery = {
 
 		ab_dwarovar_empire_breakers = {
 			allow = {
-				dwarovar_orc_culture_primary = yes
+				culture = black_orc
 			}
 			modifier = {
 				siege_ability = 0.2
@@ -390,7 +386,7 @@ age_of_reformation = {
 	
 		obj_cannorian_convert = {
 			allow = {
-				NOT = { religion_group = bulwari }
+				NOT = { capital_scope = { superregion = bulwar_superregion } }
 			}
 			OR = {
 				religion = corinite
@@ -404,7 +400,7 @@ age_of_reformation = {
 		
 		obj_sun_cult_unity = {
 			allow = {
-				religion_group = bulwari
+				capital_scope = { superregion = bulwar_superregion }
 			}
 			OR = {
 				custom_trigger_tooltip = {

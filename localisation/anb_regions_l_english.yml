@@ -31,6 +31,7 @@
  yanshen_superregion:0 "Yanshen"
  south_haless_superregion:0 "Vimdatrong"
  north_haless_superregion:0 "Gozengun"
+ planar_superregion:0 "Planar Realm"
  
  
  north_aelantir_coast_region:0 "North Aelantir Coast"
@@ -181,9 +182,9 @@
  bamaliwuni_region:0 "Bamaliwuni"
  bamaliwuni_region_name:0 "Bamaliwuni"
  bamaliwuni_region_adj:0 "Bamaliwuni"
- guifa_guyamva_region:0 "Ishyamtumu"
- guifa_guyamva_region_name:0 "Ishyamtumu"
- guifa_guyamva_region_adj:0 "Ishyamtumu"
+ guifa_guyamva_region:0 "Guifa Guyamva"
+ guifa_guyamva_region_name:0 "Guifa Guyamva"
+ guifa_guyamva_region_adj:0 "Guifa Guyamva"
  yetefesefi_region:0 "Yetefesefi"
  yetefesefi_region_name:0 "Yetefesefi"
  yetefesefi_region_adj:0 "Yetefesefi"
@@ -452,6 +453,8 @@
  nuugdanghan_region:0 "Nuugdanghan"
  nuugdanghan_region_name:0 "Nuugdanghan"
  nuugdanghan_region_adj:0 "Nuugdanghan"
+ ascended_region_name:0 "Ascension"
+ ascended_region_adj:0 "Ascension"
 
  #province groups
  golden_highway_bulwar_proper:0 "Golden Highway Bulwar Proper"

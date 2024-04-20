@@ -7,12 +7,16 @@ primary_culture = eltibhar
 religion = gotiriei
 technology_group = tech_bharbhen
 capital = 2785
+historical_friend = G64
+taychend_superregion = {
+	discover_country = ROOT
+}
 
 1000.1.1 = { set_estate_privilege = estate_mages_organization_guilds }
 
 1444.1.1 = {
 	monarch = {
-		name = "Aósiki `The Righteous Uniter`"
+		name = "Spyhaus `The Righteous Uniter`"
 		dynasty = "Iafas"
 		birth_date = 1410.3.1
 		adm = 3

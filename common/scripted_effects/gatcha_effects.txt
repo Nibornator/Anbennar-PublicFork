@@ -1,0 +1,193 @@
+add_ticket_effect = {
+	custom_tooltip = add_$tickets$_tickets_tooltip
+	hidden_effect = {
+		change_variable = {
+			tickets = $tickets$
+		}
+		change_variable = {
+			total_tickets = $tickets$
+		}
+
+		save_global_event_target_as = gatcha_current_target
+		clr_global_flag = gatcha_sort_done
+
+		# Sorting from best to bottom, stop sorting if tag reached itself and just update value
+		if = {
+			limit = {
+				event_target:gatcha_leader_1 = {
+					tag = PREV	
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+
+			# We reached the original tag, stop here. Either we assigned it before or we're at same spot, swap with current tag
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_1 }
+			set_global_flag = gatcha_sort_done
+		} 
+		else_if = {
+			limit = {
+				# Eh, make new one take spot if equal cause it will look more dynamic or some BS (too much effort)
+				event_target:gatcha_current_target = {
+					check_variable = {
+						which = tickets
+						which = event_target:gatcha_leader_1
+					}
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+			event_target:gatcha_leader_1 = { save_global_event_target_as = gatcha_tmp_target }
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_1 }
+			event_target:gatcha_tmp_target = { save_global_event_target_as = gatcha_current_target }
+		}
+		# Sorting from best to bottom, stop sorting if tag reached itself and just update value
+		if = {
+			limit = {
+				event_target:gatcha_leader_2 = {
+					tag = PREV	
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+
+			# We reached the original tag, stop here. Either we assigned it before or we're at same spot, swap with current tag
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_2 }
+			set_global_flag = gatcha_sort_done
+		} 
+		else_if = {
+			limit = {
+				# Eh, make new one take spot if equal cause it will look more dynamic or some BS (too much effort)
+				event_target:gatcha_current_target = {
+					check_variable = {
+						which = tickets
+						which = event_target:gatcha_leader_2
+					}
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+			event_target:gatcha_leader_2 = { save_global_event_target_as = gatcha_tmp_target }
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_2 }
+			event_target:gatcha_tmp_target = { save_global_event_target_as = gatcha_current_target }
+		}
+		# Sorting from best to bottom, stop sorting if tag reached itself and just update value
+		if = {
+			limit = {
+				event_target:gatcha_leader_3 = {
+					tag = PREV	
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+
+			# We reached the original tag, stop here. Either we assigned it before or we're at same spot, swap with current tag
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_3 }
+			set_global_flag = gatcha_sort_done
+		} 
+		else_if = {
+			limit = {
+				# Eh, make new one take spot if equal cause it will look more dynamic or some BS (too much effort)
+				event_target:gatcha_current_target = {
+					check_variable = {
+						which = tickets
+						which = event_target:gatcha_leader_3
+					}
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+			event_target:gatcha_leader_3 = { save_global_event_target_as = gatcha_tmp_target }
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_3 }
+			event_target:gatcha_tmp_target = { save_global_event_target_as = gatcha_current_target }
+		}
+		# Sorting from best to bottom, stop sorting if tag reached itself and just update value
+		if = {
+			limit = {
+				event_target:gatcha_leader_4 = {
+					tag = PREV	
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+
+			# We reached the original tag, stop here. Either we assigned it before or we're at same spot, swap with current tag
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_4 }
+			set_global_flag = gatcha_sort_done
+		} 
+		else_if = {
+			limit = {
+				# Eh, make new one take spot if equal cause it will look more dynamic or some BS (too much effort)
+				event_target:gatcha_current_target = {
+					check_variable = {
+						which = tickets
+						which = event_target:gatcha_leader_4
+					}
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+			event_target:gatcha_leader_4 = { save_global_event_target_as = gatcha_tmp_target }
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_4 }
+			event_target:gatcha_tmp_target = { save_global_event_target_as = gatcha_current_target }
+		}
+		# Sorting from best to bottom, stop sorting if tag reached itself and just update value
+		if = {
+			limit = {
+				event_target:gatcha_leader_5 = {
+					tag = PREV	
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+
+			# We reached the original tag, stop here. Either we assigned it before or we're at same spot, swap with current tag
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_5 }
+			set_global_flag = gatcha_sort_done
+		} 
+		else_if = {
+			limit = {
+				# Eh, make new one take spot if equal cause it will look more dynamic or some BS (too much effort)
+				event_target:gatcha_current_target = {
+					check_variable = {
+						which = tickets
+						which = event_target:gatcha_leader_5
+					}
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+			event_target:gatcha_leader_5 = { save_global_event_target_as = gatcha_tmp_target }
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_5 }
+			event_target:gatcha_tmp_target = { save_global_event_target_as = gatcha_current_target }
+		}
+		# Sorting from best to bottom, stop sorting if tag reached itself and just update value
+		if = {
+			limit = {
+				event_target:gatcha_leader_6 = {
+					tag = PREV	
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+
+			# We reached the original tag, stop here. Either we assigned it before or we're at same spot, swap with current tag
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_6 }
+			set_global_flag = gatcha_sort_done
+		} 
+		else_if = {
+			limit = {
+				# Eh, make new one take spot if equal cause it will look more dynamic or some BS (too much effort)
+				event_target:gatcha_current_target = {
+					check_variable = {
+						which = tickets
+						which = event_target:gatcha_leader_6
+					}
+				}
+				NOT = { has_global_flag = gatcha_sort_done }
+			}
+			event_target:gatcha_leader_6 = { save_global_event_target_as = gatcha_tmp_target }
+			event_target:gatcha_current_target = { save_global_event_target_as = gatcha_leader_6 }
+			event_target:gatcha_tmp_target = { save_global_event_target_as = gatcha_current_target }
+		}
+	}
+}
+
+gacha_flags_clear_effect = {
+	hidden_effect = {
+		clr_country_flag = gacha_open_menu_flag
+		clr_country_flag = gacha_tab_1_open
+		clr_country_flag = gacha_tab_2_open
+		clr_country_flag = gacha_tab_3_open
+	}
+}
+

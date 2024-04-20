@@ -1,0 +1,26 @@
+villager_sprite_pack = {
+	country_trigger = {
+			TAG = F42
+	}
+
+	sprite_infantry = {
+		0 = VILLAGER_INFANTRY_1
+		1 = VILLAGER_INFANTRY_2
+		2 = VILLAGER_INFANTRY_3
+		3 = VILLAGER_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = VILLAGER_INFANTRY_1
+		1 = VILLAGER_INFANTRY_2
+		2 = VILLAGER_INFANTRY_3
+		3 = VILLAGER_INFANTRY_4
+	}
+	
+	sprite_artillery = {
+		0 = VILLAGER_ARTILLERY_1
+		1 = VILLAGER_ARTILLERY_2
+		2 = VILLAGER_ARTILLERY_3
+		3 = VILLAGER_ARTILLERY_4
+	}
+}

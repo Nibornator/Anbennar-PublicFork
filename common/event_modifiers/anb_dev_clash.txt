@@ -1,0 +1,59 @@
+clash_most_discipline_modifier = {
+	prestige = 0.5
+}
+
+clash_most_inflation_modifier = {
+	inflation_action_cost = -0.25
+}
+
+clash_most_most_income_modifier = {
+	inflation_reduction = 0.1
+	interest = -0.5
+}
+
+clash_most_not_income_modifier = {
+	global_tax_income = 12
+}
+
+clash_most_army_modifier = {
+	prestige = 0.5
+}
+
+clash_most_navy_modifier = {
+	prestige = 0.5
+}
+
+clash_most_dev = {
+	local_prosperity_growth = 0.5
+	local_monthly_devastation = -0.5
+}
+
+clash_most_adm_dev = {
+	local_manpower_modifier = 0.1
+}
+
+clash_most_dip_dev = {
+	local_tax_modifier = 0.1
+}
+
+clash_most_mil_dev = {
+	local_production_efficiency = 0.1
+}
+
+# Duplicate modifiers to get tooltip working
+clash_most_dev_2 = {
+	local_prosperity_growth = 0.5
+	local_monthly_devastation = -0.5
+}
+
+clash_most_adm_dev_2 = {
+	local_manpower_modifier = 0.1
+}
+
+clash_most_dip_dev_2 = {
+	local_tax_modifier = 0.1
+}
+
+clash_most_mil_dev_2 = {
+	local_production_efficiency = 0.1
+}

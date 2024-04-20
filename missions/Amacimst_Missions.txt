@@ -1744,13 +1744,8 @@ G26_river_priests_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 				has_tax_building_trigger = yes
 			}
-			OR = {
-				G30 = { #Mocvare
-					is_subject_of = ROOT
-				}
-				1186 = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+			G30 = { #Mocvare
+				is_subject_of = ROOT
 			}
 			adm_power = 100
 			treasury = 200

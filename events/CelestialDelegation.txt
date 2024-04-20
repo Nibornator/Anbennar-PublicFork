@@ -1,0 +1,113 @@
+
+namespace = celestial_delegation
+
+country_event = {
+	id = celestial_delegation.1
+	title = celestial_delegation.1.t
+	desc = celestial_delegation.1.d
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = celestial_delegation.1.a
+
+		tooltip = {
+			add_country_modifier = {
+				name = celestial_delegation_inspiration
+				duration = 3650
+			}
+		}
+		add_prestige = 20
+	}
+}
+
+country_event = {
+	id = celestial_delegation.2
+	title = celestial_delegation.2.t
+	desc = celestial_delegation.2.d
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = celestial_delegation.2.a
+
+		tooltip = {
+			add_country_modifier = {
+				name = celestial_delegation_scorn
+				duration = 3650
+			}
+		}
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = celestial_delegation.3
+	title = celestial_delegation.3.t
+	desc = celestial_delegation.3.d
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = celestial_delegation.3.a # you IDIOT doge you FOOL you put the wrong NUMBER OPTION
+
+		tooltip = {
+			add_country_modifier = {
+				name = celestial_delegation_prosperity
+				duration = 3650
+			}
+		}
+		add_years_of_income = 1
+	}
+}
+
+province_event = {
+	id = celestial_delegation.4
+	title = celestial_delegation.4.t
+	desc = celestial_delegation.4.d
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = celestial_delegation.4.a
+
+		tooltip = {
+			add_province_modifier = {
+				name = celestial_delegation_abundance
+				duration = 3650
+			}
+		}
+		add_base_tax = 2
+		add_base_production = 2
+		add_base_manpower = 2
+		add_prosperity = 100
+	}
+}
+
+province_event = {
+	id = celestial_delegation.5
+	title = celestial_delegation.5.t
+	desc = celestial_delegation.5.d
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = celestial_delegation.5.a
+
+		tooltip = {
+			add_province_modifier = {
+				name = celestial_delegation_pestilence
+				duration = 3650
+			}
+		}
+		add_base_tax = -2
+		add_base_production = -2
+		add_base_manpower = -2
+		add_devastation = 50
+	}
+}

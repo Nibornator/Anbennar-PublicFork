@@ -12,6 +12,7 @@ national_focus = DIP
 capital = 349
 historical_rival = A25 #Damescrown
 historical_friend = G98 #CLSTC
+historical_friend = Z26
 
 1000.1.1 = { 
 	set_estate_privilege = estate_mages_organization_magisterium 
@@ -23,7 +24,7 @@ historical_friend = G98 #CLSTC
 
 1426.2.3 = {
 	monarch = {
-		name = "Ricard I"
+		name = "Stormrunner I"
 		dynasty = "Silcalas"
 		birth_date = 1400.3.23
 		adm = 4

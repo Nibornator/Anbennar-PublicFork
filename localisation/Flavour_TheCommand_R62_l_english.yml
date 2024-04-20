@@ -472,10 +472,10 @@
  R62_broken_crowns_desc: "Every tribe styles their leader a king, but aside from that, they each have their own customs, laws, and ways. None of that will matter, though - all of these will be brushed aside for the law of the Great Command, and all their primitive tribal bonds will end up nothing but history!"
 
  R62_start_the_arawkelin_campaign_title: "A Final March South"
- R62_start_the_arawkelin_campaign_desc: " The most important city in southern Haless is the port of Arawkelin. Records indicate that it was originally constructed as a naval station, but later outgrew this purpose and now exists as a powerful city-state. Arawkelin's port infrastructure makes it a high-priority target to establish a navy capable of assisting land-based operations with full efficiency."
+ R62_start_the_arawkelin_campaign_desc: " The most important city in southern Haless is the port of AruWukelin. Records indicate that it was originally constructed as a naval station, but later outgrew this purpose and now exists as a powerful city-state. AruWukelin's port infrastructure makes it a high-priority target to establish a navy capable of assisting land-based operations with full efficiency."
 
  R62_arawkelin_campaign_middle_title: "The Peninsula Fortress"
- R62_arawkelin_campaign_middle_desc: "We cannot march on Arawkelin until we take the forts of Aksa Sanuyego, which serves as the major redoubt for enemy forces and allows them control over much of the western countryside. It will likely not be a swift siege, but none can beat the perseverance of the hobgoblins."
+ R62_arawkelin_campaign_middle_desc: "We cannot march on AruWukelin until we take the forts of Aksa Sanuyego, which serves as the major redoubt for enemy forces and allows them control over much of the western countryside. It will likely not be a swift siege, but none can beat the perseverance of the hobgoblins."
  
  R62_batteries_at_sea_title: "Batteries at Sea"
  R62_batteries_at_sea_desc: "The ship designs we employ are heavy and capable of holding a large amount of weight; this makes them perfect for hosting artillery batteries. The siege at Aksa Sanuyego is slow, but some of these sea batteries should ensure our campaign does not falter."
@@ -484,13 +484,13 @@
  R62_citadel_on_the_linchpin_desc: "Aksa Sanuyego was daunting when controlled by foes; the front for an attacking army was very small, in addition to requiring a navy to disrupt the flow of supplies. But now that it is secured, our control in the region is assured, freeing army resources to project power elsewhere."
  
  R62_the_sun_elf_city_title: "A New Naval Station"
- R62_the_sun_elf_city_desc: "According to records, Arawkelin  was initially founded as a naval station for a Sun Elf invasion of Haless - if this is true, then our conquest will be considered a return to form. What remains to resist us is undoubtedly a husk awaiting their final destruction."
+ R62_the_sun_elf_city_desc: "According to records, AruWukelin  was initially founded as a naval station for a Sun Elf invasion of Haless - if this is true, then our conquest will be considered a return to form. What remains to resist us is undoubtedly a husk awaiting their final destruction."
  
  R62_command_of_the_sea_title: "Command of the Sea"
  R62_command_of_the_sea_desc: "Our recently-acquired capabilities for shipbuilding allow for some doctrinal experimentation. The War Room’s consensus is that the navy requires a ship that is capable of directing and leading the rest of the fleet, just as the Grand Marshal directs the Great Command.\n\nThis flagship will act as the center for the at-sea admiralty, the location from which they will have the ability to navigate efficiently while also coordinating fleet actions during battle."
  
  R62_arawkelin_campaign_finished_title: "The Southern Ports"
- R62_arawkelin_campaign_finished_desc: "Both Arawkelin and Aksa Sanuyego are natural locations for naval infrastructure, with the geography necessary to create large harbor complexes. Both of these have had their potential neglected in favor of commercial trade - not anymore! The military harbours will need to be expanded to their proper shape, however with both of these we will be able to construct a fleet capable of contesting any foe at sea."
+ R62_arawkelin_campaign_finished_desc: "Both AruWukelin and Aksa Sanuyego are natural locations for naval infrastructure, with the geography necessary to create large harbor complexes. Both of these have had their potential neglected in favor of commercial trade - not anymore! The military harbours will need to be expanded to their proper shape, however with both of these we will be able to construct a fleet capable of contesting any foe at sea."
   
  R62_the_battle_of_the_great_lake_title: "The Battle of the Great Lake"
  R62_the_battle_of_the_great_lake_desc: ""This is a post-battle report, written approximately one month after our triumph on the banks of Lake Tianhu:\n\nThe unified Yanszin forces prepared battle lines along Tianhu's shores, using the lakefront as a barrier to flanking attacks, and had prepared a small fleet of fishing vessels to withdraw their troops, should the battle turn against them. Initial probing attacks were met with strong resistance, but they attempted to break our center as we spread our forces to hit their flanks.\n\nOur center fell back as the divisions on the sides collapsed in, trapping the charging Yanszin troops, and breaking the morale of the remaining defenders. As the retreat began across Lake Tianhu, we launched a small fleet of our own, laden with oil and set ablaze, into the tethered vessels, while our worgs and boar riders set upon their confused defensive line, decimating their ranks.\n\nThe result was a decisive victory, the largest in the campaign. Inserted beneath is a report on the losses and troop movements and the Yanszin retreat fleet's methods.""
@@ -670,7 +670,7 @@
  the_command.3.f: "The time of the Tiger has come!"
  
  the_command.4.t: "End the Temples' Curse"
- the_command.4.desc: "When the Oni Rashenbir arrived in [Root.Capital.GetName] to pledge his peoples’ unending fealty as slaves to the command, he also came with a suggestion. In his travels, he had seen how hobgoblin soldiers and administrators steered clear of the many conquered High Temples throughout the land. He argued that this was dangerous because the temples held immense magical power. With a glint of excitement behind his dark eyes, he assured Grand Marshal [Root.Monarch.GetName] that the Oni were more than equipped to guard and control these dangerous temples, just as they assist with supplying Korashi and that should the Grand Marshal only ask, he will dispatch Oni experts to these high temples to secure the safety of all."
+ the_command.4.desc: "When the Oni Rashenbir arrived in [Capital.GetName] to pledge his peoples’ unending fealty as slaves to the command, he also came with a suggestion. In his travels, he had seen how hobgoblin soldiers and administrators steered clear of the many conquered High Temples throughout the land. He argued that this was dangerous because the temples held immense magical power. With a glint of excitement behind his dark eyes, he assured Grand Marshal [Root.Monarch.GetName] that the Oni were more than equipped to guard and control these dangerous temples, just as they assist with supplying Korashi and that should the Grand Marshal only ask, he will dispatch Oni experts to these high temples to secure the safety of all."
  the_command.4.a: "By all means, let the Oni handle this"
  
  the_command.5.t: "Extraction"
@@ -703,7 +703,7 @@
  the_command.13.b: "Our next campaign could use the financial boost."
  the_command.13.c: "Although questionable in nature, The Command could use this manpower."
  the_command.14.t: "The Governance of the Mines"
- the_command.14.desc: "It has become clear that with our borders continuing their rapid expansion, we cannot tolerate further hindrances from the tensions within the Jade Mines. Our administrative staff within Grônstunad have begun to plan a transition to bring the goblins into the administration of the caves, and expand their work from simple mining operations to matters of logistics, food production, and smithing.\n\nOur beneficence in allowing the goblins more management of their own affairs also provides us an opportunity. We have long been vexed by the Undergrowth Goblin’s continued belief in the superstitious nonsense of the duplicitous shamans, but their continued existence served as an important focal point for the organization of the goblin clans. Now that we are reorganizing the clans, however, we can tear out this weed by its roots: for the goblin clans to run the mines, they must cast out the shamans and learn instead of discipline and order. To rise, they must follow the path of the Godlost.\n\nEnacting these changes will be no small feat – the goblins are ingenious (if bizarre) miners, but they will require dedicated support from our overseers, and we will need to carefully navigate the settlement of land between the Stolen Gem and Blackstep clans to ensure this transition is smooth. Such dedication of our resources necessitates that we choose only one clan to rule, but this will surely cause dissent from their rival. A deft hand must be clan in a mithril gauntlet for this matter – any who question our rule here shall not be allowed to question for long."
+ the_command.14.desc: "It has become obvious that while The Command’s borders continue, their rapid expansion cannot be stifled by any further complications within the Jade Mines. Our administration staff located within Grônstunad have gathered a plethora of information surrounding the inner machinations and workings of both Stolen Gem and Blackstep mining operations. They have refined the day-to-day operations and inner workings in bizarre, foreign series of machinations unknown even to us: ideas and concepts that pass under the gaze of the everyday Sunyanin are not even considered as solutions.\n\nThis inadvertent ingenuity has been acceptable, however we must elevate them to the capacity of running the mines: handling the logistics, keeping their workers fed, and ensuring a smooth transition of raw resources to the forges and smiths which fuel our own war fronts. We can use this dramatic change in the responsibilities handled by the Undergrowth Goblin clan as leverage to enforce Godlost practices upon them. This, coupled with one of the very same Grônstunadian administrators being present during the ‘Stolen Gem vs Blackstep Land settlement’, can guarantee this process can proceed smoothly.\n\nThe resources required in this undertaking will be immense -- allowing us to choose only one of the Undergrowth Goblin clans under our thrall. Unhappiness and dissent are sure to spread like wildfire as these changes are made true, but with a careful grasp and a mithril fist the worst is sure to pass."
  the_command.14.a: "Stolen Gem is the obvious choice. Elder Chiefnort will be pleased."
  the_command.14.b: "Blackstep is the obvious choice. Elder Ga’ba Biggatooth will be pleased."
 
@@ -1343,10 +1343,6 @@
 
  estate_dragon_command_sunyanin_engineering_monopoly_mod: "Sunyanin Engineering Monopoly"
  desc_estate_dragon_command_sunyanin_engineering_monopoly_mod: "We have granted the Dragon Command the sole rights over damestear and precursor relic production."
- commmand_tiger_temple_buff:0 "Elevation of the Tiger"
- desc_commmand_tiger_temple_buff:0 "The Tiger Command's expansive bureaucracy has taken on some of the burden of governing this province."
- command_elephant_fort_buff:0 "Elevation of the Elephant"
- desc_command_elephant_fort_buff:0 "The Elephant Command's expansive infrastructure has opened up space in this provice for additional barracks and manufactories."
  
  hob_gerunanin_disarmed_populace: "Disarmed Populace"
  hob_gerunanin_lightened_tax_burden: "Lightened Tax Burden"
@@ -1368,12 +1364,10 @@
  command_the_edict2: "The Edict"
  command_the_edict3: "The Edict"
  command_the_edict4: "The Edict"
- desc_command_the_edict: "§YLaws of Ninun now apply automatically to all states.§!"
- desc_command_the_edict2: "§YLaws of Ninun now apply automatically to all states.§!"
- desc_command_the_edict3: "§YLaws of Ninun now apply automatically to all states.§!"
- desc_command_the_edict4: "§YLaws of Ninun now apply automatically to all states.§!"
- command_not_yet_wuhyunized_mod: "Laws of Ninun"
- command_not_yet_wuhyunized_mod_desc: "§YLaws of Ninun§! will automatically §YWuhyunize§! this province, if it is in a state."
+ desc_command_the_edict: "§YIt is now possible to use the Laws of Ninun on a limitless amount of states.§!"
+ desc_command_the_edict2: "§YIt is now possible to use the Laws of Ninun on a limitless amount of states.§!"
+ desc_command_the_edict3: "§YIt is now possible to use the Laws of Ninun on a limitless amount of states.§!"
+ desc_command_the_edict4: "§YIt is now possible to use the Laws of Ninun on a limitless amount of states.§!"
  
  command_unproven_leadership: "Unproven Leadership"
  command_exemplary_leadership: "Exemplary Leadership"
@@ -1406,7 +1400,6 @@
  command_estate_pain: "Rebellious Subsidiaries"
  command_oni_infiltrators: "Oni Subterfuge"
  command_jingo_fervor: "Jingo Fervor"
- command_insubordination_fort: "Strategically Necessary Fort"
  command_capital_stronghold_t1: "Capital Stronghold - Undamaged"
  command_capital_stronghold_t1_desc: "The defenses in this province are nearly inpenetrable. We need to weaken them through decisions before conducting a proper siege."
  command_capital_stronghold_t2: "Capital Stronghold - Damaged"
@@ -1612,7 +1605,7 @@
  estate_dragon_command_monopoly_revoke_tt: "Production income from §YDamestear§! and §YPrecursor Relics§! is restored, but they will produce fewer trade goods."
  estate_dragon_command_expanded_cannon_buzanin_effect_tt: "Get the following bonus in the Dragon War Camp:\nLocal Recruitment Time: §G-50%§!\nLocal Regiment Cost: §G-50%§!"
  estate_tiger_command_proselytizers_to_the_wuhyun_effect_tt: "The §YLaws of Ninun§! edict converts provinces faster!"
- estate_tiger_command_six_schools_effect_tt: "Whenever you §YRecruit a General§!, also §GGain a Second General§! from any of the six Commands."
+ estate_tiger_command_six_schools_effect_tt: "Whenever you recruit a general, also recruit a second one from any of the six Commands."
 
  monopoly_privileges.19.b.tooltip: "We will be able to revoke the §YSunyanin Engineering Monopoly§! estate privilege."
  
@@ -1653,9 +1646,6 @@
  R62_new_schools_of_thought_effect_tt: "Improve all teachings."
  R62_philosophy_of_state_and_blood_effect_tt: "Unlock §YNationalist Teachings§!."
  R62_an_exaltation_of_man_trigger_tt: "The event "§YHuman Proves Honour§!" has happened."
- R62_lenient_teachings_req_tt: "Is following the §YLenient§! Godlost Teaching"
- R62_nationalist_teachings_req_tt: "Is following the §YNationalist§! Godlost Teaching"
- R62_strict_teachings_req_tt: "Is following the §YStrict§! Godlost Teaching"
  R62_adoptive_clans_effect_tt: "This event can now occur more often."
  R62_the_ten_reforms_effect_tt: "Unlock the "§YImplementing the Ten Reforms§!" decision"
  R62_the_marshals_dilemma_trigger_tt: "Have passed all the Ten Reforms."
@@ -1712,8 +1702,8 @@
  command_insubordination_good_tt: "The Insubordination must be crushed!"
  command_1973_tt: "Hikari will serve on the Yanshen frontier."
  command_1973_2_tt: "§RHikari will provide no second chances.§!"
- command_1984_tt: "§RThe Tiger, Elephant, and Dragon Commands will only grow more discontended as time progresses.§!\n§TWe must reconsolidate our strength inside Shamakhad and begin to prepare for a protracted siege!§!"
- command_1990_tt: "§RThere will be a decision to weaken the capitals of each rebelling Command that must be taken before the capital can be sieged successfully. Sieging down a capital puts an end to that nation's rebellion.\n\nDeath to the traitors!§!"
+ command_1984_tt: "§RThe Tiger, Elephant, and Dragon Commands will only grow more discontended as time progresses.§!"
+ command_1990_tt: "§RThere will be a decision to weaken the capitals of each rebelling Command that must be taken before the capital can be sieged successfully.\n\nDeath to the traitors!§!"
  command_1994_tt: "§R[R67.Monarch.GetSheHeCap] chose wisely.§!"
  command_1994_2_tt: "Integrate the §YTiger Command§!."
  command_1995_tt: "§R[R68.Monarch.GetSheHeCap] chose wisely.§!"
@@ -1786,8 +1776,8 @@
  estate_wolf_command_campaign_thidinkai_desc: "The [Root.GetWolf CommandName] pushes the Grand Marshal to continue the subjugation of Thidinkai. Only complete domination of the area will secure our foothold in the south."
  estate_wolf_command_campaign_lupulan: "Lupulan Campaign"
  estate_wolf_command_campaign_lupulan_desc: "The [Root.GetWolf CommandName] claims that the Lupulan Rainforest’s resources are impressive, and that the defenses will be weak, the perfect target for a campaign."
- estate_boar_command_campaign_arawkelin: "Arawkelin Campaign"
- estate_boar_command_campaign_arawkelin_desc: "The [Root.GetBoar CommandName] argues for the seizing of the great port of Arawkelin. They assert that it will cement Command control of the southern peninsula of Haless."
+ estate_boar_command_campaign_arawkelin: "AruWukelin Campaign"
+ estate_boar_command_campaign_arawkelin_desc: "The [Root.GetBoar CommandName] argues for the seizing of the great port of AruWukelin. They assert that it will cement Command control of the southern peninsula of Haless."
  estate_lion_command_campaign_yanszin: "Yanszin Campaign"
  estate_lion_command_campaign_yanszin_desc: "The [Root.GetLion CommandName] speaks of the power of the eunuchs, and how their influence spreads throughout Yanshen. Yanszin is their power base, taking it will weaken their influence greatly."
  estate_boar_command_campaign_xianjie: "Xianjie Campaign"
@@ -1832,8 +1822,8 @@
  estate_elephant_command_campaign_thidinkai_desc: "The [Root.GetElephant CommandName] pushes the Grand Marshal to continue the subjugation of Thidinkai. Only complete domination of the area will secure our foothold in the south."
  estate_elephant_command_campaign_lupulan: "Lupulan Campaign"
  estate_elephant_command_campaign_lupulan_desc: "The [Root.GetElephant CommandName] claims that the Lupulan Rainforest’s resources are impressive, and that the defenses will be weak, the perfect target for a campaign."
- estate_elephant_command_campaign_arawkelin: "Arawkelin Campaign"
- estate_elephant_command_campaign_arawkelin_desc: "The [Root.GetElephant CommandName] argues for the seizing of the great port of Arawkelin. They assert that it will cement Command control of the southern peninsula of Haless."
+ estate_elephant_command_campaign_arawkelin: "AruWukelin Campaign"
+ estate_elephant_command_campaign_arawkelin_desc: "The [Root.GetElephant CommandName] argues for the seizing of the great port of AruWukelin. They assert that it will cement Command control of the southern peninsula of Haless."
  estate_elephant_command_campaign_xianjie: "Xianjie Campaign"
  estate_elephant_command_campaign_xianjie_desc: "The [Root.GetElephant CommandName] wants us to finish the attack on the weakened Xiaken in Xianjie. They implore that it is critical we destroy them before they can regain their strength."
  

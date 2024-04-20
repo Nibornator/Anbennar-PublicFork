@@ -100,13 +100,13 @@ country_decisions = {
 		}
 		
 		allow = {
-			if = {
-				limit = { has_dlc = "Mandate of Heaven" }
-				is_emperor_of_china = yes
-			}
-			else = {
-				owns_core_province = 475	#Kheterat
-			}
+			# if = {
+			# 	limit = { has_dlc = "Mandate of Heaven" }
+			# 	is_emperor_of_china = yes
+			# }
+			# else = {
+			# 	owns_core_province = 475	#Kheterat
+			# }
 			OR = {
 				primary_culture = tijarikheti
 				primary_culture = irsmahapan
@@ -175,10 +175,6 @@ country_decisions = {
 			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = {
-				tag = L30
-				tag = L31
-			}
 		}
 		provinces_to_highlight = {
 			region = horashesh_region
@@ -271,10 +267,6 @@ country_decisions = {
 			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = {
-				tag = L29
-				tag = L31
-			}
 		}
 		provinces_to_highlight = {
 			region = horashesh_region
@@ -398,10 +390,6 @@ country_decisions = {
 			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = {
-				tag = L29
-				tag = L30
-			}
 		}
 		provinces_to_highlight = {
 			region = horashesh_region

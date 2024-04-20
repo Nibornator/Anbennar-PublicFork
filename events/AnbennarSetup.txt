@@ -28,7 +28,9 @@ country_event = {
 		}
 
 		every_country = {
-			limit = { has_country_modifier = monstrous_nation }
+			limit = { 
+				AND = { has_country_modifier = monstrous_nation }
+			}
 			set_country_flag = setup_monstrous_opinion 
 			every_country = {
 				limit = { NOT = { tag = PREV } } # not the same nation
@@ -556,7 +558,18 @@ country_event = {
 				hidden = yes
 			}
 			set_country_flag = init_racial_admin_mil
-			apply_sprite_pack = sun_elf_sprite_pack 
+			if = {
+				limit = {
+					OR = {
+						tag = F42
+						tag = F38
+					}
+				}
+				apply_sprite_pack = villager_sprite_pack
+			}
+			else = {
+				apply_sprite_pack = sun_elf_sprite_pack
+			}
 			# confusingly named, but the same sprite pack they got previously 
 		}
 		#Dwarven

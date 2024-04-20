@@ -2124,11 +2124,19 @@ A73_remove_ibevar = {
 		}
 		
 		trigger = {
-			is_state_core = 356
-			is_state_core = 352
-			is_state_core = 351
-			is_state_core = 261
-			is_state_core = 353
+			OR = {
+				AND = {
+					is_state_core = 356
+					is_state_core = 352
+					is_state_core = 351
+					is_state_core = 261
+					is_state_core = 353
+				}
+				AND = {
+					alliance_with = A32
+					treasury = 500
+				}
+			}
 		}
 		
 		effect = {
@@ -2139,6 +2147,14 @@ A73_remove_ibevar = {
 			}
 			else = {
 				add_mil_power = 50
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_state_core = 356
+					}
+				}
+				add_treasury = -500
 			}
 			add_country_modifier = {
 				name = bested_the_elves

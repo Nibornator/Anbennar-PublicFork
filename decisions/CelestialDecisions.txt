@@ -1,0 +1,273 @@
+country_decisions = {
+
+	reveal_map_decision = {
+		potential = {
+			tag = U89
+			ai = no
+		}
+
+		allow = {
+			tag = U89
+			ai = no
+		}
+
+		effect = {
+			hidden_effect = {
+				every_province = {
+					discover_country = ROOT
+				}
+				north_aelantir_coast_region = {
+					discover_country = ROOT
+				}
+				
+				southeast_aelantir_coast_region = {
+					discover_country = ROOT
+				}
+				
+				north_uelos_lament_ocean_region = {
+					discover_country = ROOT
+				}
+				
+				south_uelos_lament_ocean_region = {
+					discover_country = ROOT
+				}
+				
+				south_sarhal_coast_region = {
+					discover_country = ROOT
+				}
+				
+				west_salahad_coast_region = {
+					discover_country = ROOT
+				}
+				
+				cleaved_sea_coast_region = {
+					discover_country = ROOT
+				}
+				
+				north_ocean_of_the_lost_region = {
+					discover_country = ROOT
+				}
+				
+				south_ocean_of_the_lost_region = {
+					discover_country = ROOT
+				}
+				
+				punctured_coast_region = {
+					discover_country = ROOT
+				}
+				
+				west_aelantir_coast_region = {
+					discover_country = ROOT
+				}
+				
+				torn_sea_region = {
+					discover_country = ROOT
+				}
+				
+				outer_torn_sea_region = {
+					discover_country = ROOT
+				}
+				
+				
+				northern_sea_region = {
+					discover_country = ROOT
+				}
+				
+				ringlet_sea_region = {
+					discover_country = ROOT
+				}
+				
+				gulf_of_rahen_region = {
+					discover_country = ROOT
+				}
+				
+				northeast_haless_coast_region = {
+					discover_country = ROOT
+				}
+				
+				kedwali_gulf_region = {
+					discover_country = ROOT
+				}
+				
+				dameshead_sea_region = {
+					discover_country = ROOT
+				}
+				
+				giants_grave_sea_region = {
+					discover_country = ROOT
+				}
+				
+				divenhal_sea_region = {
+					discover_country = ROOT
+				}
+				
+				westcoast_region = {
+					discover_country = ROOT
+				}
+				
+				northern_thaw_region = {
+					discover_country = ROOT
+				}
+				
+				broken_sea_region = {
+					discover_country = ROOT
+				}
+				
+				western_broken_sea_region = {
+					discover_country = ROOT
+				}
+				
+				ruined_sea_region = {
+					discover_country = ROOT
+				}
+				
+				calamity_pass_region = {
+					discover_country = ROOT
+				}
+			}
+		}
+	}
+
+	unreveal_map_decision = {
+		potential = {
+			tag = U89
+			ai = no
+		}
+
+		allow = {
+			tag = U89
+			ai = no
+		}
+
+		effect = {
+			hidden_effect = {
+				every_province = {
+					undiscover_country = ROOT
+				}
+				north_aelantir_coast_region = {
+					undiscover_country = ROOT
+				}
+				
+				southeast_aelantir_coast_region = {
+					undiscover_country = ROOT
+				}
+				
+				north_uelos_lament_ocean_region = {
+					undiscover_country = ROOT
+				}
+				
+				south_uelos_lament_ocean_region = {
+					undiscover_country = ROOT
+				}
+				
+				south_sarhal_coast_region = {
+					undiscover_country = ROOT
+				}
+				
+				west_salahad_coast_region = {
+					undiscover_country = ROOT
+				}
+				
+				cleaved_sea_coast_region = {
+					undiscover_country = ROOT
+				}
+				
+				north_ocean_of_the_lost_region = {
+					undiscover_country = ROOT
+				}
+				
+				south_ocean_of_the_lost_region = {
+					undiscover_country = ROOT
+				}
+				
+				punctured_coast_region = {
+					undiscover_country = ROOT
+				}
+				
+				west_aelantir_coast_region = {
+					undiscover_country = ROOT
+				}
+				
+				torn_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				outer_torn_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				
+				northern_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				ringlet_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				gulf_of_rahen_region = {
+					undiscover_country = ROOT
+				}
+				
+				northeast_haless_coast_region = {
+					undiscover_country = ROOT
+				}
+				
+				kedwali_gulf_region = {
+					undiscover_country = ROOT
+				}
+				
+				dameshead_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				giants_grave_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				divenhal_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				westcoast_region = {
+					undiscover_country = ROOT
+				}
+				
+				northern_thaw_region = {
+					undiscover_country = ROOT
+				}
+				
+				broken_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				western_broken_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				ruined_sea_region = {
+					undiscover_country = ROOT
+				}
+				
+				calamity_pass_region = {
+					undiscover_country = ROOT
+				}
+			}
+		}
+	}
+
+	debug_magic_menu = {
+		potential = {
+			has_ruler_flag = magic_menu_opened
+			ai = no
+		}
+
+		allow = {
+			ai = no
+		}
+
+		effect = {
+			close_single_menu = yes
+		}
+	}
+}

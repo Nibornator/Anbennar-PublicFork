@@ -9,17 +9,21 @@ technology_group = tech_lizardfolk
 historical_rival = L69 #Zerat
 historical_friend = L96 #Asarta, ruled by brother, intending to conquer Karassk
 historical_friend = L97 #Arazin, ruled by brother
+historical_friend = L22
+fangaula_superregion = {
+	discover_country = ROOT
+}
 
 capital = 5908
 
 1000.1.1 = { 
 	set_country_flag = semi_monstrous
-	set_estate_privilege = estate_mages_organization_religious
+	set_estate_privilege = estate_mages_organization_state 
 }
 
 1420.3.3 = {
 	monarch = {
-		name = "Sykar I"
+		name = "Brosur I"
 		dynasty = "Riverclaw"
 		birth_date = 1403.3.3
 		adm = 3
@@ -32,9 +36,9 @@ capital = 5908
 
 1444.1.1 = {
 	heir = { 
-		name = "Sykar"
+		name = "Brosur"
 		dynasty = "Riverclaw"
-		monarch_name = "Sykar II"
+		monarch_name = "Brosur II"
 		birth_date = 1421.6.8
 		death_date = 1525.1.1
 		claim = 80

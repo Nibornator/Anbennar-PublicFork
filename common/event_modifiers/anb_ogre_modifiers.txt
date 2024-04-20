@@ -595,3 +595,7 @@ ogrillons = {
 	discipline = 0.05
 	land_morale = 0.05
 }
+
+ogre_divine_intervention = {
+	local_development_cost = -0.6
+}

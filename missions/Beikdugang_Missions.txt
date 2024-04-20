@@ -126,8 +126,10 @@ Y15_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = zuurzoi_area
-				area = tozgonrek_area
+				area = zoitalzar_area
 				area = zurkalga_area
+				province_id = 5217
+				province_id = 5222
 			}
 			has_port = yes
 			has_discovered = ROOT
@@ -136,13 +138,23 @@ Y15_1 = {
 		trigger = {
 			if = {
 				limit = {
+					5217 = {
+						NOT = { owned_by = ROOT }
+						is_city = yes
+						is_colony = yes
+					}
+					5222 = {
+						NOT = { owned_by = ROOT }
+						is_city = yes
+						is_colony = yes
+					}
 					zuurzoi_area = {
 						type = all
 						NOT = { owned_by = ROOT }
 						is_city = yes
 						is_colony = yes
 					}
-					tozgonrek_area = {
+					zoitalzar_area = {
 						type = all
 						NOT = { owned_by = ROOT }
 						OR = {
@@ -166,13 +178,25 @@ Y15_1 = {
 			}
 			else = {
 				OR = {
+					5217 = {
+						owned_by = ROOT
+						is_core = ROOT
+						has_port = yes
+						development = 5
+					}
+					5222 = {
+						owned_by = ROOT
+						is_core = ROOT
+						has_port = yes
+						development = 5
+					}
 					zuurzoi_area = {
 						owned_by = ROOT
 						is_core = ROOT
 						has_port = yes
 						development = 5
 					}
-					tozgonrek_area = {
+					zoitalzar_area = {
 						owned_by = ROOT
 						is_core = ROOT
 						has_port = yes
@@ -192,13 +216,23 @@ Y15_1 = {
 		effect = {
 			if = {
 				limit = {
+					5217 = {
+						NOT = { owned_by = ROOT }
+						is_city = yes
+						is_colony = yes
+					}
+					5222 = {
+						NOT = { owned_by = ROOT }
+						is_city = yes
+						is_colony = yes
+					}
 					zuurzoi_area = {
 						type = all
 						NOT = { owned_by = ROOT }
 						is_city = yes
 						is_colony = yes
 					}
-					tozgonrek_area = {
+					zoitalzar_area = {
 						type = all
 						NOT = { owned_by = ROOT }
 						OR = {
@@ -236,8 +270,10 @@ Y15_1 = {
 						limit = {
 							OR = {
 								area = zuurzoi_area
-								area = tozgonrek_area
+								area = zoitalzar_area
 								area = zurkalga_area
+								province_id = 5217
+								province_id = 5222
 							}
 							owned_by = ROOT
 							is_core = ROOT
@@ -1267,8 +1303,10 @@ Y15_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = zuurzoi_area
-				area = tozgonrek_area
+				area = zoitalzar_area
 				area = zurkalga_area
+				province_id = 5217
+				province_id = 5222
 			}
 			has_province_modifier = Y15_northern_post
 			has_discovered = ROOT
@@ -1293,8 +1331,10 @@ Y15_2 = {
 				has_province_modifier = Y15_northern_post
 				OR = {
 					area = zuurzoi_area
-					area = tozgonrek_area
+					area = zoitalzar_area
 					area = zurkalga_area
+					province_id = 5217
+					province_id = 5222
 				}
 				development = 10
 			}
@@ -1475,8 +1515,10 @@ Y15_2 = {
 					has_province_modifier = Y15_northern_post
 					OR = {
 						area = zuurzoi_area
-						area = tozgonrek_area
+						area = zoitalzar_area
 						area = zurkalga_area
+						province_id = 5217
+						province_id = 5222
 					}
 				}
 				change_trade_goods = precursor_relics

@@ -44,8 +44,7 @@ country_event = { #Project Briefing
 		
 		country_event = {
 			id = varamhar_flavour.2
-			days = 730
-			random = 730
+			days = 360
 		}
 	}
 }
@@ -80,8 +79,7 @@ country_event = { #Preliminary research
 		
 		country_event = {
 			id = varamhar_flavour.3
-			days = 730
-			random = 730
+			days = 360
 		}
 	}
 }
@@ -135,8 +133,7 @@ country_event = { #Animal testing
 		
 		country_event = {
 			id = varamhar_flavour.5
-			days = 730
-			random = 730
+			days = 360
 		}
 	}
 }
@@ -156,8 +153,7 @@ country_event = { #Human Testing
 		
 		country_event = {
 			id = varamhar_flavour.6
-			days = 730
-			random = 730
+			days = 360
 		}
 	}
 }
@@ -213,8 +209,7 @@ country_event = { #Analysing Test Results
 		
 		country_event = {
 			id = varamhar_flavour.8
-			days = 730
-			random = 730
+			days = 600
 		}
 	}
 }
@@ -247,8 +242,7 @@ country_event = { #Cracked the Secret
 		
 		country_event = {
 			id = varamhar_flavour.9
-			days = 730
-			random = 730
+			days = 600
 		}
 	}
 }
@@ -318,7 +312,7 @@ country_event = { #Start the Sunmaker Procedure
 				}
 				change_variable = {
 					which = varamharProjectDivinityCounter
-					value = 1
+					value = 5
 				}
 			}
 		}

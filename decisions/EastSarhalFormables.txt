@@ -133,7 +133,7 @@ country_decisions = {
 				}
 			}
 			OR = {
-				#primary_culture = dakinshi
+				primary_culture = dakinshi
 				primary_culture = antmvura
 				primary_culture = kombedak
 				primary_culture = umsozidak
@@ -169,12 +169,11 @@ country_decisions = {
 			owns = 5547
 			owns = 5545
 			OR = { 
-				#primary_culture = dakinshi
+				primary_culture = dakinshi
 				primary_culture = antmvura
 				primary_culture = kombedak
 				primary_culture = umsozidak
 				primary_culture = wakoodak
-				has_reform = dakinshi_warlord_reform
 			} 
 			custom_trigger_tooltip = {
 				tooltip = united_dakinshi_tooltip
@@ -184,8 +183,6 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 		}
 		effect = {
-			change_tag = S84
-			hidden_effect = { restore_country_name = yes }
 			if = {
 				limit = {
 					government = monarchy
@@ -196,16 +193,7 @@ country_decisions = {
 				limit = { NOT = { government_rank = 3 } }
 				set_government_rank = 3
 			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			# custom_tooltip = dakinshi_end_warlord_era_effect_tt
 			add_prestige = 50
-			if = {
-				limit = { primary_culture = dakinshi }
-				override_country_name = BWA_DAKINSHI
-			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
@@ -361,7 +349,7 @@ country_decisions = {
 			NOT = { exists = L65 } #Melakmengi 
 			OR = { #so the ai dont hate eachother
 				num_of_owned_provinces_with = {
-					value = 20
+					value = 50
 					OR = {
 						region = yetefesefi_region
 						region = telekenid_region
@@ -384,7 +372,7 @@ country_decisions = {
 					NOT = {
 						ROOT = {
 							num_of_owned_provinces_with = {
-								value = 75
+								value = 100
 								OR = {
 									region = yetefesefi_region
 									region = telekenid_region
@@ -414,26 +402,18 @@ country_decisions = {
 		}
 
 		allow = {
-			hidden_trigger = {
-				religion = sky_domain
-			}
+
+			owns_core_province = 5505 #Dakemender, jewel of the north
+			owns_core_province = 5689 #Simegasfan, the bastion of the frontier
+			owns_core_province = 5521 #Leenshelok, queen of the highlands
+			owns_core_province = 5529 #Yetmesira, gate of the Yet
+			owns_core_province = 5538 #Meretgeban, the great marketplace
+			owns_core_province = 5519 #Enikmesiki, the capital of the southern Yet
+			owns_core_province = 5600 #Yikikakeli, the floating city
+			owns_core_province = 6118 #Senidmot, crater of the Martyr
 
 			num_of_owned_provinces_with = {
-				value = 6
-				OR = {
-					province_id = 5505 #Dakmender, jewel of the north
-					province_id = 5689 #Simegasfan, the bastion of the frontier
-					province_id = 5521 #Leenshelok, queen of the highlands
-					province_id = 5529 #Yetmesira, gate of the Yet
-					province_id = 5538 #Meretgeban, the great marketplace
-					province_id = 5519 #Enikmesiki, the capital of the lower Yet
-					province_id = 5600 #Yikikakeli, the floating city
-					province_id = 6118 #Senidmot, crater of the Martyr
-				}
-			}
-
-			num_of_owned_provinces_with = {
-				value = 75
+				value = 100
 				OR = {
 					region = yetefesefi_region
 					region = telekenid_region

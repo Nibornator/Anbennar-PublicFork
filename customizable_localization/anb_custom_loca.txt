@@ -13857,14 +13857,14 @@ defined_text = {
 	text = { localisation_key = FlagF57 trigger = { tag = F57 } }
 	text = { localisation_key = FlagF58 trigger = { tag = F58 } }
 	# text = { localisation_key = FlagF60 trigger = { tag = F60 } }
-	# text = { localisation_key = FlagF61 trigger = { tag = F61 } }
+	text = { localisation_key = FlagF61 trigger = { tag = F61 } }
 	# text = { localisation_key = FlagF62 trigger = { tag = F62 } }
 	# text = { localisation_key = FlagF63 trigger = { tag = F63 } }
-	# text = { localisation_key = FlagF64 trigger = { tag = F64 } }
+	text = { localisation_key = FlagF64 trigger = { tag = F64 } }
 	# text = { localisation_key = FlagF65 trigger = { tag = F65 } }
 	# text = { localisation_key = FlagF66 trigger = { tag = F66 } }
 	# text = { localisation_key = FlagF67 trigger = { tag = F67 } }
-	# text = { localisation_key = FlagF68 trigger = { tag = F68 } }
+	text = { localisation_key = FlagF68 trigger = { tag = F68 } }
 	# text = { localisation_key = FlagF69 trigger = { tag = F69 } }
 	# text = { localisation_key = FlagF70 trigger = { tag = F70 } }
 	# text = { localisation_key = FlagF71 trigger = { tag = F71 } }
@@ -14326,7 +14326,7 @@ defined_text = {
 	text = { localisation_key = FlagL26 trigger = { tag = L26 } }
 	text = { localisation_key = FlagL27 trigger = { tag = L27 } }
 	text = { localisation_key = FlagL28 trigger = { tag = L28 } }
-	# text = { localisation_key = FlagL29 trigger = { tag = L29 } }
+	text = { localisation_key = FlagL29 trigger = { tag = L29 } }
 	# text = { localisation_key = FlagL30 trigger = { tag = L30 } }
 	# text = { localisation_key = FlagL31 trigger = { tag = L31 } }
 	# text = { localisation_key = FlagL32 trigger = { tag = L32 } }
@@ -14352,7 +14352,7 @@ defined_text = {
 	# text = { localisation_key = FlagL52 trigger = { tag = L52 } }
 	# text = { localisation_key = FlagL53 trigger = { tag = L53 } }
 	# text = { localisation_key = FlagL54 trigger = { tag = L54 } }
-	# text = { localisation_key = FlagL55 trigger = { tag = L55 } }
+	text = { localisation_key = FlagL55 trigger = { tag = L55 } }
 	# text = { localisation_key = FlagL56 trigger = { tag = L56 } }
 	# text = { localisation_key = FlagL57 trigger = { tag = L57 } }
 	# text = { localisation_key = FlagL58 trigger = { tag = L58 } }
@@ -14380,7 +14380,7 @@ defined_text = {
 	# text = { localisation_key = FlagL81 trigger = { tag = L81 } }
 	# text = { localisation_key = FlagL82 trigger = { tag = L82 } }
 	# text = { localisation_key = FlagL83 trigger = { tag = L83 } }
-	# text = { localisation_key = FlagL84 trigger = { tag = L84 } }
+	text = { localisation_key = FlagL84 trigger = { tag = L84 } }
 	# text = { localisation_key = FlagL85 trigger = { tag = L85 } }
 	# text = { localisation_key = FlagL86 trigger = { tag = L86 } }
 	# text = { localisation_key = FlagL87 trigger = { tag = L87 } }
@@ -14391,7 +14391,7 @@ defined_text = {
 	# text = { localisation_key = FlagL92 trigger = { tag = L92 } }
 	# text = { localisation_key = FlagL93 trigger = { tag = L93 } }
 	# text = { localisation_key = FlagL94 trigger = { tag = L94 } }
-	# text = { localisation_key = FlagL95 trigger = { tag = L95 } }
+	text = { localisation_key = FlagL95 trigger = { tag = L95 } }
 	# text = { localisation_key = FlagL96 trigger = { tag = L96 } }
 	# text = { localisation_key = FlagL97 trigger = { tag = L97 } }
 	# text = { localisation_key = FlagL98 trigger = { tag = L98 } }
@@ -14985,7 +14985,7 @@ defined_text = {
 	# text = { localisation_key = FlagU86 trigger = { tag = U86 } }
 	# text = { localisation_key = FlagU87 trigger = { tag = U87 } }
 	# text = { localisation_key = FlagU88 trigger = { tag = U88 } }
-	# text = { localisation_key = FlagU89 trigger = { tag = U89 } }
+	text = { localisation_key = FlagU89 trigger = { tag = U89 } }
 	# text = { localisation_key = FlagU90 trigger = { tag = U90 } }
 	# text = { localisation_key = FlagU91 trigger = { tag = U91 } }
 	# text = { localisation_key = FlagU92 trigger = { tag = U92 } }
@@ -15497,6 +15497,11 @@ defined_text = {
 	# text = { localisation_key = FlagZ98 trigger = { tag = Z98 } }
 	text = { localisation_key = FlagZ99 trigger = { tag = Z99 } }
 	text = { localisation_key = FlagEmpty trigger = { always = yes } }
+    text = { localisation_key = FlagKEK trigger = { tag = KEK } }
+    text = { localisation_key = FlagS15 trigger = { tag = S15 } }
+    text = { localisation_key = FlagS52 trigger = { tag = S52 } }
+    text = { localisation_key = FlagS79 trigger = { tag = S79 } }
+    text = { localisation_key = FlagS71 trigger = { tag = S71 } }
 }
 
 defined_text = {

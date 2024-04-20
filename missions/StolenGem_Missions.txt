@@ -1,0 +1,1039 @@
+
+stolen_gem_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	
+	potential = {
+		tag = R66
+	}
+
+	R66_colonizing_the_mines_p1 = {
+		position = 1
+		icon = mission_unknown_mission
+		provinces_to_highlight = {
+			province_id = 4304
+		}
+		trigger = {
+			if = {
+				limit = {
+					4304 = {
+						is_city = yes
+					}
+				}
+				4304 = {
+					owned_by = ROOT
+				}
+			}
+			else = {
+				treasury = 50
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					4304 = {
+						is_city = yes
+						owned_by = ROOT
+					}
+				}
+				add_treasury = 100
+			}
+			else = {
+				add_treasury = -50
+				4304 = {
+					add_siberian_construction = 400
+				}
+			}
+			if = {
+				limit = { native_policy = native_policy_coexist }
+				dwarovrod_66_68_area = {
+					change_native_hostileness = -10
+					change_native_size = -25
+				}
+			}
+			else_if = {
+				limit = { native_policy = native_policy_trade }
+				dwarovrod_66_68_area = {
+					change_native_ferocity = -10
+				}
+			}
+			else_if = {
+				limit = { native_policy = native_policy_hostile }
+				4350 = {
+					add_unit_construction = {
+						type = infantry
+						amount = 5
+						speed = 0.5
+						cost = 0
+					}
+				}
+			}
+		}
+	}
+
+	R66_we_need_to_escape = {
+		position = 2
+		icon = mission_unknown_mission
+		provinces_to_highlight = {
+			province_id = 4302
+		}
+		required_missions = {
+			R66_colonizing_the_mines_p1
+			R66_uncovering_the_depths
+		}
+		trigger = {
+			4302 = {
+				is_city = yes
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			drunken_pass_area = {
+				discover_country = ROOT
+			}
+			add_country_modifier = {
+				name = R66_remnant_legacy
+				duration = 1825
+			}
+			dwarovrod_63_65_area = {
+				discover_country = ROOT
+				add_siberian_construction = 400
+				change_native_ferocity = -5
+			}
+		}
+	}
+
+	R66_branching_caverns = {
+		position = 3
+		icon = mission_unknown_mission
+		provinces_to_highlight = {
+			province_id = 4297
+		}
+		required_missions = {
+			R66_we_need_to_escape
+		}
+		trigger = {
+			dwarovrod_63_65_area = {
+				is_city = yes
+				owned_by = ROOT
+			}
+			adm_power = 150
+			dip_power = 150
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_country_modifier = {
+				name = R66_command_marching_on_the_tree
+				duration = 14600
+			}
+			hidden_effect = {
+				hul_az_krakazol_area = {
+					discover_country = ROOT
+				}
+				4266 = {
+					change_native_ferocity = -5
+				}
+			}
+		}
+	}
+
+	R66_dwarven_hold_encounter = {
+		position = 4
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_branching_caverns
+		}
+		provinces_to_highlight = {
+			province_id = 4266
+		}
+		trigger = {
+			4266 = {
+				owned_by = ROOT
+				NOT = {
+					has_province_modifier = infested_hold
+					has_province_modifier = ruined_hold
+				}
+			}
+		}
+		effect = {
+			4266 = {
+				add_province_modifier = {
+					name = fallen_great_excavation
+					duration = 5475
+				}
+			}
+		}
+	}
+	R66_backup_plan = {
+		position = 5
+		icon = mission_unknown_mission
+		provinces_to_highlight = {
+			province_id = 4266
+		}
+		required_missions = {
+			R66_a_tentative_peek
+			R66_dwarven_hold_encounter
+		}
+		trigger = {
+			4266 = {
+				has_dwarven_hold_4 = yes
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				generic_increase_of_racial_tolerance_effect = { race = dwarven largest = yes }
+			}
+			4350 = {
+				generic_add_race_minority_size_effect = { race = dwarven }
+			}
+			add_manpower = 2
+		}
+	}
+}
+
+stolen_gem_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	
+	potential = {
+		tag = R66
+	}
+
+	R66_uncovering_the_depths = {
+		position = 1
+		icon = mission_unknown_mission
+		provinces_to_highlight = {
+			area = tuwad_pass_area
+		}
+		trigger = {
+			tuwad_pass_area = {
+				type = all
+				num_of_units_in_province = {
+					who = ROOT
+					type = infantry
+					amount = 1
+				}
+			}
+			treasury = 100
+			mil_power = 150
+		}
+		effect = {
+			add_mil_power = -50
+			4338 = {
+				add_building_construction = {
+					building = mage_tower
+					speed = 0.75
+					cost = 0.25
+				}
+				add_province_modifier = {
+					name = R66_G52_excavation
+					duration = -1
+				}
+				hidden_effect = {
+					kill_units = {
+						who = ROOT
+						type = infantry
+						amount = 1
+					}
+				}
+			}
+		}
+	}
+	R66_securing_the_depths = {
+		position = 2
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_uncovering_the_depths
+			R66_request_feudalism
+		}
+		provinces_to_highlight = {
+			province_id = 4337
+			province_id = 4338
+		}
+		trigger = {
+			4337 = {
+				has_fort_building_trigger = yes
+			}
+			4338 = {
+				num_of_units_in_province = {
+					who = ROOT
+					type = infantry
+					amount = 5
+				}
+			}
+			OR = {
+				num_of_mercenaries = 4
+				num_of_infantry = 10
+			}
+		}
+		effect = {
+			add_prestige = 80
+			4350 = {
+				add_building = mage_tower
+			}
+			4338 = {
+				remove_province_modifier = G52_excavation
+			}
+			hidden_effect = {
+				4338 = {
+					add_province_modifier = {
+						name = R66_storm_of_spirits
+						duration = -1
+					}
+					kill_units = {
+						who = ROOT
+						type = infantry
+						amount = 5
+					}
+				}
+			}
+		}
+	}
+	R66_a_tentative_peek = {
+		position = 4
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_the_calcite_caves
+		}
+		provinces_to_highlight = {
+			province_id = 4338
+		}
+		trigger = {
+			4338 = {
+				has_manpower_building_trigger = yes
+				base_manpower = 4
+				num_of_units_in_province = {
+					who = ROOT
+					type = infantry
+					amount = 20
+				}
+				NOT = {
+					num_of_units_in_province = {
+						who = ROOT
+						amount = 21
+					}
+				}
+			}
+		}
+		effect = {
+			4338 = {
+				remove_province_modifier = storm_of_spirits
+			}
+			hidden_effect = {
+				4338 = {
+					add_province_modifier = {
+						name = R66_Y51_tomb_spirits_furious
+						duration = -1
+					}
+					kill_units = {
+						who = ROOT
+						type = infantry
+						amount = 19
+					}
+					spawn_expedition = yes
+					generate_expedition = { base_floor = 7 base_danger = 5 }
+					set_province_flag = vazhatun_expedition_flag
+				}
+			}
+		}
+	}
+	R66_fight_back_the_darkness = {
+		position = 5
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_a_tentative_peek
+		}
+		provinces_to_highlight = {
+			province_id = 4338
+		}
+		trigger = {
+			4338 = {
+				NOT = { has_province_modifier = expedition_target }
+				num_of_units_in_province = {
+					who = ROOT
+					type = infantry
+					amount = 30
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				4020 = {
+					set_province_flag = vazhatun_expedition_flag
+				}
+				4338 = {
+					add_province_modifier = {
+						name = R66_Y51_tomb_power_high
+						duration = -1
+					}
+				}
+			}
+			4338 = {
+				remove_province_modifier = Y51_tomb_spirits_furious
+			}
+		}
+	}
+}
+
+stolen_gem_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	
+	potential = {
+		tag = R66
+	}
+
+	R66_request_feudalism = {
+		position = 1
+		icon = mission_unknown_mission
+		provinces_to_highlight = {
+			superregion = rahen_superregion
+			is_capital = yes
+		}
+		trigger = {
+			4350 = {
+				OR = {
+					has_province_modifier = knowledge_sharing
+					feudalism = 100
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = R66_orc_on_the_path_to_civilization
+				duration = 18250
+			}
+			R63 = {
+				add_country_modifier = {
+					name = R66_orc_on_the_path_to_civilization
+					duration = 18250
+				}
+			}
+		}
+	}
+	R66_develop_renaissance = {
+		position = 2
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_request_feudalism
+		}
+		provinces_to_highlight = {
+			province_id = 4350
+		}
+		trigger = {
+			4350 = {
+				renaissance = 100
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = R66_G67_the_ursibadur_emperors
+				duration = 7300
+			}
+		}
+	}
+	R66_the_calcite_caves = {
+		position = 3
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_securing_the_depths
+			R66_sarisungi_sneakies
+			R66_develop_renaissance
+			R66_goblin_trove
+		}
+		provinces_to_highlight = {
+			province_id = 4350
+		}
+		trigger = {
+			4350 = {
+				has_dwarven_hold_2 = yes
+				num_of_units_in_province = {
+					who = ROOT
+					type = infantry
+					amount = 15
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					4350 = {
+						has_province_modifier = diamond_district
+					}
+				}
+				4350 = {
+					remove_province_modifier = diamond_district
+					add_province_modifier = {
+						name = R66_greedy_grin_serpentbloom_cartels
+						duration = -1
+					}
+				}
+			}
+			4350 = {
+				change_trade_goods = serpentbloom
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+	R66_raheni_cooperation = {
+		position = 5
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_vimdatrong_workforce
+		}
+		provinces_to_highlight = {
+			superregion = rahen_superregion
+			has_harimari_majority_trigger = yes
+		}
+		trigger = {
+			OR = {
+				has_country_flag = removing_monstrous
+				has_country_flag = no_longer_monstrous
+			}
+			any_known_country = {
+				capital_scope = { superregion = rahen_superregion }
+				culture_group = harimari
+				AND = {
+					has_opinion = {
+						who = ROOT
+						value = 0
+					}
+					has_opinion_modifier = {
+						WHO = ROOT
+						modifier = sent_gift
+						value = 25
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				generic_increase_of_racial_tolerance_effect = { race = harimari large = yes }
+			}
+			4350 = {
+				generic_add_race_minority_size_effect = { race = harimari }
+			}
+			add_manpower = 2
+		}
+	}
+	R66_the_war = {
+		position = 6
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_backup_plan
+			R66_fight_back_the_darkness
+			R66_yanshen_secrets
+			R66_raheni_cooperation
+			R66_prove_yourself_to_pirates
+		}
+		effect = {
+			tooltip = {
+				declare_war_with_cb = {
+					who = overlord
+					casus_belli = cb_independence_war
+				}
+			}
+			hidden_effect = {
+				overlord = {
+					declare_war = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = R66_jiantsiang_cruel_firelord
+				duration = 1825
+			}
+		}
+	}
+	R66_the_march = {
+		position = 7
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_the_war
+		}
+		trigger = {
+			is_subject = no
+			R63 = { is_subject = no }
+			is_at_war = no
+		}
+		effect = {
+			custom_tooltip = R62_warbringer_peacemaker_effect_tt
+			hidden_effect = {
+				inherit = R65
+				jade_mines_region = {
+					cede_province = R66
+					add_core = R66
+					remove_core = R62
+					remove_core = R65
+				}
+				change_primary_culture = march_goblin
+				every_owned_province = {
+					change_culture = march_goblin
+				}
+				change_tag = R81
+				country_event = { id = ideagroups.1 }
+				add_stability_or_adm_power = yes
+				set_government_rank = 2
+				swap_non_generic_missions = yes
+			}
+		}
+	}
+}
+
+stolen_gem_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	
+	potential = {
+		tag = R66
+	}
+
+	R66_shake_down_bigwigs = {
+		position = 1
+		icon = mission_unknown_mission
+		trigger = {
+			NOT = {
+				estate_influence = {
+					estate = estate_monstrous_tribes
+					influence = 60
+				}
+			}
+		}
+		effect = {
+			add_treasury = 200
+			add_estate_loyalty = {
+				estate = estate_monstrous_tribes
+				loyalty = -20
+			}
+		}
+	}
+	R66_goblin_trove = {
+		position = 2
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_shake_down_bigwigs
+		}
+		trigger = {
+			estate_loyalty = {
+				estate = estate_monstrous_tribes
+				loyalty = 30
+			}
+		}
+		effect = {
+			4350 = {
+				spawn_expedition = yes
+				hidden_effect = { generate_expedition = { base_floor = 1 base_danger = 3 } }
+			}
+		}
+	}
+	R66_vimdatrong_workforce = {
+		position = 4
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_the_calcite_caves
+			R66_preparing_for_the_inevitable
+		}
+		provinces_to_highlight = {
+			province_id = 4559
+		}
+		trigger = {
+			OR = {
+				AND = {
+					OR = {
+						has_country_flag = removing_monstrous
+						has_country_flag = no_longer_monstrous
+					}
+					4559 = {
+						owner = {
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+					}
+				}
+				4559 = {
+					owner = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = sent_gift
+							value = 25
+						}
+						has_spy_network_from = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			4350 = {
+				generic_add_race_minority_size_effect = { race = human }
+			}
+			add_manpower = 2
+			if = {
+				limit = { alliance_with = R63 }
+				R63 = {
+					add_country_modifier = {
+						name = R66_xia_budding_chi
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	R66_yanshen_secrets = {
+		position = 5
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_vimdatrong_workforce
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			OR = {
+				has_kobold_minority_trigger = yes
+				has_kobold_majority_trigger = yes
+			}
+		}
+		trigger = {
+			OR = {
+				has_country_flag = removing_monstrous
+				has_country_flag = no_longer_monstrous
+			}
+			any_known_country = {
+				capital_scope = { superregion = yanshen_superregion }
+				any_owned_province = {
+					OR = {
+						has_kobold_minority_trigger = yes
+						culture_group = kobold
+					}
+				}
+				AND = {
+					has_spy_network_from = {
+						who = ROOT
+						value = 50
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = sent_gift
+						value = 25
+					}
+				}
+			}
+		}
+		effect = {
+			4350 = {
+				generic_add_race_minority_size_effect = { race = kobold }
+			}
+			add_manpower = 2
+			hidden_effect = {
+				generic_increase_of_racial_tolerance_effect = { race = kobold largest = yes }
+			}
+			if = {
+				limit = { alliance_with = R63 }
+				R63 = {
+					remove_country_modifier = xia_budding_chi
+					add_country_modifier = {
+						name = R66_bianfang_army_buff_3
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+stolen_gem_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	
+	potential = {
+		tag = R66
+	}
+	
+	R66_fomenting_insurrection = {
+		position = 1
+		icon = mission_unknown_mission
+		provinces_to_highlight = {
+			owned_by = R63
+		}
+		trigger = {
+			if = {
+				limit = { exists = R63 }
+				reverse_has_opinion = {
+					who = R63
+					value = 100
+				}
+			}
+			else = { always = yes }
+		}
+		effect = {
+			if = {
+				limit = { exists = R63 }
+				R63 = {
+					add_country_modifier = {
+						name = R66_hobgoblin_riches_of_jade_mines
+						duration = 1825
+					}
+					capital_scope = {
+						generic_add_race_minority_size_effect = { race = goblin }
+					}
+					jade_mines_region = {
+						discover_country = R63
+					}
+					hidden_effect = {
+						generic_increase_of_racial_tolerance_effect = { race = goblin largest = yes }
+					}
+				}
+				hidden_effect = {
+					generic_increase_of_racial_tolerance_effect = { race = orcish largest = yes }
+					generic_increase_of_racial_tolerance_effect = { race = half_orcish largest = yes }
+				}
+			}
+			4350 = {
+				generic_add_race_minority_size_effect = { race = half_orcish }
+			}
+			add_manpower = 2
+		}
+	}
+	R66_sarisungi_sneakies = {
+		position = 2
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_fomenting_insurrection
+		}
+		provinces_to_highlight = {
+			province_id = 4500
+		}
+		trigger = {
+			4500 = {
+				owner = {
+					has_spy_network_from = {
+						who = ROOT
+						value = 50
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = sent_gift
+						value = 25
+					}
+					gives_military_access_to = ROOT
+				}
+			}
+		}
+		effect = {
+			4350 = {
+				add_province_modifier = {
+					name = aw_thieves_guild_1
+					duration = -1
+				}
+				add_province_modifier = {
+					name = R66_castanor_well_defended_core
+					duration = 7300
+				}
+				generic_add_race_minority_size_effect = { race = human }
+			}
+			add_manpower = 2
+			hidden_effect = {
+				add_liberty_desire = 75
+			}
+			if = {
+				limit = { exists = R63 }
+				R63 = {
+					add_country_modifier = {
+						name = R66_hobgoblin_funding_of_the_jade_march
+						duration = 3650
+					}
+					hidden_effect = {
+						add_liberty_desire = 75
+					}
+				}
+			}
+			if = {
+				limit = {
+					R66 = {
+						is_subject_of = R62
+					}
+				}
+				R62 = {
+					add_country_modifier = {
+						name = R66_Y91_egg_sabotage
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+	R66_preparing_for_the_inevitable = {
+		position = 3
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_sarisungi_sneakies
+		}
+		provinces_to_highlight = {
+			owned_by = R63
+		}
+		trigger = {
+			OR = {
+				R63 = {
+					alliance_with = ROOT
+					trust = { who = ROOT value = 60 }
+				}
+				overlord = {
+					has_spy_network_from = {
+						who = ROOT
+						value = 60
+					}
+				}
+				NOT = { exists = R62 exists = R63}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					R63 = {
+						alliance_with = ROOT
+					}
+				}
+				R63 = {
+					add_country_modifier = {
+						name = R66_acolyte_gathering_forces
+						duration = 7300
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					overlord = {
+						has_spy_network_from = {
+							who = ROOT
+							value = 60
+						}
+					}
+				}
+				overlord = {
+					add_country_modifier = {
+						name = R66_nsc_army_more_paid
+						duration = 7300
+					}
+				}
+			}
+			add_liberty_desire = 75
+			R63 = { add_liberty_desire = 75 }
+		}
+	}
+	R66_prove_yourself_to_pirates = {
+		position = 5
+		icon = mission_unknown_mission
+		required_missions = {
+			R66_vimdatrong_workforce
+		}
+		provinces_to_highlight = {
+			OR = {
+				superregion = south_haless_superregion
+				superregion = east_sarhal_superregion
+			}
+			owner = { 
+				has_government_attribute = is_pirate_republic_reform
+			}
+			is_capital = yes
+		}
+		trigger = {
+			OR = {
+				has_country_flag = removing_monstrous
+				has_country_flag = no_longer_monstrous
+			}
+			OR = {
+				any_known_country = {
+					has_government_attribute = is_pirate_republic_reform
+					AND = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+						has_opinion_modifier = {
+							WHO = ROOT
+							modifier = sent_gift
+							value = 25
+						}
+					}
+				}
+				NOT = {
+					any_known_country = {
+						has_government_attribute = is_pirate_republic_reform
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_known_country = {
+						has_government_attribute = is_pirate_republic_reform
+						capital_scope = { superregion = south_haless_superregion }
+						AND = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
+							has_opinion_modifier = {
+								WHO = ROOT
+								modifier = sent_gift
+								value = 25
+							}
+						}
+					}
+				}
+				4350 = {
+					generic_add_race_minority_size_effect = { race = harimari }
+					generic_add_race_minority_size_effect = { race = elven }
+				}
+				hidden_effect = {
+					generic_increase_of_racial_tolerance_effect = { race = harimari largest = yes }
+					generic_increase_of_racial_tolerance_effect = { race = elven largest = yes }
+				}
+			}
+			if = {
+				limit = {
+					any_known_country = {
+						has_government_attribute = is_pirate_republic_reform
+						capital_scope = { superregion = east_sarhal_superregion }
+						AND = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
+							has_opinion_modifier = {
+								WHO = ROOT
+								modifier = sent_gift
+								value = 25
+							}
+						}
+					}
+				}
+				4350 = {
+					generic_add_race_minority_size_effect = { race = harpy }
+					generic_add_race_minority_size_effect = { race = harpy }
+				}
+				hidden_effect = {
+					generic_increase_of_racial_tolerance_effect = { race = harpy largest = yes }
+				}
+			}
+			add_manpower = 2
+		}
+	}
+}

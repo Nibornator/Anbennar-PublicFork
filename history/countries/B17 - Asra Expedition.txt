@@ -7,6 +7,20 @@ primary_culture = silver_dwarf
 religion = regent_court
 technology_group = tech_dwarven
 capital = 2864
+historical_friend = B18
+west_dwarovar_region = {
+	discover_country = ROOT
+}
+inner_castanor_region = {
+	discover_country = ROOT
+}
+south_castanor_region = {
+	discover_country = ROOT
+}
+west_castanor_region = {
+	discover_country = ROOT
+}
+
 
 1000.1.1 = { 
 	set_estate_privilege = estate_mages_organization_guilds 
@@ -16,7 +30,7 @@ capital = 2864
 
 1442.3.17 = {
 	monarch = {
-		name = "Jarmun"
+		name = "Lexperiment"
 		dynasty = "Asra"
 		culture = agate_dwarf
 		birth_date = 1290.11.4
@@ -24,5 +38,5 @@ capital = 2864
 		dip = 3
 		mil = 5
 	}
-	set_ruler_flag = long_lived_ruler
+	
 }
