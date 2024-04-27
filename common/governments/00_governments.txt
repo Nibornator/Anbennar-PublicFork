@@ -1066,6 +1066,7 @@ republic = {
 				blorc_codified_omens
 				just_another_cult
 				semayebaka_chapter_houses
+				khug_asra_reform_republic
 			}
 		}
 		military_doctrines = { #Tier 5
@@ -1283,7 +1284,6 @@ republic = {
 				nothern_league_autonomous_principle
 				nothern_league_military_principle
 				high_dawn_academy_reform
-				khug_asra_reform_republic
 				feiten_reformist_movement
 				dwarovar_keep_to_tradition
 			}

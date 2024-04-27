@@ -1,0 +1,697 @@
+namespace = karguin
+
+# Info: 
+# karguin.1 - fire by mission to open portal in province
+# karguin.2 - passive waves on open portal, mtth
+# karguin.3 - use on portal province, will spawn extra wave, hidden
+# karguin.4 - effect of karguin.3, rebels on inidividual provinces
+# karguin.11-15 - Events for each vassal tag spawning, fires in province scope so you can direct it at portal
+# karguin.20 - Spawning support to vassal
+
+# JELLY: Make sure to use province name in title!!!
+# Portal opens
+province_event = {
+	id = karguin.1
+	title = karguin.1.t
+	desc = karguin.1.d
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		set_province_flag = portal_open
+	}
+
+	option = {
+		name = karguin.1.a
+		# JELLY: make tooltip about portal opening and invasion starting
+		custom_tooltip = karguin_portal_open_tt
+		hidden_effect = {
+			for = {
+				amount = 10
+				effect = "
+					random_province = {
+						limit = {
+							superregion = ROOT
+							is_city = yes
+							NOT = {
+								OR = {
+									owned_by = KEK
+									owned_by = U89
+								}
+							}
+							NOT = { 
+								owner = { 
+									has_country_flag = reward_onyx_country
+									has_country_modifier = blessed_by_the_other_doge
+								}
+							}
+						}
+						spawn_rebels = {
+							type = tax_collectors_rebels_rebels
+							size = 2
+							culture = sun_elf
+						}
+					}
+				"
+			}
+		}
+	}
+}
+
+# Regular spawning, runs for each portal indepently
+province_event = {
+	id = karguin.2
+	title = karguin.2.t
+	desc = karguin.2.d
+	picture = ANGRY_MOB_eventPicture
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_province_flag = portal_open
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_province = {
+				limit = {
+					superregion = ROOT
+					is_city = yes
+					NOT = {
+						OR = {
+							owned_by = KEK
+							owned_by = U89
+						}
+					}
+				}
+	
+				save_event_target_as = karguin_spawn_province
+			}
+		}
+	}
+
+	option = {
+		name = karguin.2.a
+		goto = karguin_spawn_province
+		
+		# JELLY: tooltip about regular wave going
+		custom_tooltip = karguin_portal_wave_tt
+		event_target:karguin_spawn_province = {
+			spawn_rebels = {
+				type = tax_collectors_rebels_rebels
+				size = 2
+				culture = sun_elf
+			}
+		}
+	}
+}
+
+# Wave sent by karguin, bigger than normal
+province_event = {
+	id = karguin.3
+	title = karguin.3.t
+	desc = karguin.3.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	
+	hidden = yes
+	trigger = {
+		has_province_flag = portal_open
+	}
+
+	option = {
+		name = karguin.3.a
+		
+		for = {
+			amount = 5
+			effect = "
+				random_province = {
+					limit = {
+						superregion = ROOT
+						is_city = yes
+						NOT = {
+							OR = {
+								owned_by = KEK
+								owned_by = U89
+							}
+						}
+						NOT = { 
+							owner = { 
+								has_country_flag = reward_onyx_country
+								has_country_modifier = blessed_by_the_other_doge
+							}
+						}
+					}
+					province_event = { id = karguin.4 }
+				}
+			"
+		}
+	}
+}
+
+# Wave by karguin - end provinces
+province_event = {
+	id = karguin.4
+	title = karguin.4.t
+	desc = gacha.4.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = karguin.4
+		
+		# JELLY: tooltip about wave sent by the evil karguin!
+		custom_tooltip = karguin_portal_wave_big_tt
+		spawn_rebels = {
+			type = tax_collectors_rebels_rebels
+			size = 3
+			culture = sun_elf
+		}
+	}
+}
+
+# Spawning - LOL
+province_event = {
+	id = karguin.11
+	title = karguin.11.t
+	desc = gacha.11.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_province = {
+			limit = {
+				superregion = ROOT
+				is_city = yes
+				owner = { ai = yes }
+			}
+		}
+
+		save_event_target_as = spawning_point
+		owner = { save_event_target_as = big_l_tag }
+	}
+
+	option = {
+		name = karguin.11.a
+		
+		# JELLY: tooltip about invasion tag spawning
+		custom_tooltip = karguin_vassal_spawn_tt
+		hidden_effect = {
+			event_target:spawning_point = {
+				add_core = LOL
+				change_religion = infernal_court
+				change_culture = sun_elf
+				cede_province = LOL
+				LOL = {
+					change_religion = infernal_court
+					change_government = theocracy
+					add_government_reform = secular_order_reform
+					change_primary_culture = sun_elf
+					add_country_modifier = {
+						name = invasion_spawn_buff
+						duration = -1
+					}
+					karguin_starting_army = yes
+					# custom ruler or whatev
+				}
+			}
+
+			if = {
+				limit = {
+					event_target:big_l_tag = {
+						exists = yes					
+					}
+				}
+
+				LOL = {
+					declare_war_with_cb = {
+						who = event_target:big_l_tag
+						casus_belli = cb_karguin
+					}
+				}
+			}
+
+			every_province = {
+				limit = {
+					superregion = ROOT
+					NOT = {
+						OR = {
+							owned_by = KEK
+							owned_by = U89
+						}
+					}
+					is_city = yes
+					owner = { ai = yes }
+					NOT = { province_id = event_target:spawning_point }
+				}
+				add_core = LOL
+				change_culture = sun_elf
+				spawn_rebels = {
+					type = nyarguin_invasion_rebels
+					size = 3
+					separatists_target = LOL
+					culture = sun_elf
+				}
+			}
+		}
+	}
+}
+
+# Spawning - TOP
+province_event = {
+	id = karguin.12
+	title = karguin.12.t
+	desc = gacha.12.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_province = {
+			limit = {
+				superregion = ROOT
+				is_city = yes
+				owner = { ai = yes }
+			}
+		}
+
+		save_event_target_as = spawning_point
+		owner = { save_event_target_as = big_l_tag }
+	}
+
+	option = {
+		name = karguin.12.a
+		
+		# JELLY: tooltip about invasion tag spawning
+		custom_tooltip = karguin_vassal_spawn_tt
+		hidden_effect = {
+			event_target:spawning_point = {
+				add_core = TOP
+				change_religion = infernal_court
+				change_culture = sun_elf
+				cede_province = TOP
+				TOP = {
+					change_government = theocracy
+					add_government_reform = secular_order_reform
+					change_religion = infernal_court
+					change_primary_culture = sun_elf
+					add_country_modifier = {
+						name = invasion_spawn_buff
+						duration = -1
+					}
+					karguin_starting_army = yes
+					# custom ruler or whatev
+				}
+			}
+
+			if = {
+				limit = {
+					event_target:big_l_tag = {
+						exists = yes					
+					}
+				}
+
+				TOP = {
+					declare_war_with_cb = {
+						who = event_target:big_l_tag
+						casus_belli = cb_karguin
+					}
+				}
+			}
+
+			every_province = {
+				limit = {
+					superregion = ROOT
+					NOT = {
+						OR = {
+							owned_by = KEK
+							owned_by = U89
+						}
+					}
+					is_city = yes
+					owner = { ai = yes }
+					NOT = { province_id = event_target:spawning_point }
+				}
+				add_core = TOP
+				change_culture = sun_elf	
+				spawn_rebels = {
+					type = nyarguin_invasion_rebels
+					size = 3
+					separatists_target = TOP
+					culture = sun_elf
+				}
+			}
+		}
+	}
+}
+
+# Spawning - SUB
+province_event = {
+	id = karguin.13
+	title = karguin.13.t
+	desc = gacha.13.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_province = {
+			limit = {
+				superregion = ROOT
+				is_city = yes
+				owner = { ai = yes }
+			}
+		}
+
+		save_event_target_as = spawning_point
+		owner = { save_event_target_as = big_l_tag }
+	}
+
+	option = {
+		name = karguin.13.a
+		
+		# JELLY: tooltip about invasion tag spawning
+		custom_tooltip = karguin_vassal_spawn_tt
+		hidden_effect = {
+			event_target:spawning_point = {
+				add_core = SUB
+				change_religion = infernal_court
+				change_culture = sun_elf
+				cede_province = SUB
+				SUB = {
+					change_government = theocracy
+					add_government_reform = secular_order_reform
+					change_religion = infernal_court
+					change_primary_culture = sun_elf
+					add_country_modifier = {
+						name = invasion_spawn_buff
+						duration = -1
+					}
+					karguin_starting_army = yes
+					# custom ruler or whatev
+				}
+			}
+
+			if = {
+				limit = {
+					event_target:big_l_tag = {
+						exists = yes					
+					}
+				}
+
+				SUB = {
+					declare_war_with_cb = {
+						who = event_target:big_l_tag
+						casus_belli = cb_karguin
+					}
+				}
+			}
+
+			every_province = {
+				limit = {
+					superregion = ROOT
+					NOT = {
+						OR = {
+							owned_by = KEK
+							owned_by = U89
+						}
+					}
+					is_city = yes
+					owner = { ai = yes }
+					NOT = { province_id = event_target:spawning_point }
+				}
+				add_core = SUB
+				change_culture = sun_elf		
+				spawn_rebels = {
+					type = nyarguin_invasion_rebels
+					size = 3
+					separatists_target = SUB
+					culture = sun_elf
+				}
+			}
+		}
+	}
+}
+
+# Spawning - GIT
+province_event = {
+	id = karguin.14
+	title = karguin.14.t
+	desc = gacha.14.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_province = {
+			limit = {
+				superregion = ROOT
+				is_city = yes
+				owner = { ai = yes }
+			}
+		}
+
+		save_event_target_as = spawning_point
+		owner = { save_event_target_as = big_l_tag }
+	}
+
+	option = {
+		name = karguin.14.a
+		
+		# JELLY: tooltip about invasion tag spawning
+		custom_tooltip = karguin_vassal_spawn_tt
+		hidden_effect = {
+			event_target:spawning_point = {
+				add_core = GIT
+				change_religion = infernal_court
+				change_culture = sun_elf
+				cede_province = GIT
+				GIT = {
+					change_government = theocracy
+					add_government_reform = secular_order_reform
+					change_religion = infernal_court
+					change_primary_culture = sun_elf
+					add_country_modifier = {
+						name = invasion_spawn_buff
+						duration = -1
+					}
+					karguin_starting_army = yes
+					# custom ruler or whatev
+				}
+			}
+
+			if = {
+				limit = {
+					event_target:big_l_tag = {
+						exists = yes					
+					}
+				}
+
+				GIT = {
+					declare_war_with_cb = {
+						who = event_target:big_l_tag
+						casus_belli = cb_karguin
+					}
+				}
+			}
+
+			every_province = {
+				limit = {
+					superregion = ROOT
+					NOT = {
+						OR = {
+							owned_by = KEK
+							owned_by = U89
+						}
+					}
+					is_city = yes
+					owner = { ai = yes }
+					NOT = { province_id = event_target:spawning_point }
+				}
+				add_core = GIT
+				change_culture = sun_elf	
+				spawn_rebels = {
+					type = nyarguin_invasion_rebels
+					size = 3
+					separatists_target = GIT
+					culture = sun_elf
+				}
+			}
+		}
+	}
+}
+
+# Spawning - GUD
+province_event = {
+	id = karguin.15
+	title = karguin.15.t
+	desc = gacha.15.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		random_province = {
+			limit = {
+				superregion = ROOT
+				is_city = yes
+				owner = { ai = yes }
+			}
+		}
+
+		save_event_target_as = spawning_point
+		owner = { save_event_target_as = big_l_tag }
+	}
+
+	option = {
+		name = karguin.15.a
+		
+		# JELLY: tooltip about invasion tag spawning
+		custom_tooltip = karguin_vassal_spawn_tt
+		hidden_effect = {
+			event_target:spawning_point = {
+				add_core = GUD
+				change_religion = infernal_court
+				change_culture = sun_elf
+				cede_province = GUD
+				GUD = {
+					setup_vision = yes
+					change_government = theocracy
+					add_government_reform = secular_order_reform
+					change_religion = infernal_court
+					change_primary_culture = sun_elf
+					add_country_modifier = {
+						name = invasion_spawn_buff
+						duration = -1
+					}
+					karguin_starting_army = yes
+					# custom ruler or whatev
+				}
+			}
+
+			if = {
+				limit = {
+					event_target:big_l_tag = {
+						exists = yes					
+					}
+				}
+
+				GUD = {
+					declare_war_with_cb = {
+						who = event_target:big_l_tag
+						casus_belli = cb_karguin
+					}
+				}
+			}
+
+			every_province = {
+				limit = {
+					superregion = ROOT
+					NOT = {
+						OR = {
+							owned_by = KEK
+							owned_by = U89
+						}
+					}
+					is_city = yes
+					owner = { ai = yes }
+					NOT = { province_id = event_target:spawning_point }
+				}
+				add_core = GUD
+				change_culture = sun_elf
+				spawn_rebels = {
+					type = nyarguin_invasion_rebels
+					size = 3
+					separatists_target = GUD
+					culture = sun_elf
+				}
+			}
+		}
+	}
+}
+
+# Wave sent by karguin for vassal, 
+country_event = {
+	id = karguin.20
+	title = karguin.20.t
+	desc = gacha.20.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	
+	hidden = yes
+
+	option = {
+		name = karguin.3
+
+		for = {
+			amount = 5
+			effect = "
+				capital_scope = {
+					random_province = {
+						limit = {
+							superregion = PREV
+							owner = { 
+								ai = yes
+								NOT = { tag = ROOT } 
+							}
+						}
+		
+						spawn_rebels = {
+							type = nyarguin_invasion_rebels
+							size = 3
+							separatists_target = ROOT
+							culture = sun_elf
+						}
+					}
+				}
+			"
+		}
+	}
+}
+
+country_event = {
+    id = kargsmells.1
+    title = kargsmells.1.t
+    desc = kargsmells.1.d
+    picture = THE_COVENANT_eventPicture
+
+    is_triggered_only = yes
+
+    option = {    #we love satan
+        name = kargsmells.1.a
+
+        change_religion = infernal_court
+        set_ruler_religion = infernal_court
+        set_heir_religion = infernal_court
+
+        add_stability = -1
+        add_country_modifier = {
+            name = black_converting_zeal
+            duration = 1825
+        }
+
+        random_list = {
+            1 = {
+                add_country_modifier = {
+                    name = black_the_eyes_and_the_ears
+                    duration = 1825
+                }
+            }
+            1 = {
+                add_country_modifier = {
+                    name = black_subjugated_artificery
+                    duration = 1825
+                }
+            }
+            1 = {
+                add_country_modifier = {
+                    name = black_mage_general
+                    duration = 1825
+                }
+            }
+        }
+    }
+    option = {    #y'all need jesus
+        name = kargsmells.1.b
+
+        # add gacha ticket here (idk the scripted effect)
+    }
+}

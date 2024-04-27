@@ -4,16 +4,7 @@ varamhar_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			OR = {
-				tag = F42
-				was_tag = F42
-			}
-			AND = {
-				tag = F38
-				was_tag = F42
-			}
-		}
+		tag = F42
 	}
 	has_country_shield = yes
 	
@@ -258,13 +249,7 @@ varamhar_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = F42
-			AND = {
-				tag = F38
-				was_tag = F42
-			}
-		}
+		tag = F42
 	}
 	has_country_shield = yes
 	
@@ -433,13 +418,7 @@ varamhar_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = F42
-			AND = {
-				tag = F38
-				was_tag = F42
-			}
-		}
+		tag = F42
 	}
 	has_country_shield = yes
 	
@@ -609,13 +588,7 @@ varamhar_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = F42
-			AND = {
-				tag = F38
-				was_tag = F42
-			}
-		}
+		tag = F42
 	}
 	has_country_shield = yes
 	
@@ -831,13 +804,7 @@ varamhar_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = F42
-			AND = {
-				tag = F38
-				was_tag = F42
-			}
-		}
+		tag = F42
 	}
 	has_country_shield = yes
 	

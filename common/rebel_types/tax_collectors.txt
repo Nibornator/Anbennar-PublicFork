@@ -3,7 +3,7 @@
 # tax_collectors rebels. All hope is lost.
 ######################################################################
 tax_collectors_rebels_rebels = {
-
+#JELLY: Name them something
 	color = { 230 175 175 }
 
 	area = nation 					# Sticks to provinces of their nation
@@ -25,7 +25,7 @@ tax_collectors_rebels_rebels = {
 	infantry = 0.7
 	cavalry = 0.3
 	
-	morale = 1.5
+	morale = 1.2
 
 	# Possible handle actions
 	handle_action_negotiate = no
@@ -71,6 +71,16 @@ tax_collectors_rebels_rebels = {
  	siege_won_trigger = {
  	}
 	siege_won_effect = {
+		# JELLY: tooltip for karguin gaining small power
+		custom_tooltip = karguin_rebel_province_tt
+		hidden_effect = {
+			KEK = {
+				add_adm_power = 5
+				add_dip_power = 5
+				add_mil_power = 5
+				# add_govpower				
+			}
+		}
 	}
 	
 	# Country scope
@@ -84,10 +94,20 @@ tax_collectors_rebels_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "spring_court_rebels_demand"
+	# JELLY: !!!
+	demands_description = "tax_collectors_rebels_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
-		
+		# JELLY: tooltip for karguin gaining lot power
+		custom_tooltip = karguin_rebel_province_big_tt
+		hidden_effect = {
+			KEK = {
+				add_adm_power = 150
+				add_dip_power = 150
+				add_mil_power = 150
+				# add_govpower				
+			}
+		}
 	}
 }

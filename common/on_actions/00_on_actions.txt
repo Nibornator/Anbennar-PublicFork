@@ -2339,6 +2339,22 @@ on_siege_won_country = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = no_more_taxes
+			}
+			FROM = {
+				owner = { ai = yes }
+				is_in_war = {
+					casus_belli = cb_karguin
+					attacker_leader = ROOT
+				}
+			}
+			FROM = { cede_province = ROOT add_core = ROOT change_culture = ROOT change_religion = infernal_court }
+		}
+	}
+
 	clr_vampire_hideout = yes
 	castanor_succession_war_shift_momentum_siege = yes
 	random_events = {
@@ -5470,6 +5486,152 @@ on_yearly_pulse_2 = {
 		200 = anb_ruler.8
 
 		9900 = 0
+	}
+	#Infernal lol
+	if = {
+		limit = {
+			tag = U89
+		}
+		if = {
+			limit = {
+				5206 = {
+					has_province_flag = portal_open
+				}
+			}
+			5206 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
+		if = {
+			limit = {
+				220 = {
+					has_province_flag = portal_open
+				}
+			}
+			220 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
+		if = {
+			limit = {
+				1138 = {
+					has_province_flag = portal_open
+				}
+			}
+			1138 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
+		if = {
+			limit = {
+				6690 = {
+					has_province_flag = portal_open
+				}
+			}
+			6690 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
+		if = {
+			limit = {
+				5813 = {
+					has_province_flag = portal_open
+				}
+			}
+			5813 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
+		if = {
+			limit = {
+				643 = {
+					has_province_flag = portal_open
+				}
+			}
+			643 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
+		if = {
+			limit = {
+				2388 = {
+					has_province_flag = portal_open
+				}
+			}
+			2388 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
+		if = {
+			limit = {
+				5206 = {
+					has_province_flag = portal_open
+				}
+			}
+			5206 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
+		if = {
+			limit = {
+				2495 = {
+					has_province_flag = portal_open
+				}
+			}
+			2495 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
+		if = {
+			limit = {
+				4237 = {
+					has_province_flag = portal_open
+				}
+			}
+			4237 = {
+				province_event = {
+					id = karguin.2
+					days = 30
+					random = 60
+				}
+			}
+		}
 	}
 }
 on_yearly_pulse_3 = {

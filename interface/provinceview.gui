@@ -821,6 +821,50 @@ guiTypes = {
 				scripted = yes
 			}
 
+			#Nyarguin
+			guiButtonType = {
+				name = "karg_offer_1"
+				position = { x = 120 y = 587 }
+				quadTextureSprite = GFX_exploit_button
+				clicksound = back_click
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "karg_offer_2"
+				position = { x = 180 y = 587 }
+				quadTextureSprite = GFX_exploit_button
+				clicksound = back_click
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "karg_offer_3"
+				position = { x = 240 y = 587 }
+				quadTextureSprite = GFX_exploit_button
+				clicksound = back_click
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "karg_offer_4"
+				position = { x = 300 y = 587 }
+				quadTextureSprite = GFX_exploit_button
+				clicksound = back_click
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "karg_offer_5"
+				position = { x = 360 y = 587 }
+				quadTextureSprite = GFX_exploit_button
+				clicksound = back_click
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "karg_infernal_offer"
+				position = { x = 500 y = 300 }
+				quadTextureSprite = GFX_exploit_button
+				clicksound = back_click
+				scripted = yes
+			}
+
 			guiButtonType = {
 				name = "dig_deeper_capital"
 				position = { x= 449 y = 64 }

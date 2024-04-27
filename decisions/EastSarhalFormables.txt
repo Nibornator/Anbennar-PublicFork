@@ -372,7 +372,7 @@ country_decisions = {
 					NOT = {
 						ROOT = {
 							num_of_owned_provinces_with = {
-								value = 100
+								value = 50
 								OR = {
 									region = yetefesefi_region
 									region = telekenid_region
@@ -389,8 +389,6 @@ country_decisions = {
 						province_id = 5521 #Leenshelok
 						province_id = 5529 #Yetmesira
 						province_id = 5538 #Meretgeban
-						province_id = 5519 #Enikmesiki
-						province_id = 5600 #Yikikakeli
 						province_id = 6118 #Senidmot
 					}
 					OR = {

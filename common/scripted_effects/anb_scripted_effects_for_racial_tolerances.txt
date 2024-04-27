@@ -5568,7 +5568,15 @@ update_unit_sprites_for_racial_mil = {
 
 	else_if = {
 		limit = {
-			tag = KEK
+			OR = {
+				primary_culture = sun_elf
+				tag = KEK
+				tag = SUB
+				tag = LOL
+				tag = TOP
+				tag = GIT
+				tag = GUD
+			}
 		}
 		apply_sprite_pack = hell_sprite_pack
 	}

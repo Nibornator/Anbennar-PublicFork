@@ -1,0 +1,10 @@
+# JELLY: Actually doge tweak it
+invasion_spawn_buff = {
+	land_forcelimit = 40
+	naval_forcelimit = 20
+	land_morale = 0.1
+	discipline = 0.05
+	land_maintenance_modifier = -0.75
+	naval_maintenance_modifier = -0.75
+	may_recruit_female_generals = yes
+}

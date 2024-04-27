@@ -425,11 +425,10 @@ halfling_administration = {
 	#luck of halflings
 	
 	#Positives
-	spy_offence = 0.2										#2 D / a natural race of guile
-	improve_relation_modifier = 0.33					#2 A / friendly
-	same_culture_advisor_cost = -0.2					#1 B / FYI THE IDEA GROUP GIVES -0.25 SO EITHER NERF THAT OR BUFF THIS!
+	improve_relation_modifier = 0.2					#2 A / friendly
+	war_exhaustion = -0.03					#1 B / FYI THE IDEA GROUP GIVES -0.25 SO EITHER NERF THAT OR BUFF THIS!
 	trade_efficiency = 0.1								#1 A / 
-	adventurers_loyalty_modifier = 0.05					#-1 dip rep gives -5% adventurer loyalty, and oh boy guess what race is merc-focused
+	adventurers_loyalty_modifier = 0.1					#-1 dip rep gives -5% adventurer loyalty, and oh boy guess what race is merc-focused
 	
 	global_colonial_growth = 20							#1 B / 
 	
@@ -437,11 +436,10 @@ halfling_administration = {
 	
 	
 	#Negatives
-	years_of_nationalism = 5								#-1 A / whos gonna take being conquered by halflings seriously!
-	liberty_desire_from_subject_development = 0.25	#-1 B / not really good for conquering especially vassals who wont take you seriously
-	diplomatic_reputation = -1							#-1 C / not taken seriously
-	harsh_treatment_cost = 0.2							#-1 C / not intimidating
-	
+	mil_tech_cost_modifier = 0.1
+	harsh_treatment_cost = 0.3							#-1 C / not intimidating
+	build_time = 0.15
+	max_absolutism = -20
 	#1 + 0.75 + 0.5 + 0.5 = 2.75
 	picture = "racial_adm_halfling"
 	
@@ -452,22 +450,21 @@ halfling_military = {
 	#Gameplay: horrible military but good in numbers and can recover morale fast if needed - but to be safe rely on mercs
 
 	#Positives
-	mercenary_cost = -0.10				#1 C /
-	manpower_recovery_speed = 0.2		#2 B /
+	land_forcelimit_modifier = 0.10				#1 C /
+	manpower_recovery_speed = 0.1		#2 B /
 	#global_manpower_modifier = 0.1		#1 B /
-	
-	mercenary_manpower = 0.2
-	merc_maintenance_modifier = -0.15	#2 A / 
-	mercenary_discipline = 0.1		#2 A /
+	sailors_recovery_speed = 0.1
+	fire_damage = 0.05
+	morale_damage_received = -0.1
+	global_supply_limit_modifier = 0.20
 	
 	#0.5 + 1.5 + 0.75 + 2 + 2 = 6.75
 	
 	#Negatives
-	galley_power = -0.2					#-2 D / you need long legs for galleys... and, well..
 	cavalry_cost = 0.2				#-2 B / standard small person cav malus
 	shock_damage = -0.10				# / yeah
-	morale_damage = -0.1				# / not very intimidating
 	shock_damage_received = 0.10			#-1 C /
+	drill_decay_modifier = 0.20
 	
 	#3 + 0.8 + 1.5 + 0.5 = 5.8
 	picture = "racial_mil_halfling"

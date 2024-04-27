@@ -621,3 +621,4 @@ villager_sprite_pack = 70
 stray_sprite_pack = 70
 hell_sprite_pack = 70
 celestial_sprite_pack = 70
+celestial2_sprite_pack = 70

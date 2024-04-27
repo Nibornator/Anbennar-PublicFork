@@ -5145,7 +5145,15 @@ stray_sprite_pack = {
 
 hell_sprite_pack = {
 	country_trigger = {
+		OR = {
+			primary_culture = sun_elf
 			tag = KEK
+			tag = SUB
+			tag = LOL
+			tag = TOP
+			tag = GIT
+			tag = GUD
+		}
 	}
 
 	sprite_infantry = {
@@ -5196,3 +5204,30 @@ celestial_sprite_pack = {
 		3 = CELESTIAL_ARTILLERY_4
 	}
 }
+
+# celestial2_sprite_pack = {
+# 	country_trigger = {
+# 			tag = U89
+# 	}
+
+# 	sprite_infantry = {
+# 		0 = CELESTIAL2_INFANTRY_1
+# 		1 = CELESTIAL2_INFANTRY_2
+# 		2 = CELESTIAL2_INFANTRY_3
+# 		3 = CELESTIAL2_INFANTRY_4
+# 	}
+
+# 	sprite_cavalry = {
+# 		0 = CELESTIAL2_INFANTRY_1
+# 		1 = CELESTIAL2_INFANTRY_2
+# 		2 = CELESTIAL2_INFANTRY_3
+# 		3 = CELESTIAL2_INFANTRY_4
+# 	}
+	
+# 	sprite_artillery = {
+# 		0 = CELESTIAL2_ARTILLERY_1
+# 		1 = CELESTIAL2_ARTILLERY_2
+# 		2 = CELESTIAL2_ARTILLERY_3
+# 		3 = CELESTIAL2_ARTILLERY_4
+# 	}
+# }

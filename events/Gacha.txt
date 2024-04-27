@@ -467,7 +467,7 @@ country_event = {
 			}
 			else_if = {
 				limit = {
-					has_global_flag = reward_egg_given
+					has_global_flag = reward_egg_next
 				}
 				custom_tooltip = reward_egg_tooltip
 				hidden_effect = {

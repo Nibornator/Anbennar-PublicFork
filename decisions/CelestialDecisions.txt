@@ -2,12 +2,18 @@ country_decisions = {
 
 	reveal_map_decision = {
 		potential = {
-			tag = U89
+			OR = {
+				tag = U89
+				tag = KEK
+			}
 			ai = no
 		}
 
 		allow = {
-			tag = U89
+			OR = {
+				tag = U89
+				tag = KEK
+			}
 			ai = no
 		}
 

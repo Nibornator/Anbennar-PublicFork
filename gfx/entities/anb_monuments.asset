@@ -151,12 +151,5 @@ entity = {
 	name = "Gate_Of_Hell_entity"
 	pdxmesh = "Gate_Of_Hell_mesh"
 	
-	state = { name = "idle"
-	event = { time = 0	node = "PNode"	particle = "Hell" }
-	event = { time = 0	node = "PNode1"	particle = "Hell" }
-	event = { time = 0	node = "PNode2"	particle = "Hell" }
-	event = { time = 0	node = "PNode3"	particle = "Hell" }
-	event = { time = 0	node = "PNode4"	particle = "Hell" }
-	event = { time = 0	node = "PNode5"	particle = "Hell" }
-	animation = "idle" }
+	state = { name = "idle"		animation = "idle" }
 }

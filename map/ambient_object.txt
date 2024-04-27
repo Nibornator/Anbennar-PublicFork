@@ -4305,15 +4305,126 @@ type={
 type={
 	type="Gate_Of_Hell_entity"
 	use_animation=no
+	scale=1.200000
 	time_duration=300.000000
 	object={
-		name="GoH"
-		hidden_on_start=no
+		name="GoH_dwarovar"
+		hidden_on_start=yes
 		position={
-			3226.000 3.000 1674.500 
+			3362.000 0.000 1528.500 
+		}
+		rotation={
+			0.000 25.000 0.000 
+		}
+	}
+	object={
+		name="GoH_deepwoods"
+		hidden_on_start=yes
+		position={
+			3177.000 1.500 1554.500 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="GoH_gawed"
+		hidden_on_start=yes
+		position={
+			2856.000 0.300 1704.500 
+		}
+		rotation={
+			0.000 25.000 0.000 
+		}
+	}
+	object={
+		name="GoH_azkasur"
+		hidden_on_start=yes
+		position={
+			3595.000 0.000 1274.500 
 		}
 		rotation={
 			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="GoH_sarhalwest"
+		hidden_on_start=yes
+		position={
+			2816.000 0.280 889.500 
+		}
+		rotation={
+			0.000 13.000 0.000 
+		}
+	}
+	object={
+		name="GoH_darkswamp"
+		hidden_on_start=yes
+		position={
+			3656.000 1.600 834.500 
+		}
+		rotation={
+			0.000 330.000 0.000 
+		}
+	}
+	object={
+		name="GoH_Valley"
+		hidden_on_start=yes
+		position={
+			4258.000 0.200 1722.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="GoH_ynn"
+		hidden_on_start=yes
+		position={
+			1134.000 1.000 1503.000 
+		}
+		rotation={
+			0.000 15.000 0.000 
+		}
+	}
+	object={
+		name="GoH_amadia"
+		hidden_on_start=yes
+		position={
+			1276.000 0.400 570.500 
+		}
+		rotation={
+			0.000 344.000 0.000 
+		}
+	}
+	object={
+		name="GoH_taychend"
+		hidden_on_start=yes
+		position={
+			1650.000 0.800 337.500 
+		}
+		rotation={
+			0.000 344.000 0.000 
+		}
+	}
+	object={
+		name="GoH_insyaa"
+		hidden_on_start=no
+		position={
+			4878.000 0.000 994.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="GoH_Tators"
+		hidden_on_start=yes
+		position={
+			4492.000 0.000 1214.500 
+		}
+		rotation={
+			0.000 25.000 0.000 
 		}
 	}
 }

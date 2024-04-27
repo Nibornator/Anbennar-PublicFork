@@ -30,8 +30,13 @@ celestial_delegation_pestilence = {
 
 celestial_delegation_consideration = {
 	trade_goods_size_modifier = -2
-	tax_income = 108
-	land_forcelimit = 15
+	local_defensiveness = 0.5
+	tax_income = 120
+	land_forcelimit = 20
+	supply_limit = 20
+	build_cost = -0.2
+	regiment_recruit_speed = -0.75
+	local_manpower = 20
 }
 
 hellfire_signet_modifier = {

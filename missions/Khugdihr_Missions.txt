@@ -138,10 +138,7 @@ khugdihr_1 = {
 		}
 		
 		provinces_to_highlight = {
-			OR = {
-				province_id = 4119
-				province_id = 2931
-			}
+			province_id = 2931
 			OR = {
 				NOT = { has_tax_building_trigger = yes }
 				NOT = { owned_by = ROOT }
@@ -154,15 +151,6 @@ khugdihr_1 = {
 		}
 		
 		trigger = {
-			4119 = {
-				has_tax_building_trigger = yes
-				owned_by = ROOT
-				culture_group = dwarven
-				NOT = { has_province_modifier = ruined_hold }
-				NOT = { has_province_modifier = partially_ruined_hold }
-				NOT = { has_province_modifier = damaged_hold }
-				NOT = { has_province_modifier = infested_hold }
-			}
 			2931 = {
 				has_tax_building_trigger = yes
 				owned_by = ROOT
@@ -185,13 +173,6 @@ khugdihr_1 = {
 				loyalty = -20
 			}
 			2931 = {
-				change_religion = ancestor_worship
-				add_province_modifier = {
-					name = khug_ancestral_holy_site
-					duration = -1
-				}
-			}
-			4119 = {
 				change_religion = ancestor_worship
 				add_province_modifier = {
 					name = khug_ancestral_holy_site

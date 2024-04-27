@@ -5481,3 +5481,45 @@ take_province_rending = {
 	
 	war_name = RENDING_WAR_NAME	
 }
+
+# JELLY NAME IT
+karguin_wargoal = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0
+		prestige_factor = 0
+		peace_cost_factor = 0.5
+
+		allowed_provinces = {
+			always = no
+		}
+
+		peace_options = {
+			po_demand_provinces
+		}
+
+		deny_annex = yes
+		allowed_provinces_are_eligible = yes
+	}
+	
+	
+	defender = {
+		badboy_factor = 0
+		prestige_factor = 0
+		peace_cost_factor = 0.5
+
+		allowed_provinces = {
+			always = no
+		}
+
+		peace_options = {
+			po_demand_provinces
+		}
+
+		deny_annex = yes
+		allowed_provinces_are_eligible = yes		
+	}
+	
+	war_name = KARGUIN_WAR_NAME
+}

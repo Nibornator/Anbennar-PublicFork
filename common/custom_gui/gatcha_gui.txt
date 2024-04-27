@@ -1337,13 +1337,8 @@ custom_button = {
 	trigger = { }
 	effect = { 
 		hidden_effect = {
-			every_country = {
-				limit = {
-					ai = no
-				}
-				country_event = {
-					id = banishment.1
-				}
+			hidden_effect = {
+				set_global_flag = no_more_taxes
 			}
 		}
 	}
@@ -1358,9 +1353,7 @@ custom_button = {
 	trigger = { }
 	effect = { 
 		hidden_effect = {
-			country_event = {
-				id = banishment.2
-			}
+			set_global_flag = no_more_taxes
 		}
 	}
 }
@@ -1374,10 +1367,107 @@ custom_button = {
 	trigger = { }
 	effect = { 
 		hidden_effect = {
-			event_target:banishment_banished_one = {
-				country_event = {
-					id = banishment.5
-				}
+			clr_global_flag = no_more_taxes
+		}
+	}
+}
+
+custom_button = {
+	name = karg_offer_1
+	tooltip = lol_first_button_tooltip
+	potential = {
+		FROM = { tag = KEK }
+		NOT = {
+			owner = { tag = FROM }
+			exists = LOL
+		}
+		has_province_flag = portal_open
+	}
+	effect = {
+		province_event = { id = karguin.11 }
+	}
+}
+
+custom_button = {
+	name = karg_offer_2
+	tooltip = lol_second_button_tooltip
+	potential = {
+		FROM = { tag = KEK }
+		NOT = {
+			owner = { tag = FROM }
+			exists = TOP
+		}
+		has_province_flag = portal_open
+	}
+	effect = {
+		province_event = { id = karguin.12 }
+	}
+}
+
+custom_button = {
+	name = karg_offer_3
+	tooltip = lol_third_button_tooltip
+	potential = {
+		FROM = { tag = KEK }
+		NOT = {
+			owner = { tag = FROM }
+			exists = SUB
+		}
+		has_province_flag = portal_open
+	}
+	effect = {
+		province_event = { id = karguin.13 }
+	}
+}
+
+custom_button = {
+	name = karg_offer_4
+	tooltip = lol_fourth_button_tooltip
+	potential = {
+		FROM = { tag = KEK }
+		NOT = {
+			owner = { tag = FROM }
+			exists = GIT
+		}
+		has_province_flag = portal_open
+	}
+	effect = {
+		province_event = { id = karguin.14 }
+	}
+}
+
+custom_button = {
+	name = karg_offer_5
+	tooltip = lol_fifth_button_tooltip
+	potential = {
+		FROM = { tag = KEK }
+		NOT = {
+			owner = { tag = FROM }
+			exists = GUD
+		}
+		has_province_flag = portal_open
+	}
+	effect = {
+		province_event = { id = karguin.15 }
+	}
+}
+
+custom_button = {
+	name = karg_infernal_offer
+	tooltip = karg_infernal_offer_tt
+	potential = { 
+		FROM = { tag = KEK }
+		owner = {
+			NOT = {
+				religion = infernal_court
+			}
+		}
+	}
+
+	effect = {
+		owner = {
+			country_event = {
+				id = kargsmells.1
 			}
 		}
 	}
