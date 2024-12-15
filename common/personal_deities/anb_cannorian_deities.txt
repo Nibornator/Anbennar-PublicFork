@@ -487,7 +487,10 @@ balgar = {
 		}
 		modifier = {
 			factor = 5
-			tag = Z36 # Hammerhome
+			OR = {
+				tag = Z36
+				tag = Z35
+			}
 		}
 	}
 }
@@ -538,7 +541,10 @@ balgar_upgraded = { #ex balgar_khug
 		}
 		modifier = {
 			factor = 5
-			tag = Z36 # Hammerhome
+			OR = {
+				tag = Z36
+				tag = Z35
+			}
 		}
 	}
 }

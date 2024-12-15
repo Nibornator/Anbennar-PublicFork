@@ -561,7 +561,7 @@ country_event = {
 			if = {
 				limit = {
 					OR = {
-						tag = F42
+						tag = Y29
 						tag = F38
 					}
 				}

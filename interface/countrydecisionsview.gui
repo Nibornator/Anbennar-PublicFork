@@ -872,10 +872,10 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scripted = yes
 		}
-		iconType = {
+		guiButtonType = {
 			name = "gacha_item_9"
 			position = { x = 78 y = 705 }
-			quadTextureSprite = "gacha_item_9_icon"
+			quadTextureSprite = "thors_tome_icon"
 			Orientation = "UPPER_LEFT"
 			scripted = yes
 		}

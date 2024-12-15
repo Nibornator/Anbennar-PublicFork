@@ -5091,7 +5091,7 @@ kheionai_cool_units_sprite_pack = {
 
 villager_sprite_pack = {
 	country_trigger = {
-			TAG = F42
+			TAG = Y29
 	}
 
 	sprite_infantry = {
@@ -5147,12 +5147,12 @@ hell_sprite_pack = {
 	country_trigger = {
 		OR = {
 			primary_culture = sun_elf
-			tag = KEK
-			tag = SUB
-			tag = LOL
-			tag = TOP
-			tag = GIT
-			tag = GUD
+			tag = Y29
+			tag = S49
+			tag = L77
+			tag = S24
+			tag = S48
+			tag = S45
 		}
 	}
 
@@ -5180,7 +5180,7 @@ hell_sprite_pack = {
 
 celestial_sprite_pack = {
 	country_trigger = {
-			tag = U89
+			tag = Y24
 	}
 
 	sprite_infantry = {
@@ -5205,29 +5205,35 @@ celestial_sprite_pack = {
 	}
 }
 
-# celestial2_sprite_pack = {
-# 	country_trigger = {
-# 			tag = U89
-# 	}
+celestial2_sprite_pack = {
+	country_trigger = {
+		OR = {
+			has_country_modifier = celestial_knight_order_dustbringers
+			has_country_modifier = celestial_knight_order_edgedancers
+			has_country_modifier = celestial_knight_order_skybreakers
+			has_country_modifier = celestial_knight_order_windrunners
+			has_country_modifier = celestial_knight_order_stonewards
+		}
+	}
 
-# 	sprite_infantry = {
-# 		0 = CELESTIAL2_INFANTRY_1
-# 		1 = CELESTIAL2_INFANTRY_2
-# 		2 = CELESTIAL2_INFANTRY_3
-# 		3 = CELESTIAL2_INFANTRY_4
-# 	}
+	sprite_infantry = {
+		0 = CELESTIAL2_INFANTRY_1
+		1 = CELESTIAL2_INFANTRY_2
+		2 = CELESTIAL2_INFANTRY_3
+		3 = CELESTIAL2_INFANTRY_4
+	}
 
-# 	sprite_cavalry = {
-# 		0 = CELESTIAL2_INFANTRY_1
-# 		1 = CELESTIAL2_INFANTRY_2
-# 		2 = CELESTIAL2_INFANTRY_3
-# 		3 = CELESTIAL2_INFANTRY_4
-# 	}
+	sprite_cavalry = {
+		0 = CELESTIAL2_INFANTRY_1
+		1 = CELESTIAL2_INFANTRY_2
+		2 = CELESTIAL2_INFANTRY_3
+		3 = CELESTIAL2_INFANTRY_4
+	}
 	
-# 	sprite_artillery = {
-# 		0 = CELESTIAL2_ARTILLERY_1
-# 		1 = CELESTIAL2_ARTILLERY_2
-# 		2 = CELESTIAL2_ARTILLERY_3
-# 		3 = CELESTIAL2_ARTILLERY_4
-# 	}
-# }
+	sprite_artillery = {
+		0 = CELESTIAL2_ARTILLERY_1
+		1 = CELESTIAL2_ARTILLERY_2
+		2 = CELESTIAL2_ARTILLERY_3
+		3 = CELESTIAL2_ARTILLERY_4
+	}
+}

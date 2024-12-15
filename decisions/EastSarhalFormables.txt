@@ -401,17 +401,15 @@ country_decisions = {
 
 		allow = {
 
-			owns_core_province = 5505 #Dakemender, jewel of the north
-			owns_core_province = 5689 #Simegasfan, the bastion of the frontier
-			owns_core_province = 5521 #Leenshelok, queen of the highlands
-			owns_core_province = 5529 #Yetmesira, gate of the Yet
-			owns_core_province = 5538 #Meretgeban, the great marketplace
-			owns_core_province = 5519 #Enikmesiki, the capital of the southern Yet
-			owns_core_province = 5600 #Yikikakeli, the floating city
-			owns_core_province = 6118 #Senidmot, crater of the Martyr
+			owns_core_province = 5505 #Dakemender
+			owns_core_province = 5689 #Simegasfan
+			owns_core_province = 5521 #Leenshelok
+			owns_core_province = 5529 #Yetmesira
+			owns_core_province = 5538 #Meretgeban
+			owns_core_province = 6118 #Senidmot
 
 			num_of_owned_provinces_with = {
-				value = 100
+				value = 50
 				OR = {
 					region = yetefesefi_region
 					region = telekenid_region

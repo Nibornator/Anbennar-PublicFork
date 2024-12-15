@@ -4761,7 +4761,7 @@ vf_krilavuna_magocracy = {
 
 celestial_delegation_reform = {
 	potential = {
-		tag = U89
+		tag = Y24
 	}
 
 	modifiers = {

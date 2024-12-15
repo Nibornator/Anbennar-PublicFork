@@ -1,8 +1,8 @@
 capital = "Doge's Chambers"
 
-owner = U89
-controller = U89
-add_core = U89
+owner = Y24
+controller = Y24
+add_core = Y24
 culture = leechmen
 religion = leechfather
 trade_goods = precursor_relics

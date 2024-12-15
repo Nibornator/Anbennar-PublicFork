@@ -21,7 +21,7 @@ custom_text_box = {
 custom_button = {
 	name = gacha_roll_rewards
 	tooltip = gacha_universalis_roll_rewards_tt
-	potential = { tag = U89 NOT = { has_country_flag = gacha_open_menu_flag } }
+	potential = { tag = Y24 NOT = { has_country_flag = gacha_open_menu_flag } }
 	trigger = { }
 	effect = { custom_tooltip = gacha_randomness_ptm_tt hidden_effect = { capital_scope = { add_province_triggered_modifier = gacha_randomness_ptm } } }
 }
@@ -890,19 +890,87 @@ custom_icon = {
 		trigger = { always = yes }
 	}
 }
-custom_icon = {
-	name = gacha_item_9
+custom_button = {
+    name = gacha_item_9
+    tooltip = thors_tome_tt
 	potential = {
-		has_country_flag = gacha_tab_3_open
-	}
-	frame = {
-		number = 1
-		trigger = { has_country_flag = reward_thor_country }
-	}
-	frame = {
-		number = 2
-		trigger = { always = yes }
-	}
+        has_country_flag = gacha_tab_3_open
+    }
+    frame = {
+        number = 1
+        trigger = { NOT = { has_country_flag = reward_thor_country } }
+    }
+    frame = {
+        number = 2
+        trigger = { has_country_flag = reward_thor_country NOT = { has_country_modifier = thors_tome_cd_mod } }
+    }
+    frame = {
+        number = 3
+        trigger = { has_country_modifier = thors_tome_cd_mod }
+    }
+    trigger = {
+		hidden_trigger = {
+			has_country_flag = reward_thor_country
+		}
+    }
+    effect = {
+		if = {
+			limit = {
+				has_country_flag = reward_thor_country
+				NOT = { has_country_modifier = thors_tome_cd_mod }
+			}
+			custom_tooltip = thors_tome_effect_tt
+			hidden_effect = {
+				random_list = {
+					1 = {
+						add_country_modifier = {
+							name = thors_tome_1
+							duration = 3650
+						}
+					}
+					1 = {
+						add_country_modifier = {
+							name = thors_tome_2
+							duration = 3650
+						}
+					}
+					1 = {
+						add_country_modifier = {
+							name = thors_tome_3
+							duration = 3650
+						}
+					}
+					1 = {
+						add_country_modifier = {
+							name = thors_tome_4
+							duration = 3650
+						}
+					}
+					1 = {
+						add_country_modifier = {
+							name = thors_tome_5
+							duration = 3650
+						}
+					}
+				}
+				add_country_modifier = {
+					name = thors_tome_cd_mod
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = reward_thor_country
+				has_country_modifier = thors_tome_cd_mod
+			}
+			custom_tooltip = thors_tome_cd_tt
+		}
+		else = {
+			custom_tooltip = thors_tome_sus_tt
+		}
+    }
 }
 custom_icon = {
 	name = gacha_item_10
@@ -968,9 +1036,9 @@ custom_button = {
 custom_button = {
     name = celestial_delegation_button_1
     potential = {
-    	FROM = { tag = U89 }
+    	FROM = { tag = Y24 }
 		is_city = yes
-		U89 = {
+		Y24 = {
 			has_wartaxes = yes
 			has_government_power = {
 				mechanic_type = anb_celestial_intervention
@@ -982,7 +1050,7 @@ custom_button = {
 
 	trigger = {
 		hidden_trigger = {
-			U89 = {
+			Y24 = {
 				has_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -999,7 +1067,7 @@ custom_button = {
 
 	effect = {
 		hidden_effect = {
-			U89 = {
+			Y24 = {
 				add_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -1023,8 +1091,8 @@ custom_button = {
 custom_button = {
     name = celestial_delegation_button_2
     potential = {
-    	FROM = { tag = U89}
-		U89 = {
+    	FROM = { tag = Y24}
+		Y24 = {
 			has_wartaxes = yes
 			has_government_power = {
 				mechanic_type = anb_celestial_intervention
@@ -1036,7 +1104,7 @@ custom_button = {
 
 	trigger = {
 		hidden_trigger = {
-			U89 = {
+			Y24 = {
 				has_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -1053,7 +1121,7 @@ custom_button = {
 
 	effect = {
 		hidden_effect = {
-			U89 = {
+			Y24 = {
 				add_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -1077,8 +1145,8 @@ custom_button = {
 custom_button = {
     name = celestial_delegation_button_3
     potential = {
-    	FROM = { tag = U89 }
-		U89 = {
+    	FROM = { tag = Y24 }
+		Y24 = {
 			has_wartaxes = yes
 			has_government_power = {
 				mechanic_type = anb_celestial_intervention
@@ -1090,7 +1158,7 @@ custom_button = {
 
 	trigger = {
 		hidden_trigger = {
-			U89 = {
+			Y24 = {
 				has_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -1107,7 +1175,7 @@ custom_button = {
 
 	effect = {
 		hidden_effect = {
-			U89 = {
+			Y24 = {
 				add_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -1131,8 +1199,8 @@ custom_button = {
 custom_button = {
     name = celestial_delegation_button_4
     potential = {
-    	FROM = { tag = U89}
-		U89 = {
+    	FROM = { tag = Y24}
+		Y24 = {
 			has_wartaxes = yes
 			has_government_power = {
 				mechanic_type = anb_celestial_intervention
@@ -1144,7 +1212,7 @@ custom_button = {
 
 	trigger = {
 		hidden_trigger = {
-			U89 = {
+			Y24 = {
 				has_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -1159,7 +1227,7 @@ custom_button = {
 
 	effect = {
 		hidden_effect = {
-			U89 = {
+			Y24 = {
 				add_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -1181,8 +1249,8 @@ custom_button = {
 custom_button = {
     name = celestial_delegation_button_5
     potential = {
-    	FROM = { tag = U89}
-		U89 = {
+    	FROM = { tag = Y24}
+		Y24 = {
 			has_wartaxes = yes
 			has_government_power = {
 				mechanic_type = anb_celestial_intervention
@@ -1194,7 +1262,7 @@ custom_button = {
 
 	trigger = {
 		hidden_trigger = {
-			U89 = {
+			Y24 = {
 				has_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -1212,7 +1280,7 @@ custom_button = {
 
 	effect = {
 		hidden_effect = {
-			U89 = {
+			Y24 = {
 				add_government_power = {
 					mechanic_type = anb_celestial_intervention
 					power_type = anb_celestial_intervention_1
@@ -1236,16 +1304,47 @@ custom_button = {
 	name = fun_time_1
 	tooltip = fun_time_1_tt
 	potential = {
-		FROM = { tag = U89}
-		U89 = {
+		FROM = { tag = Y24}
+		Y24 = {
 			has_wartaxes = yes
-		} 
+		}
+		if = {
+			limit = {
+				has_global_flag = skybreakers_chosen
+			}
+			owner = {
+				has_country_modifier = celestial_knight_order_skybreakers
+			}
+		}
 	}
 	trigger = { }
 	effect = { 
 		hidden_effect = {
-			owner = {
-				save_global_event_target_as = banishment_vote_1
+			if = {
+				limit = {
+					NOT = {
+						has_country_modifier = celestial_knight_order_skybreakers
+					}
+				}
+				owner = {
+					country_event = {
+						id = karguin.202
+					}
+				}
+				set_global_flag = skybreakers_chosen
+			}
+			else = {
+				hidden_effect = {
+					random_hired_mercenary_company = {
+						limit = {
+							template = celestial_knight_skybreakers
+						}
+						disband_mercenary_company = THIS
+					}
+					update_unit_sprites_for_racial_mil = yes
+					remove_country_modifier = celestial_knight_order_skybreakers
+					clr_global_flag = skybreakers_chosen
+				}
 			}
 		}
 	}
@@ -1255,16 +1354,47 @@ custom_button = {
 	name = fun_time_2
 	tooltip = fun_time_2_tt
 	potential = {
-		FROM = { tag = U89}
-		U89 = {
+		FROM = { tag = Y24}
+		Y24 = {
 			has_wartaxes = yes
-		} 
+		}
+		if = {
+			limit = {
+				has_global_flag = windrunners_chosen
+			}
+			owner = {
+				has_country_modifier = celestial_knight_order_windrunners
+			}
+		}
 	}
 	trigger = { }
 	effect = { 
 		hidden_effect = {
-			owner = {
-				save_global_event_target_as = banishment_vote_2
+			if = {
+				limit = {
+					NOT = {
+						has_country_modifier = celestial_knight_order_windrunners
+					}
+				}
+				owner = {
+					country_event = {
+						id = karguin.203
+					}
+				}
+				set_global_flag = windrunners_chosen
+			}
+			else = {
+				hidden_effect = {
+					random_hired_mercenary_company = {
+						limit = {
+							template = celestial_knight_windrunners
+						}
+						disband_mercenary_company = THIS
+					}
+					update_unit_sprites_for_racial_mil = yes
+					remove_country_modifier = celestial_knight_order_windrunners
+					clr_global_flag = windrunners_chosen
+				}
 			}
 		}
 	}
@@ -1274,16 +1404,47 @@ custom_button = {
 	name = fun_time_3
 	tooltip = fun_time_3_tt
 	potential = {
-		FROM = { tag = U89}
-		U89 = {
+		FROM = { tag = Y24}
+		Y24 = {
 			has_wartaxes = yes
-		} 
+		}
+		if = {
+			limit = {
+				has_global_flag = dustbringers_chosen
+			}
+			owner = {
+				has_country_modifier = celestial_knight_order_dustbringers
+			}
+		}
 	}
 	trigger = { }
 	effect = { 
 		hidden_effect = {
-			owner = {
-				save_global_event_target_as = banishment_vote_3
+			if = {
+				limit = {
+					NOT = {
+						has_country_modifier = celestial_knight_order_dustbringers
+					}
+				}
+				owner = {
+					country_event = {
+						id = karguin.204
+					}
+				}
+				set_global_flag = dustbringers_chosen
+			}
+			else = {
+				hidden_effect = {
+					random_hired_mercenary_company = {
+						limit = {
+							template = celestial_knight_dustbringers
+						}
+						disband_mercenary_company = THIS
+					}
+					update_unit_sprites_for_racial_mil = yes
+					remove_country_modifier = celestial_knight_order_dustbringers
+					clr_global_flag = dustbringers_chosen
+				}
 			}
 		}
 	}
@@ -1293,16 +1454,47 @@ custom_button = {
 	name = fun_time_4
 	tooltip = fun_time_4_tt
 	potential = {
-		FROM = { tag = U89}
-		U89 = {
+		FROM = { tag = Y24}
+		Y24 = {
 			has_wartaxes = yes
-		} 
+		}
+		if = {
+			limit = {
+				has_global_flag = stonewards_chosen
+			}
+			owner = {
+				has_country_modifier = celestial_knight_order_stonewards
+			}
+		}
 	}
 	trigger = { }
 	effect = { 
 		hidden_effect = {
-			owner = {
-				save_global_event_target_as = banishment_vote_4
+			if = {
+				limit = {
+					NOT = {
+						has_country_modifier = celestial_knight_order_stonewards
+					}
+				}
+				owner = {
+					country_event = {
+						id = karguin.205
+					}
+				}
+				set_global_flag = stonewards_chosen
+			}
+			else = {
+				hidden_effect = {
+					random_hired_mercenary_company = {
+						limit = {
+							template = celestial_knight_stonewards
+						}
+						disband_mercenary_company = THIS
+					}
+					update_unit_sprites_for_racial_mil = yes
+					remove_country_modifier = celestial_knight_order_stonewards
+					clr_global_flag = stonewards_chosen
+				}
 			}
 		}
 	}
@@ -1312,16 +1504,47 @@ custom_button = {
 	name = fun_time_5
 	tooltip = fun_time_5_tt
 	potential = {
-		FROM = { tag = U89}
-		U89 = {
+		FROM = { tag = Y24}
+		Y24 = {
 			has_wartaxes = yes
+		}
+		if = {
+			limit = {
+				has_global_flag = edgedancers_chosen
+			}
+			owner = {
+				has_country_modifier = celestial_knight_order_edgedancers
+			}
 		}
 	}
 	trigger = { }
 	effect = { 
 		hidden_effect = {
-			owner = {
-				save_global_event_target_as = banishment_vote_5
+			if = {
+				limit = {
+					NOT = {
+						has_country_modifier = celestial_knight_order_edgedancers
+					}
+				}
+				owner = {
+					country_event = {
+						id = karguin.206
+					}
+				}
+				set_global_flag = edgedancers_chosen
+			}
+			else = {
+				hidden_effect = {
+					random_hired_mercenary_company = {
+						limit = {
+							template = celestial_knight_edgedancers
+						}
+						disband_mercenary_company = THIS
+					}
+					update_unit_sprites_for_racial_mil = yes
+					remove_country_modifier = celestial_knight_order_edgedancers
+					clr_global_flag = edgedancers_chosen
+				}
 			}
 		}
 	}
@@ -1331,23 +1554,7 @@ custom_button = {
 	name = start_fun_time
 	tooltip = start_fun_time_tt
 	potential = {
-		tag = U89
-		artifice_invention_has_any_menu_open = no NOT = { has_country_flag = gacha_open_menu_flag }
-	}
-	trigger = { }
-	effect = { 
-		hidden_effect = {
-			hidden_effect = {
-				set_global_flag = no_more_taxes
-			}
-		}
-	}
-}
-custom_button = {
-	name = count_fun_time
-	tooltip = count_fun_time_tt
-	potential = {
-		tag = U89
+		tag = Y24
 		artifice_invention_has_any_menu_open = no NOT = { has_country_flag = gacha_open_menu_flag }
 	}
 	trigger = { }
@@ -1358,10 +1565,24 @@ custom_button = {
 	}
 }
 custom_button = {
+	name = count_fun_time
+	tooltip = count_fun_time_tt
+	potential = {
+		tag = Y24
+		artifice_invention_has_any_menu_open = no NOT = { has_country_flag = gacha_open_menu_flag }
+	}
+	trigger = { }
+	effect = { 
+		hidden_effect = {
+			clr_global_flag = no_more_taxes
+		}
+	}
+}
+custom_button = {
 	name = end_fun_time
 	tooltip = end_fun_time_tt
 	potential = {
-		tag = U89
+		tag = Y24
 		artifice_invention_has_any_menu_open = no NOT = { has_country_flag = gacha_open_menu_flag }
 	}
 	trigger = { }
@@ -1376,12 +1597,15 @@ custom_button = {
 	name = karg_offer_1
 	tooltip = lol_first_button_tooltip
 	potential = {
-		FROM = { tag = KEK }
+		FROM = { tag = Y29 }
 		NOT = {
 			owner = { tag = FROM }
-			exists = LOL
+			exists = L77
 		}
 		has_province_flag = portal_open
+	}
+	trigger = {
+
 	}
 	effect = {
 		province_event = { id = karguin.11 }
@@ -1392,12 +1616,15 @@ custom_button = {
 	name = karg_offer_2
 	tooltip = lol_second_button_tooltip
 	potential = {
-		FROM = { tag = KEK }
+		FROM = { tag = Y29 }
 		NOT = {
 			owner = { tag = FROM }
-			exists = TOP
+			exists = S24
 		}
 		has_province_flag = portal_open
+	}
+	trigger = {
+		
 	}
 	effect = {
 		province_event = { id = karguin.12 }
@@ -1408,12 +1635,15 @@ custom_button = {
 	name = karg_offer_3
 	tooltip = lol_third_button_tooltip
 	potential = {
-		FROM = { tag = KEK }
+		FROM = { tag = Y29 }
 		NOT = {
 			owner = { tag = FROM }
-			exists = SUB
+			exists = S49
 		}
 		has_province_flag = portal_open
+	}
+	trigger = {
+		
 	}
 	effect = {
 		province_event = { id = karguin.13 }
@@ -1424,12 +1654,15 @@ custom_button = {
 	name = karg_offer_4
 	tooltip = lol_fourth_button_tooltip
 	potential = {
-		FROM = { tag = KEK }
+		FROM = { tag = Y29 }
 		NOT = {
 			owner = { tag = FROM }
-			exists = GIT
+			exists = S48
 		}
 		has_province_flag = portal_open
+	}
+	trigger = {
+		
 	}
 	effect = {
 		province_event = { id = karguin.14 }
@@ -1440,12 +1673,15 @@ custom_button = {
 	name = karg_offer_5
 	tooltip = lol_fifth_button_tooltip
 	potential = {
-		FROM = { tag = KEK }
+		FROM = { tag = Y29 }
 		NOT = {
 			owner = { tag = FROM }
-			exists = GUD
+			exists = S45
 		}
 		has_province_flag = portal_open
+	}
+	trigger = {
+		
 	}
 	effect = {
 		province_event = { id = karguin.15 }
@@ -1456,18 +1692,20 @@ custom_button = {
 	name = karg_infernal_offer
 	tooltip = karg_infernal_offer_tt
 	potential = { 
-		FROM = { tag = KEK }
+		FROM = { tag = Y29 }
 		owner = {
 			NOT = {
 				religion = infernal_court
 			}
 		}
 	}
-
+	trigger = {
+		
+	}
 	effect = {
 		owner = {
 			country_event = {
-				id = kargsmells.1
+				id = karguin.100
 			}
 		}
 	}

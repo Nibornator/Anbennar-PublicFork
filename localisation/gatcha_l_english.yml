@@ -198,10 +198,10 @@
   hellfire_signet_modifier_very_real:0 "§RHellfire Signet§!"
 
   #pain pain
-  kargsmells.1.t:0 "An Offer From Beyond"
-  kargsmells.1.d:0 "A whisper in the dark. An outstretched hand. One tantalizing offer that few would dare rebuke. The signs were all present, yet you can hardly believe what stands before you. A being of two faces, one of unparalleled allure, one of wretched depravity. Your eyes naturally fell upon the former, with a mind fixated on the words gushing from the being's lips like smoke from a pipe.\n\nPower of your own, to wield as you see fit against those that would dare stand against your new Demesne. Such an image tempts your hand, twitching towards acceptance. But the nagging corpse of what was once your conscience still clings to your senses, stunning you for a moment. Upon regaining your wits, you..."
-  kargsmells.1.a:0 "...take the being's hand, come what may."
-  kargsmells.1.b:0 "...rebuke the fiend."
+  karguin.100.t:0 "An Offer From Beyond"
+  karguin.100.d:0 "A whisper in the dark. An outstretched hand. One tantalizing offer that few would dare rebuke. The signs were all present, yet you can hardly believe what stands before you. A being of two faces, one of unparalleled allure, one of wretched depravity. Your eyes naturally fell upon the former, with a mind fixated on the words gushing from the being's lips like smoke from a pipe.\n\nPower of your own, to wield as you see fit against those that would dare stand against your new Demesne. Such an image tempts your hand, twitching towards acceptance. But the nagging corpse of what was once your conscience still clings to your senses, stunning you for a moment. Upon regaining your wits, you..."
+  karguin.100.a:0 "...take the being's hand, come what may."
+  karguin.100.b:0 "...rebuke the fiend."
   nyarguin_portal_valley_title:0 "Valley Nyraguing"
   nyarguin_portal_valley_desc:0 ""
   nyarguin_portal_dwarovar_title:0 "Dwarovnya"
@@ -266,3 +266,7 @@
   tax_collectors_rebels_rebels_title:0 "§YTax Collectors§!"
   tax_collectors_rebels_rebels_desc:0 "§YNyarguin gets their due.§!"
   tax_collectors_rebels_rebels_army:0 "§YTax Collector Crew§!"
+  thors_tome_tt:0 "§VThor's§! §YTome§!"
+  thors_tome_effect_tt:0 "§YApplies a random positive modifier.§!"
+  thors_tome_cd_tt:0 "§RThor's Tome is on cooldown.§!"
+  thors_tome_sus_tt:0 "§PThis artifact exudes mysterious energies...it should not be tampered with, lest the stability of our realm shall come undone.§!"

@@ -282,6 +282,7 @@ country_event = {
 			OR = {
 				tag = A73 	#Silverforge
 				tag = Z36	#Hammerhome
+				tag = Z35
 			}
 		}
 		highlight = yes

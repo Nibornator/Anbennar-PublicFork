@@ -1923,7 +1923,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 5
-				tag = Z36 # Hammerhome
+				OR = {
+					tag = Z36
+					tag = Z35
+				}
 			}
 		}
 

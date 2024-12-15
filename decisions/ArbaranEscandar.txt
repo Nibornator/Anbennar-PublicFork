@@ -5,7 +5,10 @@ country_decisions = {
 		major = yes
 		
 		potential = {
-			tag = A46
+			OR = {
+				tag = A46
+				tag = A36
+			}
 			NOT = { owns = 316 }
 			has_country_flag = reclaim_escandar
 			NOT = { has_country_flag = escandar_negotiations_started }

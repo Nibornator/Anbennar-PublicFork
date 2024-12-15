@@ -157,6 +157,7 @@ country_event = {
 							tag = B02 #Corintar
 							tag = B18 #Iron Hammers
 							tag = Z36 #Hammerhome
+							tag = Z35
 						} 
 					}
 					country_event = { id = corins_circle.10 }

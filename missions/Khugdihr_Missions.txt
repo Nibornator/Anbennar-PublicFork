@@ -973,12 +973,12 @@ khugdihr_5 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					exists = Z36
-					is_capital_of = Z36
+					exists = Z35
+					is_capital_of = Z35
 				}
 				AND = {
 					NOT = { exists = B18 }
-					NOT = { exists = Z36 }
+					NOT = { exists = Z35 }
 					province_id = 849
 					NOT = { owned_by = ROOT }
 				}
@@ -988,12 +988,12 @@ khugdihr_5 = {
 		trigger = {
 			OR = {
 				AND = {
-					exists = Z36
-					alliance_with = Z36
+					exists = Z35
+					alliance_with = Z35
 				}
 				AND = {
 					NOT = { exists = B18 }
-					NOT = { exists = Z36 }
+					NOT = { exists = Z35 }
 					is_year = 1500
 					849 = { owned_by = ROOT }
 				}
@@ -1002,17 +1002,17 @@ khugdihr_5 = {
 		
 		effect = {
 			if = {
-				limit = { NOT = { exists = Z36 } }
+				limit = { NOT = { exists = Z35 } }
 				849 = {
-					add_core = Z36
+					add_core = Z35
 					remove_core = ROOT
 					change_culture = stone_dwarf
 					change_religion = ROOT
 				}
-				create_vassal_with_religion_and_culture = { tag = Z36 religion = ROOT culture = stone_dwarf }
+				create_vassal_with_religion_and_culture = { tag = Z35 religion = ROOT culture = stone_dwarf }
 			}
-			Z36 = { add_historical_friend = ROOT }
-			ROOT = { add_historical_friend = Z36 }
+			Z35 = { add_historical_friend = ROOT }
+			ROOT = { add_historical_friend = Z35 }
 		}
 	}
 	
@@ -1026,10 +1026,10 @@ khugdihr_5 = {
 		trigger = {
 			stability = 1
 			OR = {
-				Z36 = { is_in_war = { attacker_leader = ROOT } }
-				is_in_war = { attacker_leader = Z36 }
+				Z35 = { is_in_war = { attacker_leader = ROOT } }
+				is_in_war = { attacker_leader = Z35 }
 			}
-			Z36 = { trust = { who = ROOT value = 60 } }
+			Z35 = { trust = { who = ROOT value = 60 } }
 		}
 		
 		effect = {
@@ -1054,7 +1054,7 @@ khugdihr_5 = {
 				}
 			}
 			custom_tooltip = khug_tooltip_every_province_gets_prosperity
-			Z36 = { capital_scope = { add_prosperity = 100 } }
+			Z35 = { capital_scope = { add_prosperity = 100 } }
 		}
 	}
 	
@@ -1090,7 +1090,7 @@ khugdihr_5 = {
 				duration = -1
 			}
 			add_dip_power = 100
-			Z36 = {
+			Z35 = {
 				add_country_modifier = {
 					name = khug_exchange_treaty
 					duration = -1
@@ -1791,7 +1791,7 @@ khugdihr_4_pt_2 = {
 						area = castonath_area
 						province_id = 840
 					}
-					NOT = { owned_by = Z36 }
+					NOT = { owned_by = Z35 }
 				}
 				AND = {
 					province_id = 840
@@ -1803,10 +1803,10 @@ khugdihr_4_pt_2 = {
 		trigger = {
 			castonath_area = {
 				type = all
-				owned_by = Z36
+				owned_by = Z35
 			}
 			840 = {
-				owned_by = Z36
+				owned_by = Z35
 				has_province_modifier = castanorian_citadel
 			}
 		}
@@ -1814,7 +1814,7 @@ khugdihr_4_pt_2 = {
 		effect = {
 			840 = {
 				if = {
-					limit = { Z36 = { primary_culture = iron_dwarf } }
+					limit = { Z35 = { primary_culture = iron_dwarf } }
 					change_culture = iron_dwarf
 				}
 				else = {
@@ -1992,7 +1992,7 @@ khugdihr_5_pt_2 = {
 		}
 		
 		trigger = {
-			Z36 = {
+			Z35 = {
 				trust = { who = ROOT value = 100 }
 				has_spy_network_from = { who = ROOT value = 50 }
 			}
@@ -2014,9 +2014,9 @@ khugdihr_5_pt_2 = {
 			OR = {
 				AND = {
 					region = inner_castanor_region
-					NOT = { owned_by = Z36 }
+					NOT = { owned_by = Z35 }
 					NOT = {
-						Z36 = {
+						Z35 = {
 							num_of_owned_provinces_with = {
 								value = 25
 								region = inner_castanor_region
@@ -2028,7 +2028,7 @@ khugdihr_5_pt_2 = {
 					province_id = 849
 					NOT = {
 						AND = {
-							owned_by = Z36
+							owned_by = Z35
 							province_has_current_tech_fort_trigger = yes
 							base_manpower = 12
 						}
@@ -2038,14 +2038,14 @@ khugdihr_5_pt_2 = {
 		}
 		
 		trigger = {
-			Z36 = {
+			Z35 = {
 				num_of_owned_provinces_with = {
 					value = 25
 					region = inner_castanor_region
 				}
 			}
 			849 = {
-				owned_by = Z36
+				owned_by = Z35
 				province_has_current_tech_fort_trigger = yes
 				base_manpower = 12
 			}
@@ -2060,38 +2060,38 @@ khugdihr_5_pt_2 = {
 			}
 			steelhyl_area = {
 				limit = {
-					NOT = { is_core = Z36 }
-					NOT = { is_permanent_claim = Z36 }
+					NOT = { is_core = Z35 }
+					NOT = { is_permanent_claim = Z35 }
 				}
-				add_permanent_claim = Z36
+				add_permanent_claim = Z35
 			}
 			clouded_wood_area = {
 				limit = {
-					NOT = { is_core = Z36 }
-					NOT = { is_permanent_claim = Z36 }
+					NOT = { is_core = Z35 }
+					NOT = { is_permanent_claim = Z35 }
 				}
-				add_permanent_claim = Z36
+				add_permanent_claim = Z35
 			}
 			nortessord_area = {
 				limit = {
-					NOT = { is_core = Z36 }
-					NOT = { is_permanent_claim = Z36 }
+					NOT = { is_core = Z35 }
+					NOT = { is_permanent_claim = Z35 }
 				}
-				add_permanent_claim = Z36
+				add_permanent_claim = Z35
 			}
 			esshyl_area = {
 				limit = {
-					NOT = { is_core = Z36 }
-					NOT = { is_permanent_claim = Z36 }
+					NOT = { is_core = Z35 }
+					NOT = { is_permanent_claim = Z35 }
 				}
-				add_permanent_claim = Z36
+				add_permanent_claim = Z35
 			}
 			marrhold_area = {
 				limit = {
-					NOT = { is_core = Z36 }
-					NOT = { is_permanent_claim = Z36 }
+					NOT = { is_core = Z35 }
+					NOT = { is_permanent_claim = Z35 }
 				}
-				add_permanent_claim = Z36
+				add_permanent_claim = Z35
 			}
 		}
 	}
@@ -2107,7 +2107,7 @@ khugdihr_5_pt_2 = {
 			province_id = 4097
 			OR = {
 				NOT = {
-					owned_by = Z36
+					owned_by = Z35
 					owned_by = ROOT
 				}
 				has_province_modifier = ruined_hold
@@ -2119,7 +2119,7 @@ khugdihr_5_pt_2 = {
 		trigger = {
 			4097 = {
 				OR = {
-					owned_by = Z36
+					owned_by = Z35
 					owned_by = ROOT
 				}
 				NOT = { has_province_modifier = ruined_hold }
@@ -2133,7 +2133,7 @@ khugdihr_5_pt_2 = {
 			add_dip_power = -200
 			4097 = {
 				if = {
-					limit = { Z36 = { primary_culture = iron_dwarf } }
+					limit = { Z35 = { primary_culture = iron_dwarf } }
 					change_culture = iron_dwarf
 				}
 				else = {
@@ -2153,13 +2153,13 @@ khugdihr_5_pt_2 = {
 		
 		provinces_to_highlight = {
 			region = inner_castanor_region
-			NOT = { owned_by = Z36 }
+			NOT = { owned_by = Z35 }
 		}
 		
 		trigger = {
 			inner_castanor_region = {
 				type = all
-				owned_by = Z36
+				owned_by = Z35
 			}
 			current_age = age_of_absolutism
 		}
@@ -2167,21 +2167,21 @@ khugdihr_5_pt_2 = {
 		effect = {
 			west_castanor_region = {
 				limit = {
-					NOT = { is_core = Z36 }
-					NOT = { is_permanent_claim = Z36 }
+					NOT = { is_core = Z35 }
+					NOT = { is_permanent_claim = Z35 }
 				}
-				add_permanent_claim = Z36
+				add_permanent_claim = Z35
 			}
 			south_castanor_region = {
 				limit = {
-					NOT = { is_core = Z36 }
-					NOT = { is_permanent_claim = Z36 }
+					NOT = { is_core = Z35 }
+					NOT = { is_permanent_claim = Z35 }
 				}
-				add_permanent_claim = Z36
+				add_permanent_claim = Z35
 			}
 			if = {
-				limit = { Z36 = { is_subject = yes } }
-				Z36 = {
+				limit = { Z35 = { is_subject = yes } }
+				Z35 = {
 					add_country_modifier = {
 						name = khug_balgaric_union_solidified
 						duration = -1
@@ -2189,7 +2189,7 @@ khugdihr_5_pt_2 = {
 				}
 			}
 			else = {
-				Z36 = {
+				Z35 = {
 					add_country_modifier = {
 						name = khug_balgaric_union_strengthened
 						duration = -1

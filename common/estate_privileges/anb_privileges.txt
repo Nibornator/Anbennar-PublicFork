@@ -5391,11 +5391,17 @@ estate_church_balgarsmiths_building_oversight = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
-		tag = Z36
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 		has_country_flag = has_balgarsmiths
 	}
 	can_select = {
-		tag = Z36
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 		has_country_flag = has_balgarsmiths
 	}
 	penalties = {
@@ -5417,11 +5423,17 @@ estate_church_balgarsmiths_mining = {
 	loyalty = 0.05
 	influence = 0.1
 	is_valid = {
-		tag = Z36
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 		has_country_flag = has_balgarsmiths
 	}
 	can_select = {
-		tag = Z36
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 		has_country_flag = has_balgarsmiths
 	}
 	on_granted = {

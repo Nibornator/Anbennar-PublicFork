@@ -3,7 +3,10 @@ hammerhome_1 = {
 	generic = no
 	ai = yes 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 	}
     has_country_shield = yes  
 	
@@ -290,7 +293,10 @@ hammerhome_2 = {
     generic = no           
     ai = yes                 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 	}
     has_country_shield = yes  
 	
@@ -624,7 +630,10 @@ hammerhome_3 = {
     generic = no           
     ai = yes                 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 	}
     has_country_shield = yes  
 	
@@ -1311,7 +1320,10 @@ hammerhome_4 = {
     generic = no           
     ai = yes                 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 	}
     has_country_shield = yes  
 	
@@ -1567,7 +1579,10 @@ hammerhome_5 = {
 	generic = no
 	ai = yes 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 	}
     has_country_shield = yes  
 	
@@ -1764,7 +1779,10 @@ hammerhome_1b = {
 	generic = no
 	ai = yes 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 		has_country_flag = Z36_expanded_missions
 	}
     has_country_shield = yes  
@@ -2153,7 +2171,10 @@ hammerhome_2b = {
 	generic = no
 	ai = yes 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 		has_country_flag = Z36_expanded_missions
 	}
     has_country_shield = yes  
@@ -2353,7 +2374,10 @@ hammerhome_3b = {
 	generic = no
 	ai = yes 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 		has_country_flag = Z36_expanded_missions
 	}
     has_country_shield = yes  
@@ -2804,7 +2828,10 @@ hammerhome_4b = {
 	generic = no
 	ai = yes 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 		has_country_flag = Z36_expanded_missions
 	}
     has_country_shield = yes  
@@ -2991,7 +3018,10 @@ hammerhome_5b = {
 	generic = no
 	ai = yes 
 	potential = { 
-		tag = Z36 # Hammerhome
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 		has_country_flag = Z36_expanded_missions
 	}
     has_country_shield = yes  

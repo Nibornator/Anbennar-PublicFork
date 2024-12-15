@@ -37,14 +37,13 @@ province_event = {
 							is_city = yes
 							NOT = {
 								OR = {
-									owned_by = KEK
-									owned_by = U89
+									owned_by = Y24
+									owned_by = Y29
 								}
 							}
 							NOT = { 
 								owner = { 
 									has_country_flag = reward_onyx_country
-									has_country_modifier = blessed_by_the_other_doge
 								}
 							}
 						}
@@ -66,7 +65,6 @@ province_event = {
 	title = karguin.2.t
 	desc = karguin.2.d
 	picture = ANGRY_MOB_eventPicture
-	major = yes
 	is_triggered_only = yes
 
 	trigger = {
@@ -81,8 +79,8 @@ province_event = {
 					is_city = yes
 					NOT = {
 						OR = {
-							owned_by = KEK
-							owned_by = U89
+							owned_by = Y24
+							owned_by = Y29
 						}
 					}
 				}
@@ -133,14 +131,13 @@ province_event = {
 						is_city = yes
 						NOT = {
 							OR = {
-								owned_by = KEK
-								owned_by = U89
+								owned_by = Y24
+								owned_by = Y29
 							}
 						}
 						NOT = { 
 							owner = { 
 								has_country_flag = reward_onyx_country
-								has_country_modifier = blessed_by_the_other_doge
 							}
 						}
 					}
@@ -172,7 +169,7 @@ province_event = {
 	}
 }
 
-# Spawning - LOL
+# Spawning - L77
 province_event = {
 	id = karguin.11
 	title = karguin.11.t
@@ -200,11 +197,11 @@ province_event = {
 		custom_tooltip = karguin_vassal_spawn_tt
 		hidden_effect = {
 			event_target:spawning_point = {
-				add_core = LOL
+				add_core = L77
 				change_religion = infernal_court
 				change_culture = sun_elf
-				cede_province = LOL
-				LOL = {
+				cede_province = L77
+				L77 = {
 					change_religion = infernal_court
 					change_government = theocracy
 					add_government_reform = secular_order_reform
@@ -212,6 +209,16 @@ province_event = {
 					add_country_modifier = {
 						name = invasion_spawn_buff
 						duration = -1
+					}
+					hidden_effect = {
+						clear_racial_military = yes
+						change_technology_group = tech_spirit
+						change_unit_type = tech_spirit
+						add_country_modifier = {
+							name = spirit_military
+							duration = -1
+						}
+						spirit_mil_shock_dmg = yes
 					}
 					karguin_starting_army = yes
 					# custom ruler or whatev
@@ -225,7 +232,7 @@ province_event = {
 					}
 				}
 
-				LOL = {
+				L77 = {
 					declare_war_with_cb = {
 						who = event_target:big_l_tag
 						casus_belli = cb_karguin
@@ -238,28 +245,22 @@ province_event = {
 					superregion = ROOT
 					NOT = {
 						OR = {
-							owned_by = KEK
-							owned_by = U89
+							owned_by = Y24
+							owned_by = Y29
 						}
 					}
 					is_city = yes
 					owner = { ai = yes }
 					NOT = { province_id = event_target:spawning_point }
 				}
-				add_core = LOL
+				add_core = L77
 				change_culture = sun_elf
-				spawn_rebels = {
-					type = nyarguin_invasion_rebels
-					size = 3
-					separatists_target = LOL
-					culture = sun_elf
-				}
 			}
 		}
 	}
 }
 
-# Spawning - TOP
+# Spawning - S24
 province_event = {
 	id = karguin.12
 	title = karguin.12.t
@@ -287,11 +288,11 @@ province_event = {
 		custom_tooltip = karguin_vassal_spawn_tt
 		hidden_effect = {
 			event_target:spawning_point = {
-				add_core = TOP
+				add_core = S24
 				change_religion = infernal_court
 				change_culture = sun_elf
-				cede_province = TOP
-				TOP = {
+				cede_province = S24
+				S24 = {
 					change_government = theocracy
 					add_government_reform = secular_order_reform
 					change_religion = infernal_court
@@ -299,6 +300,16 @@ province_event = {
 					add_country_modifier = {
 						name = invasion_spawn_buff
 						duration = -1
+					}
+					hidden_effect = {
+						clear_racial_military = yes
+						change_technology_group = tech_spirit
+						change_unit_type = tech_spirit
+						add_country_modifier = {
+							name = spirit_military
+							duration = -1
+						}
+						spirit_mil_shock_dmg = yes
 					}
 					karguin_starting_army = yes
 					# custom ruler or whatev
@@ -312,7 +323,7 @@ province_event = {
 					}
 				}
 
-				TOP = {
+				S24 = {
 					declare_war_with_cb = {
 						who = event_target:big_l_tag
 						casus_belli = cb_karguin
@@ -325,28 +336,22 @@ province_event = {
 					superregion = ROOT
 					NOT = {
 						OR = {
-							owned_by = KEK
-							owned_by = U89
+							owned_by = Y24
+							owned_by = Y29
 						}
 					}
 					is_city = yes
 					owner = { ai = yes }
 					NOT = { province_id = event_target:spawning_point }
 				}
-				add_core = TOP
+				add_core = S24
 				change_culture = sun_elf	
-				spawn_rebels = {
-					type = nyarguin_invasion_rebels
-					size = 3
-					separatists_target = TOP
-					culture = sun_elf
-				}
 			}
 		}
 	}
 }
 
-# Spawning - SUB
+# Spawning - S49
 province_event = {
 	id = karguin.13
 	title = karguin.13.t
@@ -374,11 +379,11 @@ province_event = {
 		custom_tooltip = karguin_vassal_spawn_tt
 		hidden_effect = {
 			event_target:spawning_point = {
-				add_core = SUB
+				add_core = S49
 				change_religion = infernal_court
 				change_culture = sun_elf
-				cede_province = SUB
-				SUB = {
+				cede_province = S49
+				S49 = {
 					change_government = theocracy
 					add_government_reform = secular_order_reform
 					change_religion = infernal_court
@@ -386,6 +391,16 @@ province_event = {
 					add_country_modifier = {
 						name = invasion_spawn_buff
 						duration = -1
+					}
+					hidden_effect = {
+						clear_racial_military = yes
+						change_technology_group = tech_spirit
+						change_unit_type = tech_spirit
+						add_country_modifier = {
+							name = spirit_military
+							duration = -1
+						}
+						spirit_mil_shock_dmg = yes
 					}
 					karguin_starting_army = yes
 					# custom ruler or whatev
@@ -399,7 +414,7 @@ province_event = {
 					}
 				}
 
-				SUB = {
+				S49 = {
 					declare_war_with_cb = {
 						who = event_target:big_l_tag
 						casus_belli = cb_karguin
@@ -412,28 +427,22 @@ province_event = {
 					superregion = ROOT
 					NOT = {
 						OR = {
-							owned_by = KEK
-							owned_by = U89
+							owned_by = Y24
+							owned_by = Y29
 						}
 					}
 					is_city = yes
 					owner = { ai = yes }
 					NOT = { province_id = event_target:spawning_point }
 				}
-				add_core = SUB
-				change_culture = sun_elf		
-				spawn_rebels = {
-					type = nyarguin_invasion_rebels
-					size = 3
-					separatists_target = SUB
-					culture = sun_elf
-				}
+				add_core = S49
+				change_culture = sun_elf
 			}
 		}
 	}
 }
 
-# Spawning - GIT
+# Spawning - S48
 province_event = {
 	id = karguin.14
 	title = karguin.14.t
@@ -461,11 +470,11 @@ province_event = {
 		custom_tooltip = karguin_vassal_spawn_tt
 		hidden_effect = {
 			event_target:spawning_point = {
-				add_core = GIT
+				add_core = S48
 				change_religion = infernal_court
 				change_culture = sun_elf
-				cede_province = GIT
-				GIT = {
+				cede_province = S48
+				S48 = {
 					change_government = theocracy
 					add_government_reform = secular_order_reform
 					change_religion = infernal_court
@@ -473,6 +482,16 @@ province_event = {
 					add_country_modifier = {
 						name = invasion_spawn_buff
 						duration = -1
+					}
+					hidden_effect = {
+						clear_racial_military = yes
+						change_technology_group = tech_spirit
+						change_unit_type = tech_spirit
+						add_country_modifier = {
+							name = spirit_military
+							duration = -1
+						}
+						spirit_mil_shock_dmg = yes
 					}
 					karguin_starting_army = yes
 					# custom ruler or whatev
@@ -486,7 +505,7 @@ province_event = {
 					}
 				}
 
-				GIT = {
+				S48 = {
 					declare_war_with_cb = {
 						who = event_target:big_l_tag
 						casus_belli = cb_karguin
@@ -499,28 +518,22 @@ province_event = {
 					superregion = ROOT
 					NOT = {
 						OR = {
-							owned_by = KEK
-							owned_by = U89
+							owned_by = Y24
+							owned_by = Y29
 						}
 					}
 					is_city = yes
 					owner = { ai = yes }
 					NOT = { province_id = event_target:spawning_point }
 				}
-				add_core = GIT
+				add_core = S48
 				change_culture = sun_elf	
-				spawn_rebels = {
-					type = nyarguin_invasion_rebels
-					size = 3
-					separatists_target = GIT
-					culture = sun_elf
-				}
 			}
 		}
 	}
 }
 
-# Spawning - GUD
+# Spawning - S45
 province_event = {
 	id = karguin.15
 	title = karguin.15.t
@@ -548,11 +561,12 @@ province_event = {
 		custom_tooltip = karguin_vassal_spawn_tt
 		hidden_effect = {
 			event_target:spawning_point = {
-				add_core = GUD
+				add_core = S45
 				change_religion = infernal_court
 				change_culture = sun_elf
-				cede_province = GUD
-				GUD = {
+				cede_province = Y24
+				cede_province = S45
+				S45 = {
 					setup_vision = yes
 					change_government = theocracy
 					add_government_reform = secular_order_reform
@@ -561,6 +575,16 @@ province_event = {
 					add_country_modifier = {
 						name = invasion_spawn_buff
 						duration = -1
+					}
+					hidden_effect = {
+						clear_racial_military = yes
+						change_technology_group = tech_spirit
+						change_unit_type = tech_spirit
+						add_country_modifier = {
+							name = spirit_military
+							duration = -1
+						}
+						spirit_mil_shock_dmg = yes
 					}
 					karguin_starting_army = yes
 					# custom ruler or whatev
@@ -574,7 +598,7 @@ province_event = {
 					}
 				}
 
-				GUD = {
+				S45 = {
 					declare_war_with_cb = {
 						who = event_target:big_l_tag
 						casus_belli = cb_karguin
@@ -587,22 +611,16 @@ province_event = {
 					superregion = ROOT
 					NOT = {
 						OR = {
-							owned_by = KEK
-							owned_by = U89
+							owned_by = Y24
+							owned_by = Y29
 						}
 					}
 					is_city = yes
 					owner = { ai = yes }
 					NOT = { province_id = event_target:spawning_point }
 				}
-				add_core = GUD
+				add_core = S45
 				change_culture = sun_elf
-				spawn_rebels = {
-					type = nyarguin_invasion_rebels
-					size = 3
-					separatists_target = GUD
-					culture = sun_elf
-				}
 			}
 		}
 	}
@@ -648,15 +666,15 @@ country_event = {
 }
 
 country_event = {
-    id = kargsmells.1
-    title = kargsmells.1.t
-    desc = kargsmells.1.d
+    id = karguin.100
+    title = karguin.100.t
+    desc = karguin.100.d
     picture = THE_COVENANT_eventPicture
 
     is_triggered_only = yes
 
     option = {    #we love satan
-        name = kargsmells.1.a
+        name = karguin.100.a
 
         change_religion = infernal_court
         set_ruler_religion = infernal_court
@@ -690,8 +708,129 @@ country_event = {
         }
     }
     option = {    #y'all need jesus
-        name = kargsmells.1.b
+        name = karguin.100.b
 
         # add gacha ticket here (idk the scripted effect)
     }
+}
+
+#Chosen Radiants
+country_event = {
+	id = karguin.202
+	desc = karguin.202.d
+	title = karguin.202.t
+	picture = THE_COVENANT_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = karguin.202.a
+		add_country_modifier = {
+			name = celestial_knight_order_skybreakers
+			duration = -1
+		}
+		add_years_of_income = 1
+		add_yearly_manpower = 2
+		hidden_effect = {
+			apply_sprite_pack = celestial2_sprite_pack
+		}
+	}
+}
+
+country_event = {
+	id = karguin.203
+	desc = karguin.203.d
+	title = karguin.203.t
+	picture = THE_COVENANT_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = karguin.203.a
+		add_country_modifier = {
+			name = celestial_knight_order_windrunners
+			duration = -1
+		}
+		add_years_of_income = 1
+		add_yearly_manpower = 2
+		hidden_effect = {
+			apply_sprite_pack = celestial2_sprite_pack
+		}
+	}
+}
+
+country_event = {
+	id = karguin.204
+	desc = karguin.204.d
+	title = karguin.204.t
+	picture = THE_COVENANT_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = karguin.204.a
+		add_country_modifier = {
+			name = celestial_knight_order_dustbringers
+			duration = -1
+		}
+		add_years_of_income = 1
+		add_yearly_manpower = 2
+		hidden_effect = {
+			apply_sprite_pack = celestial2_sprite_pack
+		}
+	}
+}
+
+country_event = {
+	id = karguin.205
+	desc = karguin.205.d
+	title = karguin.205.t
+	picture = THE_COVENANT_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = karguin.205.a
+		add_country_modifier = {
+			name = celestial_knight_order_stonewards
+			duration = -1
+		}
+		add_years_of_income = 1
+		add_yearly_manpower = 2
+		hidden_effect = {
+			apply_sprite_pack = celestial2_sprite_pack
+		}
+	}
+}
+
+country_event = {
+	id = karguin.206
+	desc = karguin.206.d
+	title = karguin.206.t
+	picture = THE_COVENANT_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = karguin.206.a
+		add_country_modifier = {
+			name = celestial_knight_order_edgedancers
+			duration = -1
+		}
+		add_years_of_income = 1
+		add_yearly_manpower = 2
+		hidden_effect = {
+			apply_sprite_pack = celestial2_sprite_pack
+		}
+	}
 }

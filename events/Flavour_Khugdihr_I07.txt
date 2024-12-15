@@ -283,7 +283,7 @@ country_event = {
 	
 	option = {
 		name = flavour_khug.10.option1
-		Z36 = {
+		Z35 = {
 			country_event = {
 				id = flavour_khug.22
 				days = 5
@@ -316,7 +316,7 @@ country_event = {
 		}
 
 		I07 = {
-			create_union = Z36
+			create_union = Z35
 		}
 		ai_chance = { factor = 100 }
 	}

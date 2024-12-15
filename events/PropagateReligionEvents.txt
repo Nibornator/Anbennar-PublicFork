@@ -647,7 +647,7 @@ country_event = {
 		}
 
 		#Anbennar
-		NOT = { capital_scope = { continent = europe } }	#this is to prevent this firing for every fucker who converts LOL
+		NOT = { capital_scope = { continent = europe } }	#this is to prevent this firing for every fucker who converts L77
 	}
 	
 	immediate = {

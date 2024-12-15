@@ -2,7 +2,7 @@
 
 graphical_culture = africangfx
 
-color = { 231  42  111 }
+color = { 22 22 22 }
 
 
 

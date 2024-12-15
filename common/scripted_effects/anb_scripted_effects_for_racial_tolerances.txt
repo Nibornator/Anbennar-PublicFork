@@ -5550,9 +5550,9 @@ update_unit_sprites_for_racial_mil = {
 
 	if = {
 		limit = {
-			tag = F42
+			tag = Y29
 			OR ={
-				tag = F42
+				tag = Y29
 				tag = F38
 			}
 		}
@@ -5561,7 +5561,7 @@ update_unit_sprites_for_racial_mil = {
 
 	else_if = { 
 		limit = {
-			tag = U89
+			tag = Y24
 		}
 		apply_sprite_pack = celestial_sprite_pack
 	}
@@ -5570,12 +5570,12 @@ update_unit_sprites_for_racial_mil = {
 		limit = {
 			OR = {
 				primary_culture = sun_elf
-				tag = KEK
-				tag = SUB
-				tag = LOL
-				tag = TOP
-				tag = GIT
-				tag = GUD
+				tag = Y29
+				tag = S49
+				tag = L77
+				tag = S24
+				tag = S48
+				tag = S45
 			}
 		}
 		apply_sprite_pack = hell_sprite_pack

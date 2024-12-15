@@ -52,24 +52,24 @@ nyarguin_invasion_rebels = {
 	siege_won_effect = {
 		owner = {
 			if = {
-				limit = { war_with = LOL }
-				ROOT = { cede_province = LOL add_core = LOL set_province_flag = illegal_land_swap }
+				limit = { war_with = L77 }
+				ROOT = { cede_province = L77 add_core = L77 set_province_flag = illegal_land_swap }
 			}
 			else_if = {
-				limit = { war_with = GIT }
-				ROOT = { cede_province = GIT add_core = GIT set_province_flag = illegal_land_swap }
+				limit = { war_with = S48 }
+				ROOT = { cede_province = S48 add_core = S48 set_province_flag = illegal_land_swap }
 			}
 			else_if = {
-				limit = { war_with = GUD }
-				ROOT = { cede_province = GUD add_core = GUD set_province_flag = illegal_land_swap }
+				limit = { war_with = S45 }
+				ROOT = { cede_province = S45 add_core = S45 set_province_flag = illegal_land_swap }
 			}
 			else_if = {
-				limit = { war_with = SUB }
-				ROOT = { cede_province = SUB add_core = SUB set_province_flag = illegal_land_swap }
+				limit = { war_with = S49 }
+				ROOT = { cede_province = S49 add_core = S49 set_province_flag = illegal_land_swap }
 			}
 			else_if = {
-				limit = { war_with = TOP }
-				ROOT = { cede_province = TOP add_core = TOP set_province_flag = illegal_land_swap }
+				limit = { war_with = S24 }
+				ROOT = { cede_province = S24 add_core = S24 set_province_flag = illegal_land_swap }
 			}
 		}
 		change_culture = sun_elf

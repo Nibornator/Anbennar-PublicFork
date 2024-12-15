@@ -668,7 +668,7 @@ guiTypes = {
 				}
 			}
 		}
-		### PANEL TOP.
+		### PANEL S24.
 		windowType = {
 			name ="mainmenu_panel_top"
 			backGround=""

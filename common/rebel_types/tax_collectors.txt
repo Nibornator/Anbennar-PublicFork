@@ -74,7 +74,7 @@ tax_collectors_rebels_rebels = {
 		# JELLY: tooltip for karguin gaining small power
 		custom_tooltip = karguin_rebel_province_tt
 		hidden_effect = {
-			KEK = {
+			Y29 = {
 				add_adm_power = 5
 				add_dip_power = 5
 				add_mil_power = 5
@@ -102,10 +102,10 @@ tax_collectors_rebels_rebels = {
 		# JELLY: tooltip for karguin gaining lot power
 		custom_tooltip = karguin_rebel_province_big_tt
 		hidden_effect = {
-			KEK = {
-				add_adm_power = 150
-				add_dip_power = 150
-				add_mil_power = 150
+			Y29 = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
 				# add_govpower				
 			}
 		}

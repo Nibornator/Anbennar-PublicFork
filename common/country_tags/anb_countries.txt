@@ -1211,11 +1211,5 @@ Z99 = "countries/Black Demense.txt"
 H99 = "countries/Feyslicer.txt" # Putting this at the end so it doesn't take rebel priority
 
 #Top of file for rebel spawn prio
-LOL = "countries/LegionOfLag.txt"
-KEK = "countries/KarguinsEgirlKnights.txt"
-TOP = "countries/TheOverpoweredPlayer.txt"
-SUB = "countries/SomewhatUnskilledBeppa.txt"
-GIT = "countries/GUIIsTainted.txt"
-GUD = "countries/GreenUltramarineDuck.txt"
 
 NPC = "countries/NPC.txt"

@@ -23,7 +23,7 @@ country_event = {
 			limit = {
 				ai = no
 				NOT = {
-					tag = U89
+					tag = Y24
 				}
 			}
 
@@ -88,7 +88,7 @@ country_event = {
 			limit = {
 				ai = no
 				NOT = {
-					tag = U89
+					tag = Y24
 				}
 			}
 
@@ -372,7 +372,7 @@ country_event = {
 		# Assign initial values
 		random_province = {
 			limit = {
-				owner = { ai = no NOT = { tag = U89 } } 
+				owner = { ai = no NOT = { tag = Y24 } } 
 				is_city = yes
 				NOT = { province_group = hold_province } 
 			}
@@ -449,7 +449,7 @@ country_event = {
 			limit = {
 				ai = no
 				NOT = {
-					tag = U89
+					tag = Y24
 				}
 			}
 

@@ -1927,3 +1927,107 @@ merc_G53_hsamaz = {
 		discipline = 0.025
 	}
 }
+
+celestial_knight_skybreakers = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	cost_modifier = 0.15
+	sprites = { celestial2_sprite_pack }
+	artillery_weight = 0.3
+	trigger = {
+		has_country_modifier = celestial_knight_order_skybreakers
+	}
+
+	modifier = {
+		movement_speed = 0.25
+		discipline = 0.1
+	}
+
+	counts_towards_force_limit = no
+	min_size = 20
+	max_size = 40
+}
+
+celestial_knight_windrunners = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	cost_modifier = 0.15
+	sprites = { celestial2_sprite_pack }
+	cavalry_weight = 1
+	trigger = {
+		has_country_modifier = celestial_knight_order_windrunners
+	}
+
+	modifier = {
+		movement_speed = 0.25
+		land_morale = 0.2
+		cav_to_inf_ratio = 1
+		cavalry_power = 0.5
+	}
+
+	counts_towards_force_limit = no
+	min_size = 20
+	max_size = 40
+}
+
+celestial_knight_dustbringers = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	cost_modifier = 0.15
+	sprites = { celestial2_sprite_pack }
+	artillery_weight = 0.5
+	trigger = {
+		has_country_modifier = celestial_knight_order_dustbringers
+	}
+
+	modifier = {
+		infantry_fire = 1
+		fire_damage = 0.1
+		artillery_levels_available_vs_fort = 2
+	}
+
+	counts_towards_force_limit = no
+	min_size = 20
+	max_size = 40
+}
+
+celestial_knight_stonewards = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	cost_modifier = 0.15
+	sprites = { celestial2_sprite_pack }
+	artillery_weight = 0.3
+	trigger = {
+		has_country_modifier = celestial_knight_order_stonewards
+	}
+
+	modifier = {
+		morale_damage_received = -0.1
+		fire_damage_received = -0.1
+		shock_damage_received = -0.1
+	}
+
+	counts_towards_force_limit = no
+	min_size = 20
+}
+
+celestial_knight_edgedancers = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	cost_modifier = 0.15
+	sprites = { celestial2_sprite_pack }
+	artillery_weight = 0.3
+	trigger = {
+		has_country_modifier = celestial_knight_order_edgedancers
+	}
+
+	modifier = {
+		reinforce_speed = 0.5
+		movement_speed = 0.2
+		recover_army_morale_speed = 0.5
+	}
+
+	counts_towards_force_limit = no
+	min_size = 40
+	manpower_pool = 150
+}

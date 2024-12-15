@@ -273,9 +273,9 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "gacha_item_9_icon"
-		texturefile = "gfx//interface//custom_gui//gacha//gacha_item_9_icon.dds"
-		noOfFrames = 2
+		name = "thors_tome_icon"
+		texturefile = "gfx//interface//custom_gui//gacha//thors_tome_icon.dds"
+		noOfFrames = 3
 	}
 	spriteType = {
 		name = "gacha_item_10_icon"

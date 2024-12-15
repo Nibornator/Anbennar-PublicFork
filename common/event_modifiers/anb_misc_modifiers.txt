@@ -106,10 +106,8 @@ has_bladechosen = {
 }
 
 blinded_by_the_sword = {
-	legitimacy = -2
-	prestige = -1
-	stability_cost_modifier = 0.5
-	diplomatic_reputation = -1
+	legitimacy = -1
+	prestige = -0.5
 }
 
 in_training_calindal_casual = {

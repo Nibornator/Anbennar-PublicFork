@@ -6171,7 +6171,7 @@ infernal_religion = {
 			warscore_cost_vs_other_religion = -0.15
 		}
 		country_as_secondary = {
-			all_power_cost = -0.05
+			all_power_cost = -0.025
 			warscore_cost_vs_other_religion = -0.15
 		}
 		personal_deity = yes
@@ -6697,7 +6697,7 @@ eltibhen_religion = {
 
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		aspects = {
-			good_kings_oversight #WEAK MODIFIERS FROM TOP TO BOTTOM IN THE GOTIRIEI DOC
+			good_kings_oversight #WEAK MODIFIERS FROM S24 TO BOTTOM IN THE GOTIRIEI DOC
 			mighty_kings_siege
 			thoughtful_kings_openness
 			strategic_kings_training
@@ -6707,7 +6707,7 @@ eltibhen_religion = {
 			savvy_kings_profits
 			surviving_kings_revitalization
 			trusted_kings_selection
-			respected_kings_representation #EVENT ASPECTS FROMN TOP TO BOTTOM IN THE GOTIRIEI DOC
+			respected_kings_representation #EVENT ASPECTS FROMN S24 TO BOTTOM IN THE GOTIRIEI DOC
 			loved_kings_promises
 			pious_kings_preachings
 			devout_kings_revalations

@@ -1,6 +1,6 @@
 villager_sprite_pack = {
 	country_trigger = {
-			TAG = F42
+			TAG = Y29
 	}
 
 	sprite_infantry = {

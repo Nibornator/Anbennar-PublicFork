@@ -486,7 +486,7 @@ country_event = {
 				days = 1
 			}
 		}
-		F42 = {
+		Y29 = {
 			country_event = {
 				id = banishment.22
 				days = 365
@@ -636,7 +636,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = F42
+		tag = Y29
 		is_year = 1500
 	}
 
@@ -644,7 +644,6 @@ country_event = {
 		name = banishment.99.a
 		ai_chance = { factor = 1 }
 
-		change_tag = KEK
 		6325 = {
 			add_base_tax = 10
 			add_base_production = 10

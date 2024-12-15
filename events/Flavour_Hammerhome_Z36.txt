@@ -24,7 +24,10 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		tag = Z36
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 	}
 	
 	#New Dynasty Name after country
@@ -105,7 +108,10 @@ country_event = {
 	is_triggered_only = yes
 	major=yes
 	major_trigger = {
-		tag = Z36
+		OR = {
+			tag = Z36
+			tag = Z35
+		}
 	}
 	
 	option = { # Accept it!
@@ -115,7 +121,7 @@ country_event = {
 			change_government = monarchy
 		}
 
-		Z36 = {
+		Z35 = {
 			create_union = I07
 		}
 		ai_chance = { factor = 100 }
@@ -123,7 +129,7 @@ country_event = {
 	option = { # Nah fam.
 		name = flavor_hammerhome.3.b
 		add_dip_power = 5
-		Z36 = {
+		Z35 = {
 			country_event = {
 				id = flavor_hammerhome.4
 			}

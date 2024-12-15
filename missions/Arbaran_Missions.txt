@@ -3,7 +3,12 @@ arbaran_1 = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential = { tag = A46 }
+	potential = { 
+		OR = {
+			tag = A46 
+			tag = A36
+		}
+	}
 	has_country_shield = yes
 	
 	A46_horsemeat_delicacies = {
@@ -369,7 +374,10 @@ arbaran_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = A46
+		OR = {
+			tag = A36
+			tag = A46
+		}
 	}
 	has_country_shield = yes
 	
@@ -807,7 +815,10 @@ arbaran_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = A46
+		OR = {
+			tag = A36
+			tag = A46
+		}
 	}
 	has_country_shield = yes
 	
@@ -1225,7 +1236,10 @@ arbaran_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = A46
+		OR = {
+			tag = A36
+			tag = A46
+		}
 	}
 	has_country_shield = yes
 	
@@ -1669,7 +1683,10 @@ arbaran_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = A46
+		OR = {
+			tag = A36
+			tag = A46
+		}
 	}
 	has_country_shield = yes
 	

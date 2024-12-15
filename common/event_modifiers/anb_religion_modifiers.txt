@@ -751,6 +751,11 @@ harmonized_faithless = {
 	religion = yes
 }
 
+harmonized_infernal = {
+	warscore_cost_vs_other_religion = -0.15
+	religion = yes
+}
+
 ##################################################
 # Regent Court Favored by the Gods Event Modifiers
 ##################################################

@@ -3,16 +3,16 @@ country_decisions = {
 	reveal_map_decision = {
 		potential = {
 			OR = {
-				tag = U89
-				tag = KEK
+				tag = Y24
+				tag = Y29
 			}
 			ai = no
 		}
 
 		allow = {
 			OR = {
-				tag = U89
-				tag = KEK
+				tag = Y29
+				tag = Y24
 			}
 			ai = no
 		}
@@ -136,12 +136,12 @@ country_decisions = {
 
 	unreveal_map_decision = {
 		potential = {
-			tag = U89
+			tag = Y24
 			ai = no
 		}
 
 		allow = {
-			tag = U89
+			tag = Y24
 			ai = no
 		}
 

@@ -1098,12 +1098,10 @@ spirit_military = {
 
 	#Negatives
 
-	drill_gain_modifier = -2 				#your control over the spirits isn't exactly solid
 	general_cost = 0.5 						#no one wants to lead a bunch of ghosts
 	leader_land_fire = -2 					#spirits understand two commands: charge, and halt.
 	army_tradition_from_battle = -0.5 		#your people are not fighting battles
-	yearly_army_professionalism = -0.01		#not exactly the cream of the crop
-	
+
 
 	picture = "racial_mil_spirit"
 }

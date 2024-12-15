@@ -1,288 +1,288 @@
-nyarguin_slot_1 = {
-	slot = 1
-	generic = no
-	ai = no
-	has_country_shield = yes
-	potential = {
-		tag = KEK
-	}
+# nyarguin_slot_1 = {
+# 	slot = 1
+# 	generic = no
+# 	ai = no
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = Y29
+# 	}
 
-	nyarguin_portal_valley = {
-		icon = mission_goblin_rocket
-		position = 3
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			5206 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_Valley
-		}
-	}
-	nyarguin_portal_dwarovar = {
-		icon = mission_goblin_rocket
-		position = 4
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			4237 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_dwarovar
-		}
-	}
-}
-nyarguin_slot_2 = {
-	slot = 2
-	generic = no
-	ai = no
-	has_country_shield = yes
-	potential = {
-		tag = KEK
-	}
+# 	nyarguin_portal_valley = {
+# 		icon = mission_goblin_rocket
+# 		position = 3
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			5206 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_Valley
+# 		}
+# 	}
+# 	nyarguin_portal_dwarovar = {
+# 		icon = mission_goblin_rocket
+# 		position = 4
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			4237 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_dwarovar
+# 		}
+# 	}
+# }
+# nyarguin_slot_2 = {
+# 	slot = 2
+# 	generic = no
+# 	ai = no
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = Y29
+# 	}
 
-	nyarguin_portal_swamp = {
-		icon = mission_goblin_rocket
-		position = 3
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			6690 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_darkswamp
-		}
-	}
-	nyarguin_portal_sarhal = {
-		icon = mission_goblin_rocket
-		position = 4
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			5813 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_sarhalwest
-		}
-	}
-	nyarguin_portal_northaelantir = {
-		icon = mission_goblin_rocket
-		position = 5
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			1138 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_ynn
-		}
-	}
-}
-nyarguin_slot_3 = {
-	slot = 3
-	generic = no
-	ai = no
-	has_country_shield = yes
-	potential = {
-		tag = KEK
-	}
+# 	nyarguin_portal_swamp = {
+# 		icon = mission_goblin_rocket
+# 		position = 3
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			6690 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_darkswamp
+# 		}
+# 	}
+# 	nyarguin_portal_sarhal = {
+# 		icon = mission_goblin_rocket
+# 		position = 4
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			5813 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_sarhalwest
+# 		}
+# 	}
+# 	nyarguin_portal_northaelantir = {
+# 		icon = mission_goblin_rocket
+# 		position = 5
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			1138 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_ynn
+# 		}
+# 	}
+# }
+# nyarguin_slot_3 = {
+# 	slot = 3
+# 	generic = no
+# 	ai = no
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = Y29
+# 	}
 
-	nyarguin_descent_1 = {
-		icon = mission_goblin_rocket
-		position = 1
-		trigger = {
-			adm_power = 150
-			dip_power = 150
-			mil_power = 150
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			add_adm_power = -150
-			add_dip_power = -150
-			add_mil_power = -150
-			change_religion = infernal_court
-			add_ruler_modifier = {
-				name = varamhar_blessed_of_surael
-				duration = -1
-			}
-			every_owned_province = {
-				add_province_modifier = {
-					name = celestial_delegation_consideration
-					duration = -1
-				}
-				change_religion = infernal_court
-			}
-			hidden_effect = {
-				add_treasury = 2000
-				add_prestige = 200
-				add_corruption = -10
-				if = {
-					limit = { NOT = { ruler_has_mage_personality = yes } }
+# 	nyarguin_descent_1 = {
+# 		icon = mission_goblin_rocket
+# 		position = 1
+# 		trigger = {
+# 			adm_power = 150
+# 			dip_power = 150
+# 			mil_power = 150
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			add_adm_power = -150
+# 			add_dip_power = -150
+# 			add_mil_power = -150
+# 			change_religion = infernal_court
+# 			add_ruler_modifier = {
+# 				name = varamhar_blessed_of_surael
+# 				duration = -1
+# 			}
+# 			every_owned_province = {
+# 				add_province_modifier = {
+# 					name = celestial_delegation_consideration
+# 					duration = -1
+# 				}
+# 				change_religion = infernal_court
+# 			}
+# 			hidden_effect = {
+# 				add_treasury = 2000
+# 				add_prestige = 200
+# 				add_corruption = -10
+# 				if = {
+# 					limit = { NOT = { ruler_has_mage_personality = yes } }
 					
-					force_add_ruler_personality = { personality = mage_personality }
+# 					force_add_ruler_personality = { personality = mage_personality }
 					
-					magic_ruler_give_random_spell_school = yes
-					magic_ruler_give_random_spell_school = yes
-					magic_ruler_give_random_spell_school = yes
-					magic_ruler_give_random_spell_school = yes
-					magic_ruler_give_random_spell_school = yes
-					magic_ruler_give_random_spell_school = yes
-					magic_study_level_up_evocation = yes
-					magic_study_level_up_evocation = yes
-					magic_study_level_up_divination = yes
-					magic_study_level_up_divination = yes
-					magic_study_level_up_abjuration = yes
-				}
-				else = {
-					magic_study_level_up_evocation = yes
-					magic_study_level_up_evocation = yes
-					magic_study_level_up_divination = yes
-					magic_study_level_up_divination = yes
-					magic_study_level_up_abjuration = yes
-				}
-				make_ruler_immortal = yes
-			}
-		}
-	}
-}
-nyarguin_slot_4 = {
-	slot = 4
-	generic = no
-	ai = no
-	has_country_shield = yes
-	potential = {
-		tag = KEK
-	}
-	nyarguin_portal_azkasur = {
-		icon = mission_goblin_rocket
-		position = 3
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			643 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_azkasur
-		}
-	}
-	nyarguin_portal_deepwoods = {
-		icon = mission_goblin_rocket
-		position = 4
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			3022 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_deepwoods
-		}
-	}
-	nyarguin_portal_taychend = {
-		icon = mission_goblin_rocket
-		position = 5
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			2495 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_taychend
-		}
-	}
-}
-nyarguin_slot_5 = {
-	slot = 5
-	generic = no
-	ai = no
-	has_country_shield = yes
-	potential = {
-		tag = KEK
-	}
+# 					magic_ruler_give_random_spell_school = yes
+# 					magic_ruler_give_random_spell_school = yes
+# 					magic_ruler_give_random_spell_school = yes
+# 					magic_ruler_give_random_spell_school = yes
+# 					magic_ruler_give_random_spell_school = yes
+# 					magic_ruler_give_random_spell_school = yes
+# 					magic_study_level_up_evocation = yes
+# 					magic_study_level_up_evocation = yes
+# 					magic_study_level_up_divination = yes
+# 					magic_study_level_up_divination = yes
+# 					magic_study_level_up_abjuration = yes
+# 				}
+# 				else = {
+# 					magic_study_level_up_evocation = yes
+# 					magic_study_level_up_evocation = yes
+# 					magic_study_level_up_divination = yes
+# 					magic_study_level_up_divination = yes
+# 					magic_study_level_up_abjuration = yes
+# 				}
+# 				make_ruler_immortal = yes
+# 			}
+# 		}
+# 	}
+# }
+# nyarguin_slot_4 = {
+# 	slot = 4
+# 	generic = no
+# 	ai = no
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = Y29
+# 	}
+# 	nyarguin_portal_azkasur = {
+# 		icon = mission_goblin_rocket
+# 		position = 3
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			643 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_azkasur
+# 		}
+# 	}
+# 	nyarguin_portal_deepwoods = {
+# 		icon = mission_goblin_rocket
+# 		position = 4
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			3022 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_deepwoods
+# 		}
+# 	}
+# 	nyarguin_portal_taychend = {
+# 		icon = mission_goblin_rocket
+# 		position = 5
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			2495 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_taychend
+# 		}
+# 	}
+# }
+# nyarguin_slot_5 = {
+# 	slot = 5
+# 	generic = no
+# 	ai = no
+# 	has_country_shield = yes
+# 	potential = {
+# 		tag = Y29
+# 	}
 
-	nyarguin_portal_amadia = {
-		icon = mission_goblin_rocket
-		position = 3
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			2388 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_amadia
-		}
-	}
-	nyarguin_portal_cannor = {
-		icon = mission_goblin_rocket
-		position = 4
-		trigger = {
-			treasury = 10
-			hidden_trigger = {
-				ai = no
-			}
-		}
-		effect = {
-			220 = {
-				province_event = {
-					id = karguin.1
-				}
-			}
-			show_ambient_object = GoH_gawed
-		}
-	}
-}
+# 	nyarguin_portal_amadia = {
+# 		icon = mission_goblin_rocket
+# 		position = 3
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			2388 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_amadia
+# 		}
+# 	}
+# 	nyarguin_portal_cannor = {
+# 		icon = mission_goblin_rocket
+# 		position = 4
+# 		trigger = {
+# 			treasury = 10
+# 			hidden_trigger = {
+# 				ai = no
+# 			}
+# 		}
+# 		effect = {
+# 			220 = {
+# 				province_event = {
+# 					id = karguin.1
+# 				}
+# 			}
+# 			show_ambient_object = GoH_gawed
+# 		}
+# 	}
+# }
