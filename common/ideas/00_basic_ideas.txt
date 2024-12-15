@@ -12,7 +12,7 @@
 aristocracy_ideas = {
 	category = MIL
 
-	bonus = {
+	bonus = { 
 		leader_siege = 1
 		nobles_loyalty_modifier = 0.1
 		#rajput_loyalty_modifier = 0.1
@@ -30,7 +30,7 @@ aristocracy_ideas = {
 				has_government_attribute = enables_aristocratic_idea_group
 			}
 		}
-		NOT = { government = theocracy }
+		#NOT = { government = theocracy }	#Anbennar - Twilight Court enables Aristocratic Ideas while being a theocracy reform
 		NOT = { 
 			OR = {
 				has_reform = steppe_horde
@@ -38,6 +38,7 @@ aristocracy_ideas = {
 				has_reform = centaur_settled
 				has_reform = great_centaur_horde
 				has_reform = pachyderm_masters
+				has_country_flag = rakkaz_unlocked_horde_gov_ideas
 			}
 		}
 	}
@@ -199,6 +200,7 @@ horde_gov_ideas = {
 			has_reform = centaur_settled
 			has_reform = great_centaur_horde
 			has_reform = pachyderm_masters
+			has_country_flag = rakkaz_unlocked_horde_gov_ideas #Rakkaz MT
 		}
 	}
 	
@@ -252,7 +254,11 @@ theocracy_gov_ideas = {
 	}
 	
 	trigger = {
-		has_government_attribute = enables_divine_idea_group
+		OR = {
+			has_government_attribute = enables_divine_idea_group
+			# ANBENNAR
+			has_country_flag = unlocked_theocracy_gov_ideas #Rakkaz MT
+		}
 	}
 	servants_of_god = {
 		devotion = 1
@@ -1096,21 +1102,21 @@ exploration_ideas = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.01
-			NOT = {
-				AND = {
-					has_global_flag = delete_cannor_region 
-					NOT = { has_global_flag = delete_north_aelantir_region }
-					NOT = { has_global_flag = delete_south_aelantir_region }
-				}
-			}
-			NOT = { has_institution = renaissance }
-			NOT = { tag = A01 }
-			NOT = { tag = A02 }
-			NOT = { tag = A09 }
-			NOT = { tag = A21 }
-		}
+		#modifier = {
+		#	factor = 0.01
+		#	NOT = {
+		#		AND = {
+		#			has_global_flag = delete_cannor_region 
+		#			NOT = { has_global_flag = delete_north_aelantir_region }
+		#			NOT = { has_global_flag = delete_south_aelantir_region }
+		#		}
+		#	}
+		#	NOT = { has_institution = renaissance }
+		#	NOT = { tag = A01 }
+		#	NOT = { tag = A02 }
+		#	NOT = { tag = A09 }
+		#	NOT = { tag = A21 }
+		#}
 		modifier = {
 			factor = 0.1
 			NOT = {
@@ -1138,26 +1144,26 @@ exploration_ideas = {
 			factor = 0.5
 			culture_group = kobold
 		}
-		modifier = {
-			factor = 0.1
-			NOT = {
-				AND = {
-					has_global_flag = delete_cannor_region 
-					NOT = { has_global_flag = delete_north_aelantir_region }
-					NOT = { has_global_flag = delete_south_aelantir_region }
-				}
-			}
-			NOT = { is_year = 1490 }
-			capital_scope = {
-				NOT = {
-					OR = {
-						region = lencenor_region
-						region = dragon_coast_region
-						region = akasik_region
-					}
-				}
-			}
-		}
+		#modifier = {
+		#	factor = 0.1
+		#	NOT = {
+		#		AND = {
+		#			has_global_flag = delete_cannor_region 
+		#			NOT = { has_global_flag = delete_north_aelantir_region }
+		#			NOT = { has_global_flag = delete_south_aelantir_region }
+		#		}
+		#	}
+		#	NOT = { is_year = 1490 }
+		#	capital_scope = {
+		#		NOT = {
+		#			OR = {
+		#				region = lencenor_region
+		#				region = dragon_coast_region
+		#				region = akasik_region
+		#			}
+		#		}
+		#	}
+		#}
 		modifier = {
 			factor = 2.0
 			num_of_ports = 5
@@ -1186,27 +1192,27 @@ exploration_ideas = {
 		modifier = {
 			factor = 1000
 			OR = {
-				tag = A01 #Lorent
-				tag = A02 #Deranne
 				tag = A21 #Venail
+				tag = A33 #Verne
+				tag = A11 #Pearlsedge
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 10
 			OR = {
-				tag = A33 #Verne
-				tag = A11 #Pearlsedge
+				tag = A01 #Lorent
+				tag = A02 #Deranne
 				tag = A47 #Eborthil
 				tag = A29 #Busilar
-				tag = A09 #Sorncost (if they somehow survive)
+				tag = A79 #Gnomish Hierarchy (if they somehow form)
 			}
 		}
 		modifier = {
 			factor = 1.5
 			OR = {
-				tag = A13 #Gawed (if they somehow get ports soon enough)
-				tag = A79 #Gnomish Hierarchy (if they somehow form)
 				tag = Z08 #Bjarnrik (if they somehow are successful)
+				tag = A31 #Moonhaven
+				tag = A05 #Reveria
 			}
 		}
 	}
@@ -1357,10 +1363,10 @@ quality_ideas = {
 
 	ai_will_do = {
 		factor = 3.5
-		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
-		}
+		#modifier = {
+		#	factor = 2
+		#	has_strong_mil_national_ideas = yes 
+		#}
 		modifier = { 
 			factor = 0.75
 			NOT = { monthly_mil = 8 }
@@ -1453,10 +1459,10 @@ quantity_ideas = {
 
 	ai_will_do = {
 		factor = 3.5
-		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
-		}
+		#modifier = {
+		#	factor = 2
+		#	has_strong_mil_national_ideas = yes 
+		#}
 		modifier = { 
 			factor = 0.75
 			NOT = { monthly_mil = 8 }
@@ -1545,19 +1551,6 @@ expansion_ideas = {
 			}
 		}
 		modifier = {
-			factor = 10	#Boys who wanna settle the Dreadmire and in the future, the Serpentspine
-			OR = {
-				any_owned_province = {
-					OR = {
-						region = ourdia_region
-						region = dostanor_region
-						region = the_borders_region
-					}
-					has_empty_adjacent_province = yes
-				}
-			}
-		}
-		modifier = {
 			factor = 0	#Serpentspine starts alread get colonists
 			capital_scope = {
 				continent = serpentspine
@@ -1603,15 +1596,11 @@ expansion_ideas = {
 		}
 		
 		modifier = {
-			factor = 5
-			
-			has_country_modifier = lake_federation_member
-		}
-		modifier = {
 			factor = 100
 			OR = {
-				tag = Z18
-				tag = Z50
+				tag = Z18 #Frozenmaw
+				tag = Z50 #Grombar
+				tag = Z45 #Vrorenmarch
 			}
 			adm_tech = 7
 			any_owned_province = {
@@ -1634,9 +1623,20 @@ expansion_ideas = {
 			factor = 0
 			NOT = { has_idea_group = exploration_ideas }
 			NOT = { is_colonial_nation = yes }
-			NOT = {
-				any_owned_province = {
-					has_empty_adjacent_province = yes
+			OR = {
+				NOT = {
+					any_owned_province = {
+						has_empty_adjacent_province = yes
+					}
+				}
+				AND = {
+					capital_scope = {
+						OR = {
+							superregion = western_cannor_superregion
+							superregion = escann_superregion
+						}
+					}
+					NOT = { is_year = 1500 }
 				}
 			}
 		}
@@ -1651,6 +1651,7 @@ expansion_ideas = {
 				technology_group = tech_elven
 				technology_group = tech_bulwari
 				technology_group = tech_triunic
+				technology_group = tech_kheionai
 			}
 		}
 	}
@@ -1693,10 +1694,10 @@ administrative_ideas = {
 
 	ai_will_do = {
 		factor = 0.65
-		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
-		}
+		#modifier = {
+		#	factor = 2
+		#	has_strong_mil_national_ideas = yes 
+		#}
 		modifier = { 
 			factor = 0.75
 			NOT = { monthly_adm = 8 }
@@ -1795,6 +1796,7 @@ humanist_ideas = {
 		modifier = {
 			factor = 3
 			religion_group = faithless
+			NOT = { religion = godlost }
 		}
 		modifier = {
 			factor = 1.1 

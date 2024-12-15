@@ -607,12 +607,14 @@ country_event = {
 						}
 					}
 					NOT = { tag = Z97 }
+					NOT = { tag = A31 }
 				}
 				country_event = {
 					id = ravelian.5 
 				}
 			}
 			577 = { province_event = { id = new_sun_cult.8 days = 3650 random = 3650 } } 	#Ravelian missionaries arrive in the Drolas
+			A31 = { country_event = { id = A31_flavour.23 days = 15 } } #Ravelian Switch
 		}
 	}
 	#no I don't want to go to ravelian state please nonononono
@@ -813,11 +815,14 @@ country_event = {
 					}
 					NOT = { tag = Z97 }
 					NOT = { tag = ROOT }
+					NOT = { tag = A31 }
+					NOT = { religion = kalyin_worshippers }
 				}
 				country_event = {
 					id = ravelian.5 
 				}
 				577 = { province_event = { id = new_sun_cult.8 days = 3650 random = 3650 } } 	#Ravelian missionaries arrive in the Drolas
+				A31 = { country_event = { id = A31_flavour.23 days = 15 } } #Ravelian Switch
 			}
 		}
 		
@@ -885,11 +890,14 @@ country_event = {
 					}
 					NOT = { tag = Z97 }
 					NOT = { tag = ROOT }
+					NOT = { tag = A31 }
+					NOT = { religion = kalyin_worshippers }
 				}
 				country_event = {
 					id = ravelian.5 
 				}
 				577 = { province_event = { id = new_sun_cult.8 days = 3650 random = 3650 } }	#Ravelian missionaries arrive in the Drolas
+				A31 = { country_event = { id = A31_flavour.23 days = 15 } } #Ravelian Switch
 			}
 		}
 	}
@@ -927,11 +935,14 @@ country_event = {
 						}
 					}
 					NOT = { tag = Z97 }
+					NOT = { tag = A31 }
+					NOT = { religion = kalyin_worshippers }
 				}
 				country_event = {
 					id = ravelian.5 
 				}
 				577 = { province_event = { id = new_sun_cult.8 days = 3650 random = 3650 } }	#Ravelian missionaries arrive in the Drolas
+				A31 = { country_event = { id = A31_flavour.23 days = 15 } } #Ravelian Switch
 			}
 		}
 		switch_tag = Z97
@@ -1053,7 +1064,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				religion_group = bulwari
+				OR = {
+					religion_group = bulwari
+					religion = kalyin_worshippers
+				}
 			}
 			modifier = {	#Aelnar and venail
 				factor = 0
@@ -1246,7 +1260,7 @@ country_event = {
 		#set_global_flag = ravelians_have_god_fragment
 		set_country_flag = ravelianism_let_mage_take_fragment
 
-		add_prestige = 50
+		add_prestige_or_monarch_power = { amount = 50 }
 
 		#TODO: add custom tooltip
 
@@ -1255,6 +1269,10 @@ country_event = {
 				has_province_modifier = god_fragment_ruins
 			}
 			remove_province_modifier = god_fragment_ruins
+			add_permanent_province_modifier = {
+				name = god_fragment_chamber
+				duration = -1 
+			}
 		}
 	}
 	#disallow it
@@ -1304,6 +1322,10 @@ country_event = {
 				has_province_modifier = god_fragment_ruins
 			}
 			remove_province_modifier = god_fragment_ruins
+			add_permanent_province_modifier = {
+				name = god_fragment_chamber
+				duration = -1 
+			}
 		}
 	}
 }
@@ -2560,6 +2582,28 @@ country_event = {
 		set_ruler_flag = refused_papacy
 		add_prestige = -25
 	}
+}
+
+#Upgrade god_fragment_chamber to god_fragment_origin if owner is ravelian
+province_event = {
+	id = ravelian.25
+	title = ravelian.25.t
+	desc = ravelian.25.d
+	picture = GOD_FRAGMENT_eventPicture
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	option = {
+		name = ravelian.25.a
+		ai_chance = { factor = 100 }
+		remove_province_modifier = god_fragment_chamber
+		add_permanent_province_modifier = {
+			name = god_fragment_origin
+			duration = -1
+		}
+	}
+
 }
 
 #==============================================random event category one: generic ravelian society, always available for societies========================================

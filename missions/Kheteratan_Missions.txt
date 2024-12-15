@@ -64,10 +64,10 @@ mandate_mt_2 = {
 						area = golkora_stretch_area
 						area = hapmot_area
 						province_id = 485
-						area = gnollakaz_area
+						area = garpix_grizaka_area
 						area = zeewix_area
 					}
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					is_city = yes
 					NOT = { area = salahad_islands_area }
 				}
@@ -86,16 +86,16 @@ mandate_mt_2 = {
 			west_salahad_region = { 
 				type = all 
 				OR = { 
-					owned_by = ROOT 
+					country_or_non_sovereign_subject_holds = ROOT
 					is_city = no
 					area = salahad_islands_area
 				}
 			}
-			golkora_stretch_area = { type = all owned_by = ROOT }
-			hapmot_area = { type = all owned_by = ROOT }
-			owns = 485
-			gnollakaz_area = { type = all owned_by = ROOT }
-			zeewix_area = { type = all owned_by = ROOT }
+			golkora_stretch_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			hapmot_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			owns_or_non_sovereign_subject_of = 485
+			garpix_grizaka_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			zeewix_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		effect = {
@@ -108,7 +108,7 @@ mandate_mt_2 = {
 			golkora_stretch_area = { change_culture = irsmahapan change_religion = ROOT add_nationalism = -5 }
 			hapmot_area = { change_culture = irsmahapan change_religion = ROOT add_nationalism = -5 }
 			485 = { change_culture = irsmahapan change_religion = ROOT add_nationalism = -5 }
-			gnollakaz_area = {  change_culture = irsmahapan change_religion = ROOT add_nationalism = -5 }
+			garpix_grizaka_area = {  change_culture = irsmahapan change_religion = ROOT add_nationalism = -5 }
 			zeewix_area = {  change_culture = irsmahapan change_religion = ROOT add_nationalism = -5 }
 		}
 	}
@@ -491,6 +491,7 @@ mandate_mt_4 = {
 				has_courthouse_building_trigger = yes
 				development = 10
 			}
+			owned_by = ROOT
 		}
 		
 		trigger = {
@@ -542,12 +543,10 @@ mandate_mt_4 = {
 			province_group = mothers_sorrow_group
 			OR = {
 				NOT = {
-					AND = {
+					has_fort_building_trigger = yes
+					any_neighbor_province = {
+						owned_by = ROOT
 						has_fort_building_trigger = yes
-						any_neighbor_province = {
-							owned_by = ROOT
-							has_fort_building_trigger = yes
-						}
 					}
 				}
 				NOT = { development = 20 }

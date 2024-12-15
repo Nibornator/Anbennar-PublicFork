@@ -301,7 +301,10 @@ country_event = {
 	picture = RELIGION_eventPicture
 
 	trigger = {
-		has_personal_deity = esmaryal
+		OR = {
+			has_personal_deity = esmaryal
+			has_personal_deity = esmaryal_upgraded_themarenn
+		}
 		OR = {
 			ruler_has_personality = fertile_personality
 			ruler_has_personality = kind_hearted_personality
@@ -900,6 +903,7 @@ country_event = {
 		OR = {
 			has_personal_deity = ryala
 			has_personal_deity = ryala_upgraded
+			has_personal_deity = ryala_upgraded_themarenn
 		}
 		OR = {
 			ruler_has_personality = calm_personality
@@ -2032,11 +2036,15 @@ country_event = {
 	picture = RELIGION_eventPicture
 
 	trigger = {
-		has_personal_deity = begga
+		OR = {
+			has_personal_deity = begga
+			has_personal_deity = begga_upgraded
+		}
 		OR = {
 			ruler_has_personality = kind_hearted_personality
 			ruler_has_personality = benevolent_personality
 			ruler_has_personality = reformist_personality
+			ruler_has_personality = peasant_revolt_leader_personality
 		}
 		has_regency = no
 		NOT = { has_ruler_modifier = RC_withdrawn_meditation }

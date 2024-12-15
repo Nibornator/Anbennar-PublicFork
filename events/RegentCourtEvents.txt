@@ -1,7 +1,7 @@
 
 namespace = regent_court
 # Regent Court Change Deity Event meant for Long Lived Races
-# Commenting it out due to it not being necessary anymore thanks to the Regent Court Deity Switch decision that was implemented
+# Commenting it out due to it not being necessary anymore thanks to the Regent Court Deity Switch decision that was implemented (See: regent_court.2)
 # country_event = {
 	# id = regent_court.1
 	# title = regent_court.1.t
@@ -112,7 +112,7 @@ country_event = {
 		}
 	}
 	
-	#castellos base
+	#Castellos Base
 	option = {
 		name = regent_court.2.b
 		trigger = {
@@ -144,9 +144,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = castellos
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = castellos }
+		}
 	}
 	
-	#castellos favorable
+	#Castellos Favorable
 	option = {
 		name = regent_court.2.b
 		highlight = yes
@@ -179,9 +183,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = castellos
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = castellos }
+		}
 	}
 	
-	#dame base
+	#Dame Base
 	option = {
 		name = regent_court.2.c
 		trigger = {
@@ -240,9 +248,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = the_dame
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = the_dame }
+		}
 	}
 	
-	#dame favorable
+	#Dame Favorable
 	option = {
 		name = regent_court.2.c
 		highlight = yes
@@ -302,20 +314,22 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = the_dame
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = the_dame }
+		}
 	}
 	
-	#corin base
+	#Corin Base
 	option = {
 		name = regent_court.2.n
 		trigger = {
 			hidden_trigger = {
 				has_global_flag = corins_ascension
 				OR = {
-					AND = {
-						NOT = { is_religion_enabled = corinite }
-						NOT = { has_global_flag = "crimson_deluge" }
-					}
+					NOT = { has_global_flag = "crimson_deluge" }
 					has_global_flag = "upgraded_adean_admin"
+					has_government_attribute = two_rulers_one_people_rc
 				}
 			}
 			NOT = {
@@ -349,9 +363,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = corin
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = corin }
+		}
 	}
 	
-	#corin favorable
+	#Corin Favorable
 	option = {
 		name = regent_court.2.n
 		highlight = yes
@@ -359,11 +377,9 @@ country_event = {
 			hidden_trigger = {
 				has_global_flag = corins_ascension
 				OR = {
-					AND = {
-						NOT = { is_religion_enabled = corinite }
-						NOT = { has_global_flag = "crimson_deluge" }
-					}
+					NOT = { has_global_flag = "crimson_deluge" }
 					has_global_flag = "upgraded_adean_admin"
+					has_government_attribute = two_rulers_one_people
 				}
 			}
 			OR = {
@@ -397,6 +413,10 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = corin
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = corin }
+		}
 	}
 	
 	#Adean Base
@@ -440,6 +460,14 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = adean
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = adean } 
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = adean_upgraded_admin }
+				improve_relations_with_deity_followers = { deity = adean_upgraded_war }
+			}
+		}
 	}
 	
 	#Adean Favorable
@@ -484,8 +512,227 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = adean
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = adean } 
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = adean_upgraded_admin }
+				improve_relations_with_deity_followers = { deity = adean_upgraded_war }
+			}
+		}
 	}
 	
+	#general comment: Is this whole Adean war/peace really needed? - NO IT'S NOT ~ LVT
+	#Adean Peace Base
+	option = {
+		name = regent_court.2.e
+		trigger = {
+			hidden_trigger = { has_global_flag = "upgraded_adean_admin" }
+			NOT = {
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = martial_educator_personality
+				ruler_has_personality = strict_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_colonialist
+			}
+			modifier = {
+				factor = 2
+				culture_group = escanni
+			}
+			modifier = {
+				factor = 1.5
+				culture_group = lencori
+			}
+			modifier = {
+				factor = 3
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 2
+				personality = ai_capitalist
+			}
+			modifier = {
+				factor = 1.2
+				government = monarchy
+			}
+			modifier = {
+				factor = 10 
+				tag = B58	#Adenica
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = adean_upgraded_admin
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = adean } 
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = adean_upgraded_admin }
+				improve_relations_with_deity_followers = { deity = adean_upgraded_war }
+			}
+		}
+	}
+	
+	#Adean Peace Favorable
+	option = {
+		name = regent_court.2.e
+		highlight = yes
+		trigger = {
+			hidden_trigger = { has_global_flag = "upgraded_adean_admin" }
+			OR = {
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = martial_educator_personality
+				ruler_has_personality = strict_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_colonialist
+			}
+			modifier = {
+				factor = 2
+				culture_group = escanni
+			}
+			modifier = {
+				factor = 1.5
+				culture_group = lencori
+			}
+			modifier = {
+				factor = 3
+				personality = ai_balanced
+			}
+			modifier = {
+				factor = 2
+				personality = ai_capitalist
+			}
+			modifier = {
+				factor = 1.2
+				government = monarchy
+			}
+			modifier = {
+				factor = 10 
+				tag = B58	#Adenica
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = adean_upgraded_admin
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = adean } 
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = adean_upgraded_admin }
+				improve_relations_with_deity_followers = { deity = adean_upgraded_war }
+			}
+		}
+	}
+	
+	#Adean War Base
+	option = {
+		name = regent_court.2.e
+		trigger = {
+			hidden_trigger = { has_global_flag = "upgraded_adean_war" }
+			NOT = {
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = martial_educator_personality
+				ruler_has_personality = strict_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_colonialist
+			}
+			modifier = {
+				factor = 1.5
+				culture_group = escanni
+			}
+			modifier = {
+				factor = 1.5
+				culture_group = lencori
+			}
+			modifier = {
+				factor = 10 
+				tag = B58	#Adenica
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = adean_upgraded_war
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = adean } 
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = adean_upgraded_admin }
+				improve_relations_with_deity_followers = { deity = adean_upgraded_war }
+			}
+		}
+	}
+	
+	#Adean War Favorable
+	option = {
+		name = regent_court.2.e
+		highlight = yes
+		trigger = {
+			hidden_trigger = { has_global_flag = "upgraded_adean_war" }
+			OR = {
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = martial_educator_personality
+				ruler_has_personality = strict_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_colonialist
+			}
+			modifier = {
+				factor = 1.5
+				culture_group = escanni
+			}
+			modifier = {
+				factor = 1.5
+				culture_group = lencori
+			}
+			modifier = {
+				factor = 10 
+				tag = B58	#Adenica
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = adean_upgraded_war
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = adean }
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = adean_upgraded_admin }
+				improve_relations_with_deity_followers = { deity = adean_upgraded_war }
+			}
+		}
+	}
+
 	#Munas Base
 	option = {
 		name = regent_court.2.f
@@ -526,9 +773,14 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = munas_moonsinger
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = munas_moonsinger }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = munas_upgraded } }
+		}
 	}
 	
-	#munas favorable
+	#Munas Favorable
 	option = {
 		name = regent_court.2.f
 		highlight = yes
@@ -569,9 +821,14 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = munas_moonsinger
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = munas_moonsinger }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = munas_upgraded } }
+		}
 	}
 	
-	#munas upgraded base
+	#Munas Upgraded Base
 	option = {
 		name = regent_court.2.f
 		trigger = {
@@ -587,9 +844,14 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = munas_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = munas_moonsinger }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = munas_upgraded } }
+		}
 	}
 	
-	#munas upgraded favorable
+	#Munas Upgraded Favorable
 	option = {
 		name = regent_court.2.f
 		highlight = yes
@@ -606,9 +868,14 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = munas_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = munas_moonsinger }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = munas_upgraded } }
+		}
 	}
 	
-	#ara base
+	#Ara Base
 	option = {
 		name = regent_court.2.g
 		trigger = {
@@ -654,6 +921,10 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = ara
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = ara }
+		}
 	}
 	
 	#ara favorable
@@ -703,9 +974,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = ara
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = ara }
+		}
 	}
 	
-	#balgar base
+	#Balgar Base
 	option = {
 		name = regent_court.2.h
 		trigger = {
@@ -741,9 +1016,14 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = balgar
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = balgar }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = balgar_upgraded } }
+		}
 	}
 	
-	#balger favorable
+	#Balgar Favorable
 	option = {
 		name = regent_court.2.h
 		highlight = yes
@@ -780,9 +1060,14 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = balgar
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = balgar }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = balgar_upgraded } }
+		}
 	}
 	
-	#balgar upgraded base
+	#Balgar Upgraded Base
 	option = {
 		name = regent_court.2.h
 		trigger = {
@@ -818,9 +1103,14 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = balgar_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = balgar }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = balgar_upgraded } }
+		}
 	}
 	
-	#balger upgraded favorable
+	#Balgar Upgraded Favorable
 	option = {
 		name = regent_court.2.h
 		highlight = yes
@@ -857,12 +1147,18 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = balgar_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = balgar }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = balgar_upgraded } }
+		}
 	}
 	
-	#esmaryal base
+	#Esmaryal Base
 	option = {
 		name = regent_court.2.i
 		trigger = {
+			hidden_trigger = { NOT = { has_country_flag = lady_of_flows_esmaryal } }
 			NOT = {
 				ruler_has_personality = fertile_personality
 				ruler_has_personality = kind_hearted_personality
@@ -895,18 +1191,24 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				culture_group = halfling
+				is_cannorian_halfling_primary_culture = yes
 			}
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = esmaryal
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = esmaryal }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = esmaryal_upgraded_themarenn } }
+		}
 	}
 	
-	#esmaryal favorable
+	#Esmaryal Favorable
 	option = {
 		name = regent_court.2.i
 		highlight = yes
 		trigger = {
+			hidden_trigger = { NOT = { has_country_flag = lady_of_flows_esmaryal } }
 			OR = {
 				ruler_has_personality = fertile_personality
 				ruler_has_personality = kind_hearted_personality
@@ -939,18 +1241,123 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				culture_group = halfling
+				is_cannorian_halfling_primary_culture = yes
 			}
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = esmaryal
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = esmaryal }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = esmaryal_upgraded_themarenn } }
+		}
 	}
-	
-	#ryala base
+
+	#Esmaryal Base (Themarenn)
+	option = {
+		name = regent_court.2.i
+		trigger = {
+			hidden_trigger = { has_country_flag = lady_of_flows_esmaryal }
+			NOT = {
+				ruler_has_personality = fertile_personality
+				ruler_has_personality = kind_hearted_personality
+				ruler_has_personality = charismatic_negotiator_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 1.3
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_capitalist
+			}
+			modifier = {
+				factor = 2
+				primary_culture = esmari
+			}
+			modifier = {
+				factor = 2
+				has_heir = no
+				government = monarchy
+				ruler_age = 40	#old ruler
+			}
+			modifier = {
+				factor = 1.5
+				is_cannorian_halfling_primary_culture = yes
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = esmaryal_upgraded_themarenn
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = esmaryal }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = esmaryal_upgraded_themarenn } }
+		}
+	}
+
+	#Esmaryal Favorable (Themarenn)
+	option = {
+		name = regent_court.2.i
+		highlight = yes
+		trigger = {
+			hidden_trigger = { has_country_flag = lady_of_flows_esmaryal }
+			OR = {
+				ruler_has_personality = fertile_personality
+				ruler_has_personality = kind_hearted_personality
+				ruler_has_personality = charismatic_negotiator_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 1.3
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_capitalist
+			}
+			modifier = {
+				factor = 2
+				primary_culture = esmari
+			}
+			modifier = {
+				factor = 2
+				has_heir = no
+				government = monarchy
+				ruler_age = 40	#old ruler
+			}
+			modifier = {
+				factor = 1.5
+				is_cannorian_halfling_primary_culture = yes
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = esmaryal_upgraded_themarenn
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = esmaryal }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = esmaryal_upgraded_themarenn } }
+		}
+	}
+
+	#Ryala Base
 	option = {
 		name = regent_court.2.j
 		trigger = {
 			hidden_trigger = { NOT = { has_country_flag = upgraded_ryala } }
+			hidden_trigger = { NOT = { has_country_flag = lady_of_flows_ryala } }
 			NOT = {
 				ruler_has_personality = calm_personality
 				ruler_has_personality = careful_personality
@@ -978,14 +1385,23 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = ryala
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = ryala }
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = ryala_upgraded }
+				improve_relations_with_deity_followers = { deity = ryala_upgraded_themarenn } 
+			}
+		}
 	}
 
-	#ryala favorable
+	#Ryala Favorable
 	option = {
 		name = regent_court.2.j
 		highlight = yes
 		trigger = {
 			hidden_trigger = { NOT = { has_country_flag = upgraded_ryala } }
+			hidden_trigger = { NOT = { has_country_flag = lady_of_flows_ryala } }
 			OR = {
 				ruler_has_personality = calm_personality
 				ruler_has_personality = careful_personality
@@ -1013,9 +1429,17 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = ryala
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = ryala }
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = ryala_upgraded }
+				improve_relations_with_deity_followers = { deity = ryala_upgraded_themarenn } 
+			}
+		}
 	}
 	
-	#ryala upgraded base
+	#Ryala Upgraded Base
 	option = {
 		name = regent_court.2.j
 		trigger = {
@@ -1047,9 +1471,17 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = ryala_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = ryala }
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = ryala_upgraded }
+				improve_relations_with_deity_followers = { deity = ryala_upgraded_themarenn } 
+			}
+		}
 	}
 
-	#ryala upgraded favorable
+	#Ryala Upgraded Favorable
 	option = {
 		name = regent_court.2.j
 		highlight = yes
@@ -1082,9 +1514,102 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = ryala_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = ryala }
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = ryala_upgraded }
+				improve_relations_with_deity_followers = { deity = ryala_upgraded_themarenn } 
+			}
+		}
+	}
+
+	#Ryala Themarenn Base
+	option = {
+		name = regent_court.2.j
+		trigger = {
+			hidden_trigger = { has_country_flag = lady_of_flows_ryala }
+			NOT = {
+				ruler_has_personality = calm_personality
+				ruler_has_personality = careful_personality
+				ruler_has_personality = benevolent_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 1.5
+				primary_culture = esmari
+			}
+			modifier = {
+				factor = 5
+				tag = A43 # Ryalan Temple
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = ryala_upgraded_themarenn
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = ryala }
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = ryala_upgraded }
+				improve_relations_with_deity_followers = { deity = ryala_upgraded_themarenn } 
+			}
+		}
+	}
+
+	#Ryala Themarenn Favorable
+	option = {
+		name = regent_court.2.j
+		highlight = yes
+		trigger = {
+			hidden_trigger = { has_country_flag = lady_of_flows_ryala }
+			OR = {
+				ruler_has_personality = calm_personality
+				ruler_has_personality = careful_personality
+				ruler_has_personality = benevolent_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 1.5
+				primary_culture = esmari
+			}
+			modifier = {
+				factor = 5
+				tag = A43 # Ryalan Temple
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = ryala_upgraded_themarenn
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = ryala }
+			hidden_effect = {
+				improve_relations_with_deity_followers = { deity = ryala_upgraded }
+				improve_relations_with_deity_followers = { deity = ryala_upgraded_themarenn } 
+			}
+		}
 	}
 	
-	#minara base
+	#Minara Base
 	option = {
 		name = regent_court.2.k
 		trigger = {
@@ -1123,9 +1648,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = minara
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = minara }
+		}
 	}
 	
-	#minara favorable
+	#Minara Favorable
 	option = {
 		name = regent_court.2.k
 		highlight = yes
@@ -1165,9 +1694,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = minara
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = minara }
+		}
 	}
 	
-	#falah base
+	#Falah Base
 	option = {
 		name = regent_court.2.l
 		trigger = {
@@ -1207,9 +1740,14 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = falah
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = falah }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = falah_upgraded } }
+		}
 	}
 	
-	#falah favorable
+	#Falah Favorable
 	option = {
 		name = regent_court.2.l
 		highlight = yes
@@ -1250,94 +1788,109 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = falah
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = falah }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = falah_upgraded } }
+		}
 	}
 
-		#falah upgraded base
-		option = {
-			name = regent_court.2.l
-			trigger = {
-				hidden_trigger = { has_country_flag = upgraded_falah }
-				NOT = {
-					ruler_has_personality = tactical_genius_personality
-					ruler_has_personality = incorruptible_personality
-					ruler_has_personality = conqueror_personality
-				}
-			}
-			ai_chance = {
-				factor = 1
-				modifier = {
-					factor = 2
-					personality = ai_militarist
-				}
-				modifier = {
-					factor = 0.5
-					personality = ai_capitalist
-				}
-				modifier = {
-					factor = 1.5
-					culture_group = elven
-				}
-				modifier = {
-					factor = 1.2
-					culture_group = anbennarian
-				}
-				modifier = {
-					factor = 1.5
-					primary_culture = blue_reachman
-				}
-				modifier = {
-					factor = 1.5
-					primary_culture = old_alenic
-				}
-			}
-			set_country_flag = regent_court_deity_switch_cooldown
-			change_personal_deity = falah_upgraded
+    #Falah Upgraded Base
+    option = {
+        name = regent_court.2.l
+        trigger = {
+            hidden_trigger = { has_country_flag = upgraded_falah }
+            NOT = {
+                ruler_has_personality = tactical_genius_personality
+                ruler_has_personality = incorruptible_personality
+                ruler_has_personality = conqueror_personality
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                personality = ai_militarist
+            }
+            modifier = {
+                factor = 0.5
+                personality = ai_capitalist
+            }
+            modifier = {
+                factor = 1.5
+                culture_group = elven
+            }
+            modifier = {
+                factor = 1.2
+                culture_group = anbennarian
+            }
+            modifier = {
+                factor = 1.5
+                primary_culture = blue_reachman
+            }
+            modifier = {
+                factor = 1.5
+                primary_culture = old_alenic
+            }
+        }
+        set_country_flag = regent_court_deity_switch_cooldown
+        change_personal_deity = falah_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = falah }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = falah_upgraded } }
 		}
-		
-		#falah upgraded favorable
-		option = {
-			name = regent_court.2.l
-			highlight = yes
-			trigger = {
-				hidden_trigger = { has_country_flag = upgraded_falah }
-				OR = {
-					ruler_has_personality = tactical_genius_personality
-					ruler_has_personality = incorruptible_personality
-					ruler_has_personality = conqueror_personality
-				}
-			}
-			ai_chance = {
-				factor = 1
-				modifier = {
-					factor = 2
-					personality = ai_militarist
-				}
-				modifier = {
-					factor = 0.5
-					personality = ai_capitalist
-				}
-				modifier = {
-					factor = 1.5
-					culture_group = elven
-				}
-				modifier = {
-					factor = 1.2
-					culture_group = anbennarian
-				}
-				modifier = {
-					factor = 1.5
-					primary_culture = blue_reachman
-				}
-				modifier = {
-					factor = 1.5
-					primary_culture = old_alenic
-				}
-			}
-			set_country_flag = regent_court_deity_switch_cooldown
-			change_personal_deity = falah_upgraded
+    }
+    
+    #Falah Upgraded Favorable
+    option = {
+        name = regent_court.2.l
+        highlight = yes
+        trigger = {
+            hidden_trigger = { has_country_flag = upgraded_falah }
+            OR = {
+                ruler_has_personality = tactical_genius_personality
+                ruler_has_personality = incorruptible_personality
+                ruler_has_personality = conqueror_personality
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                personality = ai_militarist
+            }
+            modifier = {
+                factor = 0.5
+                personality = ai_capitalist
+            }
+            modifier = {
+                factor = 1.5
+                culture_group = elven
+            }
+            modifier = {
+                factor = 1.2
+                culture_group = anbennarian
+            }
+            modifier = {
+                factor = 1.5
+                primary_culture = blue_reachman
+            }
+            modifier = {
+                factor = 1.5
+                primary_culture = old_alenic
+            }
+        }
+        set_country_flag = regent_court_deity_switch_cooldown
+        change_personal_deity = falah_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = falah }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = falah_upgraded } }
 		}
+    }
 	
-	#nerat base
+	#Nerat Base
 	option = {
 		name = regent_court.2.m
 		trigger = {
@@ -1375,9 +1928,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = nerat
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = nerat }
+		}
 	}
 	
-	#nerat favorable
+	#Nerat Favorable
 	option = {
 		name = regent_court.2.m
 		highlight = yes
@@ -1416,9 +1973,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = nerat
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = nerat }
+		}
 	}
 	
-	#nathalyne base
+	#Nathalyne Base
 	option = {
 		name = regent_court.2.o
 		trigger = {
@@ -1453,9 +2014,13 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = nathalyne
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = nathalyne }
+		}
 	}
 	
-	#nathalyne favorable
+	#Nathalyne Favorable
 	option = {
 		name = regent_court.2.o
 		highlight = yes
@@ -1491,191 +2056,17 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = nathalyne
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = nathalyne }
+		}
 	}
 	
-	#general comment: Is this whole adean war/peace really needed?
-	#adean peace base
-	option = {
-		name = regent_court.2.e
-		trigger = {
-			hidden_trigger = { has_global_flag = "upgraded_adean_admin" }
-			NOT = {
-				ruler_has_personality = righteous_personality
-				ruler_has_personality = martial_educator_personality
-				ruler_has_personality = strict_personality
-			}
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				personality = ai_militarist
-			}
-			modifier = {
-				factor = 0.5
-				personality = ai_colonialist
-			}
-			modifier = {
-				factor = 2
-				culture_group = escanni
-			}
-			modifier = {
-				factor = 1.5
-				culture_group = lencori
-			}
-			modifier = {
-				factor = 3
-				personality = ai_balanced
-			}
-			modifier = {
-				factor = 2
-				personality = ai_capitalist
-			}
-			modifier = {
-				factor = 1.2
-				government = monarchy
-			}
-			modifier = {
-				factor = 10 
-				tag = B58	#Adenica
-			}
-		}
-		set_country_flag = regent_court_deity_switch_cooldown
-		change_personal_deity = adean_upgraded_admin
-	}
-	
-	#adean peace favorable
-	option = {
-		name = regent_court.2.e
-		highlight = yes
-		trigger = {
-			hidden_trigger = { has_global_flag = "upgraded_adean_admin" }
-			OR = {
-				ruler_has_personality = righteous_personality
-				ruler_has_personality = martial_educator_personality
-				ruler_has_personality = strict_personality
-			}
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				personality = ai_militarist
-			}
-			modifier = {
-				factor = 0.5
-				personality = ai_colonialist
-			}
-			modifier = {
-				factor = 2
-				culture_group = escanni
-			}
-			modifier = {
-				factor = 1.5
-				culture_group = lencori
-			}
-			modifier = {
-				factor = 3
-				personality = ai_balanced
-			}
-			modifier = {
-				factor = 2
-				personality = ai_capitalist
-			}
-			modifier = {
-				factor = 1.2
-				government = monarchy
-			}
-			modifier = {
-				factor = 10 
-				tag = B58	#Adenica
-			}
-		}
-		set_country_flag = regent_court_deity_switch_cooldown
-		change_personal_deity = adean_upgraded_admin
-	}
-	
-	#adean war base
-	option = {
-		name = regent_court.2.e
-		trigger = {
-			hidden_trigger = { has_global_flag = "upgraded_adean_war" }
-			NOT = {
-				ruler_has_personality = righteous_personality
-				ruler_has_personality = martial_educator_personality
-				ruler_has_personality = strict_personality
-			}
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				personality = ai_militarist
-			}
-			modifier = {
-				factor = 0.5
-				personality = ai_colonialist
-			}
-			modifier = {
-				factor = 1.5
-				culture_group = escanni
-			}
-			modifier = {
-				factor = 1.5
-				culture_group = lencori
-			}
-			modifier = {
-				factor = 10 
-				tag = B58	#Adenica
-			}
-		}
-		set_country_flag = regent_court_deity_switch_cooldown
-		change_personal_deity = adean_upgraded_war
-	}
-	
-	#adean war favorable
-	option = {
-		name = regent_court.2.e
-		highlight = yes
-		trigger = {
-			hidden_trigger = { has_global_flag = "upgraded_adean_war" }
-			OR = {
-				ruler_has_personality = righteous_personality
-				ruler_has_personality = martial_educator_personality
-				ruler_has_personality = strict_personality
-			}
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				personality = ai_militarist
-			}
-			modifier = {
-				factor = 0.5
-				personality = ai_colonialist
-			}
-			modifier = {
-				factor = 1.5
-				culture_group = escanni
-			}
-			modifier = {
-				factor = 1.5
-				culture_group = lencori
-			}
-			modifier = {
-				factor = 10 
-				tag = B58	#Adenica
-			}
-		}
-		set_country_flag = regent_court_deity_switch_cooldown
-		change_personal_deity = adean_upgraded_war
-	}
-	
-	#begga base
+	#Begga Base
 	option = {
 		name = regent_court.2.p
 		trigger = {
+			hidden_trigger = { NOT = { has_country_flag = upgraded_begga } }
 			NOT = {
 				ruler_has_personality = kind_hearted_personality
 				ruler_has_personality = benevolent_personality
@@ -1694,7 +2085,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				culture_group = halfling
+				is_cannorian_halfling_primary_culture = yes
 			}
 			modifier = {
 				factor = 5
@@ -1703,13 +2094,19 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = begga
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = begga }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = begga_upgraded } }
+		}
 	}
 
-	#begga favorable
+	#Begga Favorable
 	option = {
 		name = regent_court.2.p
 		highlight = yes
 		trigger = {
+			hidden_trigger = { NOT = { has_country_flag = upgraded_begga } }
 			OR = {
 				ruler_has_personality = kind_hearted_personality
 				ruler_has_personality = benevolent_personality
@@ -1728,7 +2125,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				culture_group = halfling
+				is_cannorian_halfling_primary_culture = yes
 			}
 			modifier = {
 				factor = 5
@@ -1737,9 +2134,95 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = begga
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = begga }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = begga_upgraded } }
+		}
 	}
 
-	#dookan base
+	#Begga Upgraded Base
+	option = {
+		name = regent_court.2.p
+		trigger = {
+			hidden_trigger = { has_country_flag = upgraded_begga }
+			NOT = {
+				ruler_has_personality = kind_hearted_personality
+				ruler_has_personality = benevolent_personality
+				ruler_has_personality = reformist_personality
+				ruler_has_personality = peasant_revolt_leader_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				is_cannorian_halfling_primary_culture = yes
+			}
+			modifier = {
+				factor = 5
+				tag = H45	#Beggaston
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = begga_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = begga }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = begga_upgraded } }
+		}
+	}
+
+	#Begga Upgraded Favorable
+	option = {
+		name = regent_court.2.p
+		highlight = yes
+		trigger = {
+			hidden_trigger = { has_country_flag = upgraded_begga }
+			OR = {
+				ruler_has_personality = kind_hearted_personality
+				ruler_has_personality = benevolent_personality
+				ruler_has_personality = reformist_personality
+				ruler_has_personality = peasant_revolt_leader_personality
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				personality = ai_diplomat
+			}
+			modifier = {
+				factor = 0.5
+				personality = ai_militarist
+			}
+			modifier = {
+				factor = 2
+				is_cannorian_halfling_primary_culture = yes
+			}
+			modifier = {
+				factor = 5
+				tag = H45	#Beggaston
+			}
+		}
+		set_country_flag = regent_court_deity_switch_cooldown
+		change_personal_deity = begga_upgraded
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = begga }
+			hidden_effect = { improve_relations_with_deity_followers = { deity = begga_upgraded } }
+		}
+	}
+
+	#Dookan Base
 	option = {
 		name = regent_court.2.q
 		trigger = {
@@ -1761,6 +2244,10 @@ country_event = {
 		}
 		set_country_flag = regent_court_deity_switch_cooldown
 		change_personal_deity = dookan
+		if = {
+			limit = { has_government_attribute = follower_of_many_gods }
+			improve_relations_with_deity_followers = { deity = dookan }
+		}
 	}
 
 	#No emulant events yet
@@ -1784,6 +2271,10 @@ country_event = {
 	#	}
 	#	set_country_flag = regent_court_deity_switch_cooldown
 	#	change_personal_deity = dookan
+	#	if = {
+	#		limit = { has_government_attribute = follower_of_many_gods }
+	#		improve_relations_with_deity_followers = { deity = dookan }
+	#	}
 	#}
 	
 	#lightfather base
@@ -1802,6 +2293,7 @@ country_event = {
 			#		ruler_has_personality = ?
 			#	}
 			#}
+			has_global_flag = crathanor_lightfather
 		}
 		ai_chance = {
 			factor = 5
@@ -1830,6 +2322,27 @@ country_event = {
 	after = {
 		hidden_effect = {
 			clr_country_flag = regent_court_menu_open
+		}
+	}
+}
+
+country_event = {
+	id = regent_court.3
+	title = regent_court.3.t
+	desc = regent_court.3.desc
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = regent_court.3.a
+		ai_chance = { factor = 1 }
+
+		if = {
+			limit = { NOT = { any_owned_province = { province_group = cannorian_holy_sites } } }
+			clr_country_flag = owns_cannorian_holy_site
+			clr_country_flag = can_use_cannorian_holy_site
 		}
 	}
 }

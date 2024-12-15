@@ -1867,7 +1867,7 @@ magic_study_clear_study_effects = {
 			clr_country_flag = onyxguard_xp_malus
 		}
 		if = { limit = { has_country_flag = bardic_college_xp_bonus }
-			update_magic_study_experience_modifier = { value = 50 }
+			update_magic_study_experience_modifier = { value = -25 }
 			clr_country_flag = bardic_college_xp_bonus
 		}
 	}
@@ -1888,7 +1888,8 @@ magic_study_level_up_abjuration = {
 		set_ruler_flag = abjuration_3
 		custom_tooltip = tooltip_abjuration_3_level_up 
 	}
-	else = {
+	else_if = {
+		limit = { is_abjuration_0 = yes }
 		set_ruler_flag = abjuration_1
 		custom_tooltip = tooltip_abjuration_1_level_up 
 	}
@@ -1918,7 +1919,8 @@ magic_study_level_up_conjuration = {
 		set_ruler_flag = conjuration_3
 		custom_tooltip = tooltip_conjuration_3_level_up 
 	}
-	else = {
+	else_if = {
+		limit = { is_conjuration_0 = yes }
 		set_ruler_flag = conjuration_1
 		custom_tooltip = tooltip_conjuration_1_level_up 
 	}
@@ -2175,6 +2177,7 @@ remove_siege_spells_from_province = {
 	remove_province_modifier = siege_magic_elemental_besieger
 	remove_province_modifier = siege_magic_giant_besieger
 	remove_province_modifier = siege_magic_dragon_besieger
+	remove_province_modifier = siege_magic_instant_siege
 }
 
 magic_casted_spell = {

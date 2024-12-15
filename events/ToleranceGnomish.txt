@@ -21,6 +21,10 @@ country_event = {
 			factor = 10
 			has_country_modifier = racial_focus_gnomish
 		}
+		modifier = {
+			factor = 1.5
+			has_government_attribute = more_migration_and_tolerance
+		}
 	}
 
 	option = {
@@ -138,6 +142,7 @@ country_event = {
 						has_gnomish_minority_trigger = yes
 						NOT = { has_province_modifier = gnomes_public_lectures_happening }
 						NOT = { has_province_modifier = gnomes_public_lectures_discouraged }
+						
 					}
 				}
 				modifier = {
@@ -198,6 +203,10 @@ country_event = {
 			# Gnomish provocateurs
 			10 = {
 				trigger = {
+					any_owned_province = {
+						has_gnomish_majority_trigger = yes
+						NOT = { region = kheterata_region }
+					}
 					NOT = { has_country_modifier = gnomish_provocateurs }
 				}
 				modifier = {
@@ -220,7 +229,7 @@ country_event = {
 			10 = {
 				trigger = {
 					any_owned_province = {
-						has_any_gnomish_pop_trigger = yes
+						fast_has_pop_of_race = { race = gnomish }
 						NOT = { has_province_modifier = gnomish_exploiting_inventions_prov }
 						NOT = { has_province_modifier = gnomish_respect_of_innovations_prov }
 						NOT = { has_province_modifier = gnomish_stopped_innovations_prov }	
@@ -260,7 +269,7 @@ country_event = {
 			10 = {
 				trigger = {
 					any_owned_province = {
-						has_any_gnomish_pop_trigger = yes
+						fast_has_pop_of_race = { race = gnomish }
 						NOT = { has_province_modifier = gnomish_respected_intellectuals_prov }
 						NOT = { has_province_modifier = gnomish_disrespected_intellectuals_prov }
 					}
@@ -292,6 +301,21 @@ country_event = {
 				country_event = {
 					id = gnomish_tolerance_events.11
 				}
+			}
+			30 = {
+				trigger = {
+					ai = no
+					OR = {
+						has_country_modifier = just_lost_war_timer
+						average_unrest = 10
+						is_bankrupt = yes
+						NOT = { stability = 0 }
+					}
+					NOT = { high_tolerance_gnomish_race_trigger = yes }
+					is_not_purging_or_expelling_any_race_trigger = yes
+				}
+				set_country_flag = propflag_gnomish
+				country_event = { id = tolerance_generic.1 }
 			}
 		}
 	}
@@ -1222,7 +1246,7 @@ country_event = {
 					NOT = { has_province_modifier = gnomish_exploiting_inventions_prov }
 					NOT = { has_province_modifier = gnomish_respect_of_innovations_prov }
 					NOT = { has_province_modifier = gnomish_stopped_innovations_prov }
-					has_any_gnomish_pop_trigger = yes
+					fast_has_pop_of_race = { race = gnomish }
 				}
 				save_event_target_as = innovations_gnomish_province
 			}
@@ -1231,7 +1255,7 @@ country_event = {
 					NOT = { has_province_modifier = gnomish_exploiting_inventions_prov }
 					NOT = { has_province_modifier = gnomish_respect_of_innovations_prov }
 					NOT = { has_province_modifier = gnomish_stopped_innovations_prov }
-					has_any_gnomish_pop_trigger = yes
+					fast_has_pop_of_race = { race = gnomish }
 					OR = {
 						is_in_capital_area = yes
 						development = 10
@@ -1244,7 +1268,7 @@ country_event = {
 					NOT = { has_province_modifier = gnomish_exploiting_inventions_prov }
 					NOT = { has_province_modifier = gnomish_respect_of_innovations_prov }
 					NOT = { has_province_modifier = gnomish_stopped_innovations_prov }
-					has_any_gnomish_pop_trigger = yes
+					fast_has_pop_of_race = { race = gnomish }
 					is_in_capital_area = yes
 					development = 10
 				}
@@ -1267,7 +1291,7 @@ country_event = {
 					NOT = { has_province_modifier = gnomish_respect_of_innovations_prov }
 					NOT = { has_province_modifier = gnomish_stopped_innovations_prov }
 					owned_by = ROOT
-					has_any_gnomish_pop_trigger = yes
+					fast_has_pop_of_race = { race = gnomish }
 				}
 				add_province_modifier = {
 					name = gnomish_exploiting_inventions_prov
@@ -1298,7 +1322,7 @@ country_event = {
 					NOT = { has_province_modifier = gnomish_respect_of_innovations_prov }
 					NOT = { has_province_modifier = gnomish_stopped_innovations_prov }
 					owned_by = ROOT
-					has_any_gnomish_pop_trigger = yes
+					fast_has_pop_of_race = { race = gnomish }
 				}
 				add_province_modifier = {
 					name = gnomish_respect_of_innovations_prov
@@ -1376,7 +1400,7 @@ country_event = {
 					NOT = { has_province_modifier = gnomish_respect_of_innovations_prov }
 					NOT = { has_province_modifier = gnomish_stopped_innovations_prov }
 					owned_by = ROOT
-					has_any_gnomish_pop_trigger = yes
+					fast_has_pop_of_race = { race = gnomish }
 				}
 				add_province_modifier = {
 					name = gnomish_respect_of_innovations_prov
@@ -1583,7 +1607,7 @@ country_event = {
 				limit = {
 					NOT = { has_province_modifier = gnomish_respected_intellectuals_prov }
 					NOT = { has_province_modifier = gnomish_disrespected_intellectuals_prov }
-					has_any_gnomish_pop_trigger = yes
+					fast_has_pop_of_race = { race = gnomish }
 				}
 				save_event_target_as = genius_gnomish_province
 			}
